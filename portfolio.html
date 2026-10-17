@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Selected Work</title>
+<meta name="description" content="A compilation of four website builds: a donut shop, a pizzeria, a Canton Fair travel agency and a Cebu tour agency.">
+<meta name="color-scheme" content="light">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1c2340;          /* outline colour only */
+  --text:#2b3150;
+  --muted:#5d6482;
+  --paper:#ffffff;
+  --sky:#eef4ff;
+  --sky-2:#dde8ff;
+  --blue:#4a6ee0;
+  --blue-soft:#cfdcff;
+  --yellow:#ffd43b;
+  --yellow-soft:#fff3c2;
+  --red:#ef5a46;
+  --green:#3fb871;
+  --orange:#ff8a3d;
+  --line:3px solid var(--ink);
+  --shadow:5px 5px 0 var(--ink);
+  --shadow-lg:8px 8px 0 var(--ink);
+  --comic:"Bangers",Impact,sans-serif;
+  --hand:"Caveat",cursive;
+  --head:"Plus Jakarta Sans",system-ui,sans-serif;
+  --body:"Inter",system-ui,sans-serif;
+  --pop:cubic-bezier(.34,1.56,.64,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--sky);
+  background-image:radial-gradient(var(--sky-2) 1.6px,transparent 1.6px);
+  background-size:22px 22px;
+  color:var(--text);font:400 16px/1.6 var(--body);
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+a{color:inherit}
+img{display:block;max-width:100%}
+ul{list-style:none}
+.wrap{width:min(1200px,100% - 32px);margin-inline:auto}
+@media (min-width:720px){.wrap{width:min(1200px,100% - 64px)}}
+
+/* ---------- shared comic bits ---------- */
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  font:800 15px/1 var(--head);text-decoration:none;color:var(--ink);
+  background:var(--yellow);border:var(--line);border-radius:12px;
+  padding:13px 20px;box-shadow:4px 4px 0 var(--ink);
+  transition:transform .15s,box-shadow .15s;cursor:pointer;
+}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
+.btn:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--ink)}
+.btn.white{background:var(--paper)}
+.btn.small{font-size:13px;padding:9px 14px;border-radius:10px}
+.bubble{
+  position:relative;background:var(--paper);border:var(--line);border-radius:18px;
+  padding:14px 18px;box-shadow:var(--shadow);font:600 15px/1.35 var(--head);color:var(--ink);
+}
+.bubble::after{
+  content:"";position:absolute;left:34px;bottom:-15px;width:22px;height:22px;
+  background:var(--paper);border-right:var(--line);border-bottom:var(--line);
+  transform:skewX(-30deg) rotate(45deg);
+}
+.hand{font:700 clamp(22px,2.4vw,28px)/1 var(--hand);color:var(--red)}
+.sticker{
+  display:inline-block;font:400 18px/1 var(--comic);letter-spacing:.06em;color:var(--ink);
+  background:var(--yellow);border:var(--line);border-radius:8px;padding:6px 10px 4px;
+  box-shadow:3px 3px 0 var(--ink);
+}
+
+/* ---------- header ---------- */
+.top{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.88);backdrop-filter:blur(10px);border-bottom:var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:12px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font:800 18px/1 var(--head);color:var(--ink)}
+.logo-badge{width:36px;height:36px;border:var(--line);border-radius:10px;background:var(--yellow);display:grid;place-items:center;font:400 20px/1 var(--comic);box-shadow:3px 3px 0 var(--ink);transform:rotate(-6deg)}
+.top nav{display:flex;align-items:center;gap:10px}
+.nav-pill{font:400 17px/1 var(--comic);letter-spacing:.06em;text-decoration:none;color:var(--ink);background:var(--blue-soft);border:var(--line);border-radius:999px;padding:8px 14px 6px}
+@media (max-width:560px){.nav-pill{display:none}.logo span{display:none}}
+
+/* ---------- hero ---------- */
+.hero{position:relative;padding:clamp(48px,7vw,88px) 0 clamp(40px,5vw,64px);overflow:hidden}
+.rays{
+  position:absolute;left:72%;top:50%;width:1500px;height:1500px;translate:-50% -50%;z-index:-1;pointer-events:none;
+  background:repeating-conic-gradient(from 0deg,rgba(255,212,59,.22) 0deg 6deg,transparent 7deg 18deg);
+  -webkit-mask:radial-gradient(circle,#000 0 8%,transparent 38%);mask:radial-gradient(circle,#000 0 8%,transparent 38%);
+  animation:spin 90s linear infinite;
+}
+@keyframes spin{to{rotate:360deg}}
+.hero-grid{display:grid;gap:40px;align-items:center}
+@media (min-width:940px){.hero-grid{grid-template-columns:1.25fr 1fr}}
+.hero .hand{display:block;margin-bottom:6px;transform:rotate(-2deg)}
+.title{
+  font:400 clamp(64px,11vw,148px)/.86 var(--comic);letter-spacing:.015em;color:var(--paper);
+  -webkit-text-stroke:3px var(--ink);paint-order:stroke fill;
+  text-shadow:6px 6px 0 var(--ink);
+}
+.title .y{color:var(--yellow)}
+.title span{display:inline-block}
+.title .tilt{transform:rotate(-3deg)}
+.hero p.lede{margin:24px 0 28px;max-width:46ch;font-size:clamp(16px,1.5vw,18px);color:var(--muted)}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.counts{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+.counts li{background:var(--paper);border:var(--line);border-radius:12px;padding:8px 14px;font:600 14px/1 var(--head);color:var(--muted);box-shadow:3px 3px 0 var(--ink);display:flex;align-items:baseline;gap:6px}
+.counts b{font:400 26px/1 var(--comic);color:var(--blue);letter-spacing:.03em}
+
+/* hero stack of comic panels */
+.stack{position:relative;height:clamp(300px,36vw,420px);max-width:520px;width:100%;margin-inline:auto}
+.stack .panel{position:absolute;width:72%;border:var(--line);border-radius:14px;overflow:hidden;background:var(--paper);box-shadow:var(--shadow-lg);transition:transform .35s var(--pop)}
+.stack .panel img{aspect-ratio:2000/1096;width:100%;height:auto;object-fit:cover;object-position:top}
+.stack .p1{left:0;top:6%;transform:rotate(-7deg)}
+.stack .p2{right:0;top:0;transform:rotate(5deg)}
+.stack .p3{left:14%;bottom:0;transform:rotate(-1deg);z-index:2}
+.stack:hover .p1{transform:rotate(-10deg) translate(-10px,-6px)}
+.stack:hover .p2{transform:rotate(8deg) translate(10px,-8px)}
+.stack:hover .p3{transform:rotate(1deg) translateY(6px)}
+.stack .bubble{position:absolute;right:-6px;bottom:30%;z-index:3;transform:rotate(3deg);max-width:200px}
+.burst{
+  position:absolute;z-index:4;left:-14px;bottom:8%;width:96px;height:96px;display:grid;place-items:center;
+  font:400 26px/1 var(--comic);color:var(--ink);background:var(--red);
+  clip-path:polygon(50% 0,61% 18%,82% 8%,79% 31%,100% 38%,83% 53%,96% 74%,72% 74%,66% 98%,50% 82%,33% 98%,28% 74%,4% 74%,17% 53%,0 38%,21% 31%,18% 8%,39% 18%);
+  transform:rotate(-12deg);animation:wobble 2.6s ease-in-out infinite;
+}
+.burst span{color:var(--paper);-webkit-text-stroke:1.5px var(--ink);paint-order:stroke fill}
+@keyframes wobble{50%{transform:rotate(-4deg) scale(1.06)}}
+@media (max-width:560px){.stack .bubble{display:none}}
+
+/* ---------- tabs (filters) ---------- */
+.tabs{display:grid;gap:14px;grid-template-columns:repeat(2,1fr);margin:8px 0 40px}
+@media (min-width:860px){.tabs{grid-template-columns:repeat(4,1fr)}}
+.tab{
+  display:flex;align-items:center;gap:12px;text-align:left;cursor:pointer;
+  background:var(--paper);border:var(--line);border-radius:16px;padding:14px 16px;box-shadow:var(--shadow);
+  transition:transform .15s,box-shadow .15s,background .2s;color:var(--ink);
+}
+.tab:hover{transform:translate(-2px,-2px);box-shadow:7px 7px 0 var(--ink)}
+.tab[aria-pressed="true"]{background:var(--yellow);transform:rotate(-1.5deg)}
+.tab .n{flex:none;width:34px;height:34px;border-radius:50%;border:var(--line);display:grid;place-items:center;font:700 13px/1 var(--head);color:var(--paper);background:var(--c)}
+.tab strong{display:block;font:400 22px/1 var(--comic);letter-spacing:.05em}
+.tab small{font:500 12px/1.2 var(--body);color:var(--muted)}
+
+.section-head{display:flex;align-items:center;gap:14px;margin-bottom:24px}
+.section-head h2{font:400 clamp(30px,3.6vw,42px)/1 var(--comic);letter-spacing:.04em;color:var(--ink);background:var(--paper);border:var(--line);border-radius:12px;padding:8px 16px 4px;box-shadow:4px 4px 0 var(--ink)}
+.section-head::after{content:"";flex:1;border-top:3px dotted var(--ink);opacity:.35}
+
+/* ---------- project grid ---------- */
+.grid{display:grid;gap:28px;grid-template-columns:1fr;padding-bottom:clamp(56px,7vw,88px)}
+@media (min-width:720px){.grid{grid-template-columns:repeat(2,1fr)}}
+.card{
+  display:flex;flex-direction:column;background:var(--paper);border:var(--line);border-radius:20px;
+  box-shadow:var(--shadow-lg);overflow:hidden;transition:transform .3s var(--pop),box-shadow .3s;
+}
+.card:hover{transform:translate(-3px,-5px) rotate(-.6deg);box-shadow:12px 13px 0 var(--ink)}
+.card.is-hidden{display:none}
+.thumb{position:relative;display:block;border-bottom:var(--line);background:var(--tint);padding:52px 18px 0;overflow:hidden}
+.thumb::before{content:"";position:absolute;inset:0;background:repeating-conic-gradient(from 0deg at 50% 110%,rgba(255,255,255,.5) 0 6deg,transparent 6deg 14deg)}
+.thumb .win{position:relative;border:var(--line);border-bottom:0;border-radius:12px 12px 0 0;overflow:hidden;background:var(--paper);transition:transform .35s var(--pop)}
+.thumb .dots{height:24px;background:var(--paper);border-bottom:var(--line);display:flex;align-items:center;gap:5px;padding:0 10px}
+.thumb .dots i{width:9px;height:9px;border-radius:50%;border:2px solid var(--ink)}
+.thumb .dots i:nth-child(1){background:var(--red)}
+.thumb .dots i:nth-child(2){background:var(--yellow)}
+.thumb .dots i:nth-child(3){background:var(--green)}
+.thumb img{aspect-ratio:2000/1096;width:100%;height:auto;object-fit:cover;object-position:top}
+.card:hover .thumb .win{transform:translateY(-6px)}
+.ep{position:absolute;top:12px;left:12px;z-index:2;font:400 16px/1 var(--comic);letter-spacing:.06em;background:var(--paper);border:var(--line);border-radius:8px;padding:5px 9px 3px;box-shadow:3px 3px 0 var(--ink);color:var(--ink)}
+.thumb .sticker{position:absolute;top:10px;right:12px;z-index:2;transform:rotate(8deg)}
+.body{display:flex;flex-direction:column;gap:12px;padding:20px 20px 22px;flex:1}
+.body h3{font:400 clamp(34px,3vw,40px)/.95 var(--comic);letter-spacing:.03em;color:var(--ink)}
+.body h3 a{text-decoration:none}
+.body .hand{font-size:24px;color:var(--c);margin-top:-6px}
+.body p{font-size:15px;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips li{font:600 12px/1 var(--head);color:var(--ink);background:var(--soft);border:2px solid var(--ink);border-radius:999px;padding:6px 10px}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);border:2px solid var(--ink);border-radius:12px;overflow:hidden;margin-top:auto}
+.facts div{padding:9px 10px;text-align:center;background:var(--sky)}
+.facts div+div{border-left:2px solid var(--ink)}
+.facts b{display:block;font:400 22px/1 var(--comic);letter-spacing:.04em;color:var(--ink)}
+.facts span{font:600 10px/1.2 var(--head);text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.palette{display:flex;align-items:center;gap:6px;font:600 12px/1 var(--head);color:var(--muted)}
+.palette i{width:20px;height:20px;border-radius:50%;border:2px solid var(--ink)}
+.card-actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.more{font:600 13px/1 var(--head);color:var(--muted)}
+.more a{color:var(--ink);text-decoration-thickness:2px;text-underline-offset:3px}
+
+/* ---------- comic strip ---------- */
+.strip{display:grid;gap:20px;grid-template-columns:1fr;padding-bottom:clamp(56px,7vw,88px)}
+@media (min-width:760px){.strip{grid-template-columns:repeat(3,1fr)}}
+.frame{position:relative;background:var(--bg);border:var(--line);border-radius:18px;box-shadow:var(--shadow);padding:22px 20px 20px;min-height:200px;display:flex;flex-direction:column;gap:10px;overflow:hidden}
+.frame::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(28,35,64,.12) 1.4px,transparent 1.4px);background-size:12px 12px;pointer-events:none}
+.frame>*{position:relative}
+.frame .big{font:400 clamp(56px,6vw,76px)/.9 var(--comic);color:var(--paper);-webkit-text-stroke:2.5px var(--ink);paint-order:stroke fill;text-shadow:4px 4px 0 var(--ink)}
+.frame h4{font:800 17px/1.3 var(--head);color:var(--ink)}
+.frame p{font-size:14px;color:var(--text)}
+.frame .tag{position:absolute;top:14px;right:14px;font:700 20px/1 var(--hand);color:var(--ink);transform:rotate(6deg)}
+
+
+/* ---------- services ---------- */
+.services{display:grid;gap:24px;grid-template-columns:1fr;padding-bottom:clamp(56px,7vw,88px)}
+@media (min-width:980px){.services{grid-template-columns:repeat(3,1fr)}}
+.svc{position:relative;display:flex;flex-direction:column;background:var(--paper);border:var(--line);border-radius:20px;box-shadow:var(--shadow-lg);overflow:hidden}
+.svc-head{position:relative;display:flex;align-items:flex-end;gap:14px;padding:44px 20px 18px;min-height:156px;background:var(--tint);border-bottom:var(--line);overflow:hidden}
+.svc-head::before{content:"";position:absolute;inset:0;background:repeating-conic-gradient(from 0deg at 100% 0%,rgba(255,255,255,.55) 0 6deg,transparent 6deg 14deg)}
+.svc-head>*{position:relative}
+.svc-icon{flex:none;width:52px;height:52px;border:var(--line);border-radius:14px;background:var(--paper);display:grid;place-items:center;box-shadow:3px 3px 0 var(--ink);transform:rotate(-5deg)}
+.svc-icon svg{width:26px;height:26px;stroke:var(--ink);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.svc-head small{display:block;font:700 20px/1 var(--hand);color:var(--c)}
+.svc-head h3{font:400 clamp(28px,2.6vw,34px)/1 var(--comic);letter-spacing:.03em;color:var(--ink)}
+.svc-list{display:flex;flex-direction:column;gap:10px;padding:18px 20px 22px;counter-reset:svc}
+.svc-list li{counter-increment:svc;display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;padding:12px 14px;border:2px solid var(--ink);border-radius:14px;background:var(--soft);transition:transform .2s var(--pop)}
+.svc-list li:hover{transform:translate(-2px,-2px) rotate(-.5deg)}
+.svc-list li::before{content:counter(svc,decimal-leading-zero);width:30px;height:30px;border-radius:50%;border:2px solid var(--ink);background:var(--paper);display:grid;place-items:center;font:700 11px/1 var(--head);color:var(--ink)}
+.svc-list strong{display:block;font:800 15px/1.25 var(--head);color:var(--ink)}
+.svc-list span{display:block;font-size:13.5px;line-height:1.45;color:var(--muted);margin-top:2px}
+.svc .badge{position:absolute;top:12px;right:14px;z-index:2;font-size:16px;transform:rotate(6deg)}
+.svc-note{font:600 13px/1.4 var(--head);color:var(--muted);padding:0 20px 20px;margin-top:-6px}
+
+/* ---------- footer ---------- */
+.cta{position:relative;background:var(--yellow-soft);border:var(--line);border-radius:24px;box-shadow:var(--shadow-lg);padding:clamp(28px,5vw,56px);display:grid;gap:24px;align-items:center;overflow:hidden;margin-bottom:56px}
+@media (min-width:860px){.cta{grid-template-columns:1.4fr 1fr}}
+.cta::before{content:"";position:absolute;right:-200px;top:-200px;width:600px;height:600px;background:repeating-conic-gradient(rgba(255,212,59,.55) 0 8deg,transparent 8deg 20deg);border-radius:50%;pointer-events:none}
+.cta>*{position:relative}
+.cta h2{font:400 clamp(44px,6vw,76px)/.92 var(--comic);letter-spacing:.02em;color:var(--paper);-webkit-text-stroke:3px var(--ink);paint-order:stroke fill;text-shadow:5px 5px 0 var(--ink)}
+.cta h2 .b{color:var(--blue)}
+.cta .bubble{justify-self:start}
+@media (min-width:860px){.cta .bubble{justify-self:end}}
+footer.base{border-top:var(--line);background:var(--paper)}
+footer.base .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:20px 0;font:600 13px/1.4 var(--head);color:var(--muted)}
+footer.base a{text-decoration:none;color:var(--ink)}
+
+/* ---------- motion ---------- */
+.pop{opacity:0;transform:translateY(24px) scale(.97)}
+.pop.in{opacity:1;transform:none;transition:opacity .5s ease,transform .6s var(--pop)}
+.card.pop.in:hover{transform:translate(-3px,-5px) rotate(-.6deg)}
+@media (prefers-reduced-motion:reduce){
+  .pop{opacity:1;transform:none}
+  .rays,.burst{animation:none}
+  *{transition:none!important}
+  html{scroll-behavior:auto}
+}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:8px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top"><span class="logo-badge" aria-hidden="true">G</span><span>HelloGiovanni07</span></a>
+    <nav aria-label="Main">
+      <a class="nav-pill" href="#work">The work</a>
+      <a class="nav-pill" href="#services">Services</a>
+      <a class="btn small" href="#contact">Say hi!</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="rays" aria-hidden="true"></div>
+    <div class="wrap hero-grid">
+      <div>
+        <span class="hand pop">four brands, four websites</span>
+        <h1 class="title pop"><span>Selected</span><br><span class="y tilt">work!</span></h1>
+        <p class="lede pop">A compilation of complete website builds for food and travel businesses. A donut you can decorate in 3D, a pizza box you open to see the menu, a travel agency that plans your whole Canton Fair trip, and a Cebu tour agency that is live today.</p>
+        <div class="hero-actions pop">
+          <a class="btn" href="#work">See the work ↓</a>
+          <a class="btn white" href="#contact">Start a project</a>
+        </div>
+        <ul class="counts pop" aria-label="At a glance">
+          <li><b>4</b>sites</li>
+          <li><b>38+</b>pages</li>
+          <li><b>3</b>industries</li>
+        </ul>
+      </div>
+
+      <div class="stack pop" aria-hidden="true">
+        <div class="panel p1"><img src="portfolio-shots/immaculate.webp" alt="" width="2000" height="1096"></div>
+        <div class="panel p2"><img src="portfolio-shots/travel.webp" alt="" width="2000" height="1096"></div>
+        <div class="panel p3"><img src="portfolio-shots/glaze.webp" alt="" width="2000" height="1096"></div>
+        <div class="bubble">Every site has its own look. Tap one!</div>
+        <div class="burst"><span>WOW!</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section id="work" class="wrap" aria-labelledby="work-title">
+    <div class="tabs" role="group" aria-label="Filter projects">
+      <button class="tab" type="button" data-filter="all" aria-pressed="true" style="--c:var(--blue)"><span class="n">01</span><span><strong>All work</strong><small>4 sites</small></span></button>
+      <button class="tab" type="button" data-filter="food" aria-pressed="false" style="--c:var(--red)"><span class="n">02</span><span><strong>Food</strong><small>Donuts &amp; pizza</small></span></button>
+      <button class="tab" type="button" data-filter="travel" aria-pressed="false" style="--c:var(--green)"><span class="n">03</span><span><strong>Travel</strong><small>Tours &amp; business trips</small></span></button>
+      <button class="tab" type="button" data-filter="3d" aria-pressed="false" style="--c:var(--orange)"><span class="n">04</span><span><strong>3D &amp; motion</strong><small>Interactive intros</small></span></button>
+    </div>
+
+    <div class="section-head"><h2 id="work-title">The work</h2></div>
+    <p class="sr" aria-live="polite" id="filter-status">Showing all 4 projects</p>
+
+    <div class="grid">
+
+      <article class="card pop" data-tags="food 3d" style="--tint:#ffd9bf;--soft:#ffeadb;--c:#e8641e">
+        <a class="thumb" href="glaze-bomb-donuts/index.html" tabindex="-1" aria-hidden="true">
+          <span class="ep">EP 01</span><span class="sticker">3D!</span>
+          <div class="win"><div class="dots"><i></i><i></i><i></i></div>
+            <img src="portfolio-shots/glaze.webp" alt="" loading="lazy" width="2000" height="1096"></div>
+        </a>
+        <div class="body">
+          <h3><a href="glaze-bomb-donuts/index.html">Glaze Bomb</a></h3>
+          <span class="hand">filled donut shop</span>
+          <p>Spin a live 3D donut, build your own, and watch six donuts drop into a box. “Glazy” the chat helper can add to your order.</p>
+          <ul class="chips"><li>three.js</li><li>Build your own</li><li>Cart</li><li>Chat helper</li></ul>
+          <div class="facts"><div><b>4</b><span>pages</span></div><div><b>84</b><span>3D renders</span></div><div><b>44</b><span>menu items</span></div></div>
+          <div class="palette">Palette <i style="background:#e8641e"></i><i style="background:#3b2116"></i><i style="background:#ffe8d6"></i></div>
+          <div class="card-actions">
+            <a class="btn small" href="glaze-bomb-donuts/index.html">Open site →</a>
+            <span class="more"><a href="glaze-bomb-donuts/menu.html">Menu</a> · <a href="glaze-bomb-donuts/gallery.html">Gallery</a></span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card pop" data-tags="food 3d" style="--tint:#c8ebcf;--soft:#e2f5e5;--c:#1f8a3a">
+        <a class="thumb" href="pizza-max/index.html" tabindex="-1" aria-hidden="true">
+          <span class="ep">EP 02</span><span class="sticker" style="background:#ff9b8f">Hot!</span>
+          <div class="win"><div class="dots"><i></i><i></i><i></i></div>
+            <img src="portfolio-shots/pizza.webp" alt="" loading="lazy" width="2000" height="1096"></div>
+        </a>
+        <div class="body">
+          <h3><a href="pizza-max/index.html">Pizza Max</a></h3>
+          <span class="hand">stone-oven pizza, Berlin</span>
+          <p>Lift the lid of the pizza box to get in. Inside: a stone-oven menu in three sizes, Blender-made textures, pickup and delivery.</p>
+          <ul class="chips"><li>Box intro</li><li>Blender</li><li>Menu sizes</li><li>Delivery</li></ul>
+          <div class="facts"><div><b>3</b><span>pages</span></div><div><b>3</b><span>pizza sizes</span></div><div><b>38</b><span>cm Wumbo</span></div></div>
+          <div class="palette">Palette <i style="background:#1f6b2a"></i><i style="background:#d22b25"></i><i style="background:#d9b07a"></i></div>
+          <div class="card-actions">
+            <a class="btn small" href="pizza-max/index.html">Open site →</a>
+            <span class="more"><a href="pizza-max/impressum.html">Impressum</a></span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card pop" data-tags="travel" style="--tint:#cfdcff;--soft:#e6edff;--c:#4a6ee0">
+        <a class="thumb" href="travel-agency/index.html" tabindex="-1" aria-hidden="true">
+          <span class="ep">EP 03</span><span class="sticker" style="background:#b8f0c9">Fly!</span>
+          <div class="win"><div class="dots"><i></i><i></i><i></i></div>
+            <img src="portfolio-shots/travel.webp" alt="" loading="lazy" width="2000" height="1096"></div>
+        </a>
+        <div class="body">
+          <h3><a href="travel-agency/index.html">ExpoBusiness</a></h3>
+          <span class="hand">Canton Fair business travel</span>
+          <p>Corporate travel for Philippine companies going to the Canton Fair: badges, China visas, flights, hotels, interpreters and factory visits.</p>
+          <ul class="chips"><li>Multi-page</li><li>Industry pages</li><li>Inquiry form</li><li>Visa guide</li></ul>
+          <div class="facts"><div><b>14</b><span>pages</span></div><div><b>8</b><span>industries</span></div><div><b>1</b><span>quote form</span></div></div>
+          <div class="palette">Palette <i style="background:#1d1f4d"></i><i style="background:#d2541a"></i><i style="background:#ffffff"></i></div>
+          <div class="card-actions">
+            <a class="btn small" href="travel-agency/index.html">Open site →</a>
+            <span class="more"><a href="travel-agency/industries.html">Industries</a> · <a href="travel-agency/visa.html">Visa</a></span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card pop" data-tags="travel" style="--tint:#ffe6bf;--soft:#fff1da;--c:#c4731c">
+        <a class="thumb" href="https://www.immaculateconnectionsph.com/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+          <span class="ep">EP 04</span><span class="sticker" style="background:#ffd43b">Live!</span>
+          <div class="win"><div class="dots"><i></i><i></i><i></i></div>
+            <img src="portfolio-shots/immaculate.webp" alt="" loading="lazy" width="2000" height="1097"></div>
+        </a>
+        <div class="body">
+          <h3><a href="https://www.immaculateconnectionsph.com/" target="_blank" rel="noopener">Immaculate Connections</a></h3>
+          <span class="hand">Cebu tour services</span>
+          <p>A Cebu travel agency running group tours to Vietnam, China and Japan. Polaroid photo stacks from real trips, tour packages, tickets, hotels, van hire and a free quote.</p>
+          <ul class="chips"><li>Live site</li><li>Tour packages</li><li>Photo gallery</li><li>Quote form</li></ul>
+          <div class="facts"><div><b>17+</b><span>pages</span></div><div><b>8</b><span>destinations</span></div><div><b>3</b><span>countries</span></div></div>
+          <div class="palette">Palette <i style="background:#13244a"></i><i style="background:#c4731c"></i><i style="background:#f2c14e"></i></div>
+          <div class="card-actions">
+            <a class="btn small" href="https://www.immaculateconnectionsph.com/" target="_blank" rel="noopener">Open site ↗</a>
+            <span class="more"><a href="https://www.immaculateconnectionsph.com/tours" target="_blank" rel="noopener">Tours</a> · <a href="https://www.immaculateconnectionsph.com/gallery" target="_blank" rel="noopener">Gallery</a></span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- HOW -->
+  <section class="wrap" aria-labelledby="how-title">
+    <div class="section-head"><h2 id="how-title">How each one is made</h2></div>
+    <div class="strip">
+      <div class="frame pop" style="--bg:#fff3c2">
+        <span class="tag">step 1</span>
+        <span class="big">Idea</span>
+        <h4>One big idea per brand</h4>
+        <p>A donut you decorate. A box you open. A trip planned for you. Each site starts with one moment people remember.</p>
+      </div>
+      <div class="frame pop" style="--bg:#dfe8ff">
+        <span class="tag">step 2</span>
+        <span class="big">Build</span>
+        <h4>Hand-built, fast pages</h4>
+        <p>Plain HTML, CSS and JavaScript, with 3D only where it earns its place. Works on phones first.</p>
+      </div>
+      <div class="frame pop" style="--bg:#dcf5e3">
+        <span class="tag">step 3</span>
+        <span class="big">Polish</span>
+        <h4>Checked on every screen</h4>
+        <p>Every page is tested on desktop, tablet and phone, with reduced-motion and keyboard checks.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="wrap" aria-labelledby="services-title">
+    <div class="section-head"><h2 id="services-title">What we can do for you</h2></div>
+    <div class="services">
+
+      <article class="svc pop" style="--tint:#dfe8ff;--soft:#f1f5ff;--c:#4a6ee0">
+        <div class="svc-head">
+          <span class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 8h18M8 21h8M12 18v3"/></svg></span>
+          <div><small>the site itself</small><h3>Website</h3></div>
+        </div>
+        <ul class="svc-list">
+          <li><div><strong>Domain</strong><span>Finding, registering and connecting your web address, plus business email.</span></div></li>
+          <li><div><strong>Website design</strong><span>A custom site built for your brand, fast and easy to use on any phone.</span></div></li>
+          <li><div><strong>Keywords, SEO, AEO &amp; GEO</strong><span>Getting found on Google and in AI answers like ChatGPT, Gemini and Perplexity.</span></div></li>
+          <li><div><strong>Analytics</strong><span>See who visits, where they come from and what makes them get in touch.</span></div></li>
+        </ul>
+      </article>
+
+      <article class="svc pop" style="--tint:#ffe0d6;--soft:#fff2ed;--c:#e0533f">
+        <div class="svc-head">
+          <span class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 10v4a1 1 0 0 0 1 1h2l5 4V5L7 9H5a1 1 0 0 0-1 1z"/><path d="M16 9a4 4 0 0 1 0 6M19 6a8 8 0 0 1 0 12"/></svg></span>
+          <div><small>get the word out</small><h3>Marketing materials</h3></div>
+        </div>
+        <ul class="svc-list">
+          <li><div><strong>Social media posting</strong><span>Posts designed and planned for Facebook, Instagram and LinkedIn.</span></div></li>
+          <li><div><strong>Video editing</strong><span>Reels, promos and explainer videos, cut and captioned for each platform.</span></div></li>
+          <li><div><strong>Branding</strong><span>Logo, colours, fonts and a look that stays the same everywhere you show up.</span></div></li>
+        </ul>
+      </article>
+
+      <article class="svc pop" style="--tint:#dcf5e3;--soft:#effaf2;--c:#2f9a5a">
+        <span class="sticker badge">Add-on!</span>
+        <div class="svc-head">
+          <span class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span>
+          <div><small>additional services</small><h3>ERP system (Odoo)</h3></div>
+        </div>
+        <ul class="svc-list">
+          <li><div><strong>Payment direct to website</strong><span>Customers pay online on your site, and the payment lands in your system.</span></div></li>
+          <li><div><strong>Database</strong><span>Customers, products and orders kept in one place instead of scattered sheets.</span></div></li>
+          <li><div><strong>Accounting</strong><span>Invoices, bills and reports that update as you sell.</span></div></li>
+          <li><div><strong>Inventory</strong><span>Know what is in stock and what to reorder, across every location.</span></div></li>
+          <li><div><strong>Sales</strong><span>Quotes, orders and follow-ups, connected to your website and stock.</span></div></li>
+        </ul>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="contact" class="wrap">
+    <div class="cta pop">
+      <div>
+        <span class="hand">your brand next?</span>
+        <h2>Let’s make <span class="b">yours</span> pop!</h2>
+      </div>
+      <div class="bubble">Got a shop, a restaurant or a service that needs a website people remember? Let’s talk.</div>
+    </div>
+  </section>
+</main>
+
+<footer class="base">
+  <div class="wrap">
+    <span>HelloGiovanni07 · Selected work 2026</span>
+    <a href="#top">Back to top ↑</a>
+  </div>
+</footer>
+
+<script>
+(() => {
+  // filters
+  const tabs = document.querySelectorAll('.tab');
+  const cards = document.querySelectorAll('.card');
+  const status = document.getElementById('filter-status');
+  tabs.forEach(t => t.addEventListener('click', () => {
+    tabs.forEach(x => x.setAttribute('aria-pressed', x === t));
+    const f = t.dataset.filter;
+    let shown = 0;
+    cards.forEach(c => {
+      const hide = f !== 'all' && !c.dataset.tags.split(' ').includes(f);
+      c.classList.toggle('is-hidden', hide);
+      if (!hide) shown++;
+    });
+    status.textContent = 'Showing ' + shown + (shown === 1 ? ' project' : ' projects');
+  }));
+
+  // first screen pops in on load, the rest on scroll
+  requestAnimationFrame(() => document.querySelectorAll('.hero .pop').forEach((e, i) => { e.style.transitionDelay = i * 80 + 'ms'; e.classList.add('in'); }));
+  const els = document.querySelectorAll('.pop:not(.hero .pop)');
+  if (!('IntersectionObserver' in window)) { els.forEach(e => e.classList.add('in')); return; }
+  const io = new IntersectionObserver(entries => entries.forEach(en => {
+    if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+  }), { threshold: .1, rootMargin: '0px 0px -30px 0px' });
+  els.forEach((e, i) => { e.style.transitionDelay = (e.closest('.grid,.strip') ? (i % 3) * 90 : 0) + 'ms'; io.observe(e); });
+})();
+</script>
+</body>
+</html>

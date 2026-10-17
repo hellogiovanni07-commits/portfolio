@@ -1,0 +1,5 @@
+# Only the portfolio page lives in this repo; each site has its own repo.
+/*
+!/.gitignore
+!/portfolio.html
+!/portfolio-shots/
