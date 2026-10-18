@@ -234,6 +234,10 @@ footer a{text-decoration:none;color:var(--ink);display:inline-block;padding:12px
 .loading img{position:absolute;inset:0;width:100%;height:100%!important;object-fit:cover;object-position:top;opacity:.35}
 .loading span{position:relative;padding:8px 12px;border-radius:999px;background:#fff;box-shadow:var(--shadow)}
 /* branding */
+.kit-frame{position:relative;height:calc(100% - 48px);min-height:460px;border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 0 0 1px var(--line),0 20px 40px -26px rgba(31,31,61,.4)}
+.kit-frame iframe{display:block;width:100%;height:100%;border:0;background:#fff}
+.kit-frame .loading{inset:0}
+.kit-frame[hidden]{display:none}
 .b-grid{display:grid;gap:18px}
 @media (min-width:900px){.b-grid{grid-template-columns:1.1fr 1fr}}
 .tile{background:#fff;border-radius:16px;box-shadow:inset 0 0 0 1px var(--line);padding:18px}
@@ -372,7 +376,7 @@ footer a{text-decoration:none;color:var(--ink);display:inline-block;padding:12px
         </div>
       </div>
     </section>
-    <section class="panel" id="p-brand" role="tabpanel" aria-labelledby="tab-brand" hidden></section>
+    <section class="panel" id="p-brand" role="tabpanel" aria-labelledby="tab-brand" style="height:100%" hidden></section>
     <section class="panel" id="p-biz" role="tabpanel" aria-labelledby="tab-biz" hidden></section>
   </div>
 </dialog>
@@ -544,6 +548,7 @@ const SERVICES = [
   const showTab = t => {
     tabs.forEach(x => { const on = x === t; x.setAttribute('aria-selected', on); x.tabIndex = on ? 0 : -1; $('#' + x.getAttribute('aria-controls')).hidden = !on; });
     if (t.id === 'tab-preview') { fit(); requestAnimationFrame(fit); }
+    if (t.id === 'tab-brand') loadKit();
   };
   tabs.forEach((t, i) => {
     t.addEventListener('click', () => showTab(t));
@@ -556,7 +561,18 @@ const SERVICES = [
   const renderBrand = p => {
     const b = p.brandKit;
     $('#p-brand').innerHTML = `
-      <div class="b-grid">
+      <div class="pv-tools">
+        <div class="devices" role="group" aria-label="Brand kit view">
+          <button type="button" data-kit="full" aria-pressed="true">Full brand kit</button>
+          <button type="button" data-kit="sum" aria-pressed="false">Quick summary</button>
+        </div>
+        <a class="link" href="${p.brand}" target="_blank" rel="noopener">Open in a new tab ↗</a>
+      </div>
+      <div class="kit-frame" id="kit-full">
+        <iframe id="kit-frame" title="${esc(p.name)} brand kit"></iframe>
+        <div class="loading" id="kit-loading"><span>Loading the brand kit…</span></div>
+      </div>
+      <div class="b-grid" id="kit-sum" hidden>
         <div>
           <div class="tile"><h3 class="caps">Logo</h3><div class="logo-box" style="--lb:${b.logoBg}">${b.logo}</div></div>
           <div class="tile" style="margin-top:18px"><h3 class="caps">Colours · tap to copy</h3><div class="sw-grid">${b.colors.map(([n, h]) => `<button class="sw" type="button" data-hex="${h}" aria-label="Copy ${esc(n)} ${h}"><i style="--c:${h}"></i><b>${esc(n)}</b><small>${h}</small></button>`).join('')}</div></div>
@@ -564,10 +580,18 @@ const SERVICES = [
         <div>
           <div class="tile"><h3 class="caps">Typography</h3>${b.type.map(([f, w, s, u]) => `<div class="type"><div class="s" style="font-family:'${f}',${f === 'Caveat' ? 'cursive' : 'sans-serif'};font-weight:${w}">${esc(s)}</div><small><b>${esc(f)}</b> · ${esc(u)}</small></div>`).join('')}</div>
           <div class="tile" style="margin-top:18px"><h3 class="caps">Voice</h3><div class="voice">${b.voice.map(v => `<span class="pill">${esc(v)}</span>`).join('')}</div></div>
-          <a class="btn btn-blue" style="margin-top:18px" href="${p.brand}" target="_blank" rel="noopener">Open the full brand kit ↗</a>
         </div>
       </div>`;
+    $('#kit-frame').addEventListener('load', () => { const l = $('#kit-loading'); if (l) l.style.display = 'none'; });
   };
+  // the full kit only loads when its tab is opened
+  const loadKit = () => { const f = $('#kit-frame'); if (f && cur && !f.src) f.src = cur.brand; };
+  $('#p-brand').addEventListener('click', e => {
+    const k = e.target.closest('[data-kit]'); if (!k) return;
+    $$('[data-kit]', $('#p-brand')).forEach(x => x.setAttribute('aria-pressed', x === k));
+    $('#kit-full').hidden = k.dataset.kit !== 'full'; $('#kit-sum').hidden = k.dataset.kit !== 'sum';
+    if (k.dataset.kit === 'full') loadKit();
+  });
   const renderBiz = p => {
     const rows = Object.entries(p.details);
     const todo = rows.filter(([, v]) => v === 'TODO').length;
