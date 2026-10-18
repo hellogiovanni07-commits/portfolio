@@ -229,12 +229,12 @@ a.mcat:hover{transform:translateY(-3px);background:#fff}
 .fotw button{height:44px;padding:0 18px;border-radius:999px;background:#ff6a13;color:#2a1408;font:700 15px/1 var(--head);box-shadow:0 10px 22px -10px rgba(255,106,19,.7);transition:transform .25s var(--spring)}
 .fotw button:hover{transform:translateY(-2px)}
 /* moving ribbons: every section ends on its own, in its own brand */
-.ribbon{position:relative;z-index:6;flex:none;overflow:hidden;background:var(--rb-bg);color:var(--rb-fg,#fff);padding:16px 0;margin-top:clamp(50px,6vw,80px);box-shadow:0 -1px 0 rgba(255,255,255,.12) inset}
-.ribbon>div{display:inline-flex;align-items:center;white-space:nowrap;animation:marq var(--rb-t,36s) linear infinite;font:600 clamp(18px,2vw,24px)/1 var(--head)}
+.ribbon{position:relative;z-index:6;flex:none;overflow:hidden;background:var(--rb-bg);color:var(--rb-fg,#fff);padding:10px 0;line-height:0;margin-top:clamp(50px,6vw,80px);box-shadow:0 -1px 0 rgba(255,255,255,.12) inset}
+.ribbon>div{display:inline-flex;align-items:center;white-space:nowrap;animation:marq var(--rb-t,36s) linear infinite;font:600 clamp(13px,1.15vw,15px)/1 var(--head);letter-spacing:.01em}
 .ribbon.rev>div{animation-direction:reverse}
 .ribbon:hover>div{animation-play-state:paused}
-.ribbon span{padding:0 22px}
-.ribbon i{flex:none;width:8px;height:8px;border-radius:50%;background:var(--rb-dot,rgba(255,255,255,.7))}
+.ribbon span{padding:0 16px}
+.ribbon i{flex:none;width:5px;height:5px;border-radius:50%;background:var(--rb-dot,rgba(255,255,255,.7))}
 .rb-tn{--rb-bg:#4361ee}
 .rb-glaze{--rb-bg:#e85706}
 .rb-pizza{--rb-bg:#c62f26}
