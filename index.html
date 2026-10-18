@@ -19,6 +19,7 @@
 <meta property="og:image:alt" content="The Glaze Bomb Donuts menu page, one of the three websites in the portfolio">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ff6a13'/%3E%3Cstop offset='.5' stop-color='%23c62f26'/%3E%3Cstop offset='1' stop-color='%234361ee'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Cpath d='M18 22h28v4H18zm0 8h28v4H18zm0 8h18v4H18z' fill='%23fff'/%3E%3C/svg%3E">
+<script type="importmap">{ "imports": { "three": "/pizza-max/vendor/three/three.module.min.js", "three/addons/": "/pizza-max/vendor/three/addons/" } }</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://images.unsplash.com">
@@ -264,7 +265,6 @@ a.mcat:hover{transform:translateY(-3px);background:#fff}
 .p-logo .tb{font:700 15px/1 var(--hand);color:#c62f26;text-align:right}
 @media (max-width:760px){.p-nav{display:none}.p-logo{width:118px}.p-logo .mx{font-size:32px}.p-bar .hide-sm,.p-bar .live{display:none}.p-bar .ct{margin-left:auto}}
 .p-stage{display:grid;gap:22px 40px;grid-template-areas:"title" "copy" "pizza" "ticket"}
-@media (min-width:1000px){.p-stage{grid-template-columns:1.25fr 1fr;grid-template-areas:"title copy" "pizza ticket";align-items:end}}
 .p-title{grid-area:title}
 .p-copy{grid-area:copy}
 .p-title .kick{display:block;font:700 24px/1 var(--hand);color:#c62f26;margin-bottom:18px;rotate:-2deg}
@@ -291,17 +291,32 @@ a.mcat:hover{transform:translateY(-3px);background:#fff}
 .p-slice{-webkit-clip-path:polygon(50% 50%,50% -10%,110% -10%);clip-path:polygon(50% 50%,50% -10%,110% -10%);transition:transform .7s var(--spring),filter .7s;pointer-events:none;opacity:0}
 .p-pizza.pulled .p-pie{-webkit-mask:conic-gradient(from 0deg at 50% 50%,transparent 0 45deg,#000 45deg);mask:conic-gradient(from 0deg at 50% 50%,transparent 0 45deg,#000 45deg)}
 .p-pizza.pulled .p-slice{opacity:1;transform:translate(9%,-12%) translateZ(60px);filter:drop-shadow(0 22px 18px rgba(0,0,0,.35))}
+.p-3d{position:absolute;inset:-7% -9% -6%;z-index:2;opacity:0;transition:opacity .5s}
+.p-3d canvas{display:block;width:100%!important;height:100%!important;-webkit-mask-image:linear-gradient(to right,transparent,#000 5%,#000 95%,transparent),linear-gradient(to bottom,transparent,#000 5%,#000 95%,transparent);-webkit-mask-composite:source-in;mask-image:linear-gradient(to right,transparent,#000 5%,#000 95%,transparent),linear-gradient(to bottom,transparent,#000 5%,#000 95%,transparent);mask-composite:intersect}
+.p-pizza.is-3d .p-3d{opacity:1}
+.p-pizza.is-3d .p-tilt{opacity:0;pointer-events:none;transition:opacity .4s}
 .hand-note{position:absolute;right:4%;top:-4%;z-index:4;display:inline-flex;align-items:flex-end;gap:2px;font:700 26px/1 var(--hand);color:#c62f26;rotate:-6deg;transition:transform .2s}
 .hand-note:hover{transform:scale(1.06)}
 .hand-note svg{width:60px;height:30px;transform:scaleX(-1)}
 .hero-pick{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:6px;font:500 14.5px/1.3 var(--body);color:#3a3a3a}
 .hero-pick .pname{font:700 15px/1 var(--head);color:#1f1f1f;padding:8px 10px;border-radius:8px;transition:background .2s}
-.hero-pick .pname:hover{background:#fff}
-.hero-pick .pname::after{content:" ↻";color:#c62f26}
 .mini-btn{border:1px solid #8f897f;background:#fff;border-radius:999px;min-height:44px;padding:6px 14px;font:600 14px/1 var(--head);color:#1f1f1f;transition:background .2s,color .2s}
 .mini-btn:hover{background:#1f1f1f;color:#fff}
 .today{--zig:8px;grid-area:ticket;align-self:end;position:relative;z-index:3;isolation:isolate;width:100%;max-width:360px;margin:0 auto 30px;padding:20px 20px 24px;color:#1f1f1f;transform:rotate(-.7deg);filter:drop-shadow(0 10px 12px rgba(40,25,10,.16)) drop-shadow(0 1px 1px rgba(40,25,10,.1))}
-@media (min-width:1000px){.today{margin:0 0 60px -64px}}
+/* one composition like the real hero: words on the left, the board in the middle, the oven ticket over its edge */
+@media (min-width:960px) and (max-width:1199px){
+  .p-stage{grid-template-columns:minmax(0,1.3fr) minmax(330px,1fr);grid-template-areas:"title copy" "pizza ticket";align-items:center}
+  .p-title,.p-copy{align-self:end}
+  .today{margin:0 0 0 -80px;align-self:center}
+}
+@media (min-width:1200px){
+  .p-stage{grid-template-columns:minmax(0,.92fr) minmax(0,1.2fr) minmax(330px,.95fr);grid-template-areas:"title pizza ticket" "copy pizza ticket";column-gap:28px;row-gap:22px;align-items:center}
+  .p-title{align-self:end}
+  .p-copy{align-self:start}
+  .p-visual{align-self:center}
+  .p-pizza{width:min(112%,620px);margin:0 -6%}
+  .today{margin:0 0 0 -56px;max-width:370px;align-self:center}
+}
 .today::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--thermal);-webkit-mask:conic-gradient(from 135deg at top,#0000,#000 1deg 89deg,#0000 90deg) top/var(--zig) 51% repeat-x,conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) bottom/var(--zig) 51% repeat-x;mask:conic-gradient(from 135deg at top,#0000,#000 1deg 89deg,#0000 90deg) top/var(--zig) 51% repeat-x,conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) bottom/var(--zig) 51% repeat-x}
 .today-head{display:flex;justify-content:space-between;gap:10px;font:800 13px/1.2 var(--head);letter-spacing:.12em;text-transform:uppercase;color:#1f1f1f}
 .today-head span+span{font-weight:600;letter-spacing:.04em;color:#5f5f5f}
@@ -615,7 +630,7 @@ html.still .motion-btn .play{display:block}
   <div class="wrap p-stage">
     <div class="p-title rv">
       <span class="kick">Project 02 · Pizza Max</span>
-      <h2 id="pizza-title"><span class="w"><span>Stone-oven pizza</span></span> <br><span class="w"><span>for <em>Pankow.</em></span></span></h2>
+      <h2 id="pizza-title"><span class="w"><span>Stone&#8209;oven pizza</span></span> <br><span class="w"><span>for <em>Pankow.</em></span></span></h2>
     </div>
     <div class="p-copy rv d1">
       <p class="lede">Dough rested for 24 hours, tomato sauce from their own pot, baked on the stone. The site opens on a pizza box, shows a real 3D pizza you can spin, and takes the order.</p>
@@ -628,13 +643,14 @@ html.still .motion-btn .play{display:block}
     <div class="p-visual rv">
       <button class="hand-note" id="pullSlice" type="button">pull a slice!<svg viewBox="0 0 80 40" aria-hidden="true"><path d="M4 6 Q40 4 66 30 M66 30 l-12 -2 M66 30 l-2 -12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></button>
       <div class="p-pizza" id="pPizza" role="slider" tabindex="0" aria-label="Pizza on a wooden board. Drag or use the arrow keys to spin it." aria-valuemin="0" aria-valuemax="360" aria-valuenow="0">
+        <div class="p-3d is-loading" id="p3d" aria-hidden="true"></div>
         <div class="p-tilt"><div class="p-spin" id="pSpin">
           <div class="p-board"></div>
           <img class="p-pie" id="pPie" src="portfolio-shots/decor/pizza/garden-top.webp" alt="" width="760" height="760" draggable="false">
           <img class="p-slice" id="pSlice" src="portfolio-shots/decor/pizza/garden-top.webp" alt="" width="760" height="760" draggable="false">
         </div></div>
       </div>
-      <p class="hero-pick">That's our <button type="button" class="pname" id="pName" aria-label="Show the next pizza">Veggie Garden</button> <button type="button" class="mini-btn" id="pAdd">Add a Maxi, 32 cm · <span id="pPrice">€13.20</span></button></p>
+      <p class="hero-pick">That's our <b class="pname">Veggie Garden</b> <button type="button" class="mini-btn" id="pAdd">Add a Maxi, 32 cm · <span id="pPrice">€13.20</span></button></p>
     </div>
     <section class="today rv d1" aria-labelledby="today-title">
       <h3 class="today-head" id="today-title"><span>Today's oven</span> <span id="todayDate"></span></h3>
@@ -918,7 +934,7 @@ html.still .motion-btn .play{display:block}
     let angle = 0, v = reduce ? 0 : idle, dragging = false, last = 0;
     const at = e => { const r = el.getBoundingClientRect(); return Math.atan2(e.clientY - (r.top + r.height / 2), e.clientX - (r.left + r.width / 2)) * 180 / Math.PI; };
     const set = aria => { target.style.rotate = angle + 'deg'; if (aria) el.setAttribute('aria-valuenow', ((Math.round(angle) % 360) + 360) % 360); };
-    el.addEventListener('pointerdown', e => { if (e.target.closest('button')) return; dragging = true; last = at(e); el.setPointerCapture(e.pointerId); });
+    el.addEventListener('pointerdown', e => { if (e.target.closest('button') || el.classList.contains('is-3d')) return; dragging = true; last = at(e); el.setPointerCapture(e.pointerId); });
     el.addEventListener('pointermove', e => {
       if (!dragging) return;
       let d = at(e) - last; if (d > 180) d -= 360; if (d < -180) d += 360;
@@ -929,7 +945,7 @@ html.still .motion-btn .play{display:block}
     el.addEventListener('keydown', e => { if (e.key === 'ArrowRight' || e.key === 'ArrowUp') { angle += 15; set(true); e.preventDefault(); } if (e.key === 'ArrowLeft' || e.key === 'ArrowDown') { angle -= 15; set(true); e.preventDefault(); } });
     let raf = 0;
     const tick = () => {
-      if (!moving(secId) && !dragging) { raf = 0; return; }
+      if ((!moving(secId) && !dragging) || el.classList.contains('is-3d')) { raf = 0; return; }
       if (!dragging) { v += (idle - v) * .02; angle += v; set(false); }
       raf = requestAnimationFrame(tick);
     };
@@ -972,19 +988,22 @@ html.still .motion-btn .play{display:block}
   });
 
   /* ---------- 02 Pizza: board, pull a slice, pizzas, today's oven ---------- */
-  const PIZZAS = [['garden', 'Veggie Garden', 13.2], ['salami', 'Salami Max', 13.0], ['marg', 'Margherita Deluxe', 12.5], ['funghi', 'Funghi Fresco', 12.9], ['diavolo', 'Diavolo', 13.5]];
   const pPizza = $('#pPizza'), pSpin = $('#pSpin');
   spinner(pPizza, pSpin, .1, 'pizza');
-  $('#pullSlice').addEventListener('click', () => pPizza.classList.toggle('pulled'));
-  let pz = 0;
-  $('#pName').addEventListener('click', () => {
-    pz = (pz + 1) % PIZZAS.length;
-    const [id, name, price] = PIZZAS[pz];
-    const src = id === 'garden' ? 'portfolio-shots/decor/pizza/garden-top.webp' : `portfolio-shots/decor/pizza/${id}-top-480.webp`;
-    pPizza.classList.remove('pulled');
-    $('#pPie').src = src; $('#pSlice').src = src;
-    $('#pName').textContent = name; $('#pPrice').textContent = '€' + price.toFixed(2).replace('.', ',').replace(',', '.');
-  });
+  // the real Pizza Max 3D pizza (js/pizza3d.js from the live site), loaded when the section comes near
+  let p3 = null;
+  const gl = (() => { try { const c = document.createElement('canvas'); return !!(c.getContext('webgl2') || c.getContext('webgl')); } catch { return false; } })();
+  if (gl) {
+    const near = new IntersectionObserver(([en]) => {
+      if (!en.isIntersecting) return;
+      near.disconnect();
+      import('/pizza-max/js/pizza3d.js').then(({ createPizza }) => {
+        p3 = createPizza($('#p3d'), { autoIntro: true, onReady: () => { pPizza.classList.add('is-3d'); pPizza.setAttribute('role', 'img'); pPizza.setAttribute('aria-label', '3D Veggie Garden pizza on a wooden board. Drag to spin it, or use the pull a slice button.'); ['tabindex', 'aria-valuemin', 'aria-valuemax', 'aria-valuenow'].forEach(a => pPizza.removeAttribute(a)); } });
+      }).catch(() => {});
+    }, { rootMargin: '600px 0px' });
+    near.observe(pPizza);
+  }
+  $('#pullSlice').addEventListener('click', () => { if (p3) p3.grabRandom(); else pPizza.classList.toggle('pulled'); });
   $('#pAdd').addEventListener('click', e => { const b = e.currentTarget, h = b.innerHTML; b.textContent = 'Added ✓'; setTimeout(() => b.innerHTML = h, 1300); });
   (() => {
     // the shop is in Berlin, so its hours follow Berlin time whatever the visitor's clock says
