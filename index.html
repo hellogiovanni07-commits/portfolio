@@ -365,23 +365,27 @@ footer a{text-decoration:none;color:var(--ink);display:inline-block;padding:12px
 /* =========================================================
    Corner dock: inquiry + chat
    ========================================================= */
-.dock{position:fixed;right:18px;bottom:18px;z-index:70;display:flex;align-items:center;gap:10px}
-.dock-inq{display:inline-flex;align-items:center;gap:8px;height:50px;padding:0 20px;border-radius:999px;background:#fff;color:var(--blue);font:800 13.5px/1 var(--head);letter-spacing:.08em;text-transform:uppercase;box-shadow:0 14px 30px -14px rgba(42,17,112,.6),inset 0 0 0 1.5px var(--lav-2);transition:transform .25s var(--ease),box-shadow .25s;animation:up .6s var(--ease) 1.6s both}
-.dock-inq:hover{transform:translateY(-3px) rotate(-2deg);box-shadow:0 18px 34px -14px rgba(42,17,112,.7),inset 0 0 0 1.5px var(--orchid)}
-.dock-inq svg{width:17px;height:17px}
-.dock-chat{position:relative;width:62px;height:62px;border-radius:50%;background:var(--grad);display:grid;place-items:center;box-shadow:0 16px 32px -12px rgba(74,31,192,.75);transition:transform .3s var(--ease);animation:up .6s var(--ease) 1.8s both}
-.dock-chat:hover{transform:scale(1.07) rotate(-6deg)}
-.dock-chat::before{content:"";position:absolute;inset:0;border-radius:50%;animation:ping 2.8s ease-out 3s infinite}
-@keyframes ping{0%{box-shadow:0 0 0 0 rgba(236,147,207,.65)}70%,100%{box-shadow:0 0 0 18px rgba(236,147,207,0)}}
-.dock-chat svg{width:32px;height:32px;overflow:visible}
-.dock-chat .bub{fill:#fff}.dock-chat .g{fill:none;stroke:var(--blue);stroke-width:4.2;stroke-linecap:round}.dock-chat .dot{fill:var(--orchid)}
-.dock-chat[aria-expanded="true"]::before{animation:none}
-.hint{position:absolute;right:0;bottom:76px;width:max-content;max-width:min(250px,calc(100vw - 40px));padding:11px 34px 11px 14px;border-radius:16px 16px 4px 16px;background:#fff;color:var(--ink);font:600 14px/1.4 var(--head);box-shadow:0 18px 40px -16px rgba(42,17,112,.55);opacity:0;transform:translateY(8px) scale(.96);transform-origin:100% 100%;transition:.4s var(--ease);visibility:hidden}
+.dock{position:fixed;right:0;bottom:clamp(90px,14vh,140px);z-index:70;display:flex;flex-direction:column;align-items:flex-end;gap:10px}
+.side{position:relative;display:flex;align-items:center;gap:10px;width:46px;padding:18px 0;border-radius:14px 0 0 14px;writing-mode:vertical-rl;transform:rotate(180deg);color:#fff;font:700 15px/1 var(--head);letter-spacing:.01em;text-decoration:none;white-space:nowrap;box-shadow:0 10px 24px -12px rgba(30,10,90,.55);transition:width .25s var(--ease),filter .2s;animation:sideIn .6s var(--ease) both}
+.side:nth-child(2){animation-delay:1.5s}.side:nth-child(3){animation-delay:1.65s}.side:nth-child(4){animation-delay:1.8s}
+@keyframes sideIn{from{opacity:0;translate:40px 0}}
+.side:hover,.side:focus-visible{width:54px;filter:brightness(1.08)}
+.side svg{flex:none;width:18px;height:18px;transform:rotate(180deg)}
+.side-talk{background:var(--blue)}
+.side-wa{background:#15803d}
+.side-gio{background:linear-gradient(0deg,#9447d6,#5b2bd9)}
+.side-gio svg{width:20px;height:20px;overflow:visible}
+.side-gio .bub{fill:#fff}.side-gio .g{fill:none;stroke:var(--blue);stroke-width:4.2;stroke-linecap:round}.side-gio .dot{fill:var(--orchid)}
+.side-gio{animation:sideIn .6s var(--ease) 1.8s both,glow 2.8s ease-out 4s infinite}
+.side-gio[aria-expanded="true"]{animation:none}
+@keyframes glow{0%{box-shadow:0 0 0 0 rgba(236,147,207,.75),0 10px 24px -12px rgba(30,10,90,.55)}70%,100%{box-shadow:0 0 0 12px rgba(236,147,207,0),0 10px 24px -12px rgba(30,10,90,.55)}}
+.side[aria-expanded="true"]{width:54px;box-shadow:0 0 0 3px rgba(236,147,207,.6),0 10px 24px -12px rgba(30,10,90,.55)}
+.hint{position:absolute;right:60px;bottom:0;width:max-content;max-width:min(250px,calc(100vw - 80px));padding:11px 34px 11px 14px;border-radius:16px 16px 4px 16px;background:#fff;color:var(--ink);font:600 14px/1.4 var(--head);box-shadow:0 18px 40px -16px rgba(42,17,112,.55);opacity:0;transform:translateX(8px) scale(.96);transform-origin:100% 100%;transition:.4s var(--ease);visibility:hidden;cursor:pointer}
 .hint.show{opacity:1;transform:none;visibility:visible}
 .hint b{color:var(--blue)}
 .hint button{position:absolute;right:6px;top:6px;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;color:var(--muted)}
 .hint button svg{width:13px;height:13px}
-.wpanel{position:fixed;right:18px;bottom:92px;z-index:71;width:min(390px,calc(100vw - 24px));height:min(600px,calc(100dvh - 116px));display:flex;flex-direction:column;background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 34px 80px -26px rgba(30,10,90,.6),0 0 0 1px rgba(91,43,217,.1);transform-origin:100% 100%;opacity:0;transform:translateY(18px) scale(.94);visibility:hidden;transition:opacity .3s var(--ease),transform .35s var(--ease),visibility 0s .35s}
+.wpanel{position:fixed;right:64px;bottom:24px;z-index:71;width:min(390px,calc(100vw - 80px));height:min(620px,calc(100dvh - 48px));display:flex;flex-direction:column;background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 34px 80px -26px rgba(30,10,90,.6),0 0 0 1px rgba(91,43,217,.1);transform-origin:100% 100%;opacity:0;transform:translateY(18px) scale(.94);visibility:hidden;transition:opacity .3s var(--ease),transform .35s var(--ease),visibility 0s .35s}
 .wpanel.open{opacity:1;transform:none;visibility:visible;transition:opacity .3s var(--ease),transform .35s var(--ease)}
 .wp-head{position:relative;display:flex;align-items:center;gap:12px;padding:16px 16px 18px;color:#fff;background:var(--grad);overflow:hidden;flex:none}
 .wp-head::before{content:"";position:absolute;right:-30px;top:-60px;width:180px;height:180px;border-radius:50%;background:repeating-conic-gradient(rgba(255,255,255,.1) 0 6deg,transparent 6deg 14deg)}
@@ -443,11 +447,12 @@ footer a{text-decoration:none;color:var(--ink);display:inline-block;padding:12px
 .done .row{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
 .tray .row{display:flex;gap:8px;flex-wrap:wrap}
 @media (max-width:560px){
-  .dock{right:12px;bottom:12px}
-  .dock-inq{height:46px;padding:0 16px}
-  .dock-chat{width:56px;height:56px}
-  .wpanel{right:8px;left:8px;width:auto;bottom:78px;height:calc(100dvh - 92px)}
-  .tray{margin-bottom:70px}
+  .dock{bottom:96px;gap:8px}
+  .side{width:40px;padding:14px 0;font-size:13.5px;gap:8px}
+  .side:hover,.side:focus-visible,.side[aria-expanded="true"]{width:44px}
+  .side svg{width:16px;height:16px}
+  .wpanel{right:8px;left:8px;width:auto;bottom:8px;height:calc(100dvh - 16px)}
+  .tray{margin-right:44px}
 }
 @media (prefers-reduced-motion:reduce){
   .slap{opacity:1!important}
@@ -531,10 +536,11 @@ footer a{text-decoration:none;color:var(--ink);display:inline-block;padding:12px
 <footer><div class="wrap"><span class="foot-brand"><a class="logo on-light" href="#top" aria-label="Hello Giovanni, back to top"><svg class="mark" viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="hg-g2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5b2bd9"/><stop offset=".65" stop-color="#9447d6"/><stop offset="1" stop-color="#ec93cf"/></linearGradient></defs><path class="bub" d="M20 3a16 16 0 1 1-9.6 28.8L3.5 35.5l2.6-8.5A16 16 0 0 1 20 3z"/><path class="g" d="M26.1 13.9A8 8 0 1 0 28 19h-6.5"/><circle class="dot" cx="34" cy="6" r="3.2"/></svg><b><span>hello</span>GIOVANNI</b></a><span>Selected work 2026</span></span><a href="#top">Back to top ↑</a></div></footer>
 
 <!-- Corner dock: inquiry + chat helper -->
-<div class="dock">
+<div class="dock" aria-label="Contact">
   <div class="hint" id="hint" role="status"><span>Hi! I’m <b>Gio</b>. Questions about a website? Ask me.</span><button type="button" id="hint-x" aria-label="Dismiss"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
-  <button class="dock-inq" type="button" data-inquire aria-controls="inq" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v12H8l-4 4z"/><path d="M8 9h8M8 12h5"/></svg>Inquire</button>
-  <button class="dock-chat" type="button" id="chat-btn" aria-controls="chat" aria-expanded="false" aria-label="Chat with Gio, the Hello Giovanni helper"><svg viewBox="0 0 40 40" aria-hidden="true"><path class="bub" d="M20 3a16 16 0 1 1-9.6 28.8L3.5 35.5l2.6-8.5A16 16 0 0 1 20 3z"/><path class="g" d="M26.1 13.9A8 8 0 1 0 28 19h-6.5"/><circle class="dot" cx="34" cy="6" r="3.2"/></svg></button>
+  <button class="side side-talk dock-inq" type="button" data-inquire aria-controls="inq" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 3L10 14"/><path d="M21 3l-7 18-4-7-7-4z"/></svg>Let's Talk</button>
+  <a class="side side-wa" id="wa-btn" href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp (opens WhatsApp)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>WhatsApp</a>
+  <button class="side side-gio" type="button" id="chat-btn" aria-controls="chat" aria-expanded="false" aria-label="Ask Gio, the Hello Giovanni chat helper"><svg viewBox="0 0 40 40" aria-hidden="true"><path class="bub" d="M20 3a16 16 0 1 1-9.6 28.8L3.5 35.5l2.6-8.5A16 16 0 0 1 20 3z"/><path class="g" d="M26.1 13.9A8 8 0 1 0 28 19h-6.5"/><circle class="dot" cx="34" cy="6" r="3.2"/></svg>Ask Gio</button>
 </div>
 
 <section class="wpanel" id="chat" role="dialog" aria-modal="false" aria-labelledby="chat-title">
@@ -853,13 +859,16 @@ const SERVICES = [
    Where inquiries go. Fill in one (or both) and the form sends there.
    Left empty, the form copies the inquiry so the visitor can paste it.
    ========================================================= */
-const CONTACT = { email: 'hellogiovanni07@gmail.com', messenger: '' };
+const CONTACT = { email: 'hellogiovanni07@gmail.com', whatsapp: '639202478918', messenger: '' }; // WhatsApp: 0920 247 8918 in international format
+const waLink = (t = 'Hi Hello Giovanni! I’d like to ask about a website.') => `https://wa.me/${CONTACT.whatsapp}?text=${encodeURIComponent(t)}`;
 
 (() => {
   const $ = (s, el = document) => el.querySelector(s);
   const $$ = (s, el = document) => [...el.querySelectorAll(s)];
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const fine = matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+  $('#wa-btn').href = waLink();
 
   /* ---------- scroll progress ---------- */
   const prog = $('.progress');
@@ -967,14 +976,13 @@ const CONTACT = { email: 'hellogiovanni07@gmail.com', messenger: '' };
     $('#iq').innerHTML = `<div class="done">
       <div class="burst"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></div>
       <h3>Almost there, ${escH(v('name').split(' ')[0])}!</h3>
-      <p>${mail ? 'Your email app will open with everything filled in. Just press send.' : 'Here’s your inquiry. Copy it and send it to us in a message.'}</p>
+      <p>Everything is filled in. Choose how to send it, then just press send.</p>
       <pre>${escH(text)}</pre>
-      <div class="row">${mail ? `<a class="btn btn-blue" href="${escH(mail)}">Open email</a>` : ''}${CONTACT.messenger ? `<a class="btn btn-blue" href="${escH(CONTACT.messenger)}" target="_blank" rel="noopener">Open Messenger</a>` : ''}<button class="btn ${mail || CONTACT.messenger ? 'btn-line' : 'btn-blue'}" type="button" id="iq-copy">Copy inquiry</button><button class="btn btn-line" type="button" id="iq-again">Edit</button></div>
+      <div class="row">${mail ? `<a class="btn btn-blue" href="${escH(mail)}">Send by email</a>` : ''}${CONTACT.whatsapp ? `<a class="btn btn-blue" style="background:#15803d" href="${escH(waLink(text))}" target="_blank" rel="noopener">Send on WhatsApp</a>` : ''}${CONTACT.messenger ? `<a class="btn btn-blue" href="${escH(CONTACT.messenger)}" target="_blank" rel="noopener">Open Messenger</a>` : ''}<button class="btn btn-line" type="button" id="iq-copy">Copy inquiry</button><button class="btn btn-line" type="button" id="iq-again">Edit</button></div>
     </div>`;
-    if (mail) location.href = mail;
     $('#iq-copy').addEventListener('click', async ev => { const b = ev.currentTarget; try { await navigator.clipboard.writeText(text); b.textContent = 'Copied!'; } catch { b.textContent = 'Copy failed'; } setTimeout(() => b.textContent = 'Copy inquiry', 1600); });
     $('#iq-again').addEventListener('click', () => { renderForm(); $('#iq-name').focus(); });
-    $('#iq-copy').focus();
+    $('.done .row .btn').focus();
   }
 
   /* ---------- Gio, the chat helper (scripted, no server) ---------- */
@@ -992,24 +1000,24 @@ const CONTACT = { email: 'hellogiovanni07@gmail.com', messenger: '' };
     { k: ['social', 'post', 'facebook', 'instagram', 'tiktok', 'content', 'marketing material', 'branding & social'], a: 'We design and plan posts for your channels, and edit reels, promos and explainers with captions. Everything stays on-brand.', c: ['Video editing', 'Branding', '@inquire'] },
     { k: ['video', 'reel', 'edit', 'promo', 'explainer'], a: 'We cut and caption reels, promos and explainer videos sized for Facebook, Instagram and TikTok.', c: ['Branding & social', '@inquire'] },
     { k: ['odoo', 'erp', 'inventory', 'accounting', 'database', 'payment', 'pay online', 'sales', 'invoice', 'stock', 'pos'], a: 'With <b>Odoo</b>, your website connects to your back office: customers pay online, orders land in one database, and accounting, inventory and sales update by themselves.', c: ['Payment on my website', 'Inventory', '@inquire'] },
-    { w: 3, k: ['price', 'cost', 'how much', 'budget', 'rate', 'quote', 'fee', 'magkano', 'package'], a: 'Every project is different, so we quote per project. Tell us what you need and we’ll send an <b>itemised quote</b>, with no surprises.', c: ['@inquire', 'What do you offer?'] },
+    { w: 3, k: ['price', 'cost', 'how much', 'budget', 'rate', 'quote', 'fee', 'magkano', 'package'], a: 'Every project is different, so we quote per project. Tell us what you need and we’ll send an <b>itemised quote</b>, with no surprises.', c: ['@inquire', '@wa', 'What do you offer?'] },
     { w: 3, k: ['how long', 'timeline', 'time', 'days', 'weeks', 'fast', 'deadline', 'when'], a: 'It depends on the number of pages and features. A small site is quicker than a full site with Odoo. We give you a timeline together with your quote.', c: ['@inquire', 'How much?'] },
     { k: ['work', 'portfolio', 'example', 'sample', 'project', 'show me', 'made'], a: 'Here are the sites in this portfolio. Tap one to open a live preview:', c: ['@open:glaze', '@open:pizza', '@open:expo'] },
     { k: ['brand kit'], a: 'Pick a project to open its brand kit:', c: ['@kit:glaze', '@kit:pizza', '@kit:expo'] },
     { k: ['donut', 'glaze'], a: () => `<b>${P('glaze').name}</b>: ${P('glaze').desc}`, c: ['@open:glaze', '@kit:glaze'] },
     { k: ['pizza', 'berlin', 'pankow'], a: () => `<b>${P('pizza').name}</b>: ${P('pizza').desc}`, c: ['@open:pizza', '@kit:pizza'] },
     { k: ['travel', 'expo', 'canton', 'china', 'visa', 'trade fair'], a: () => `<b>${P('expo').name}</b>: ${P('expo').desc}`, c: ['@open:expo', '@kit:expo'] },
-    { w: 2, k: ['contact', 'email', 'phone', 'call', 'talk', 'human', 'person', 'inquir', 'start', 'hire', 'book', 'get started', 'interested', 'avail'], a: 'Great! Tap below to send a short inquiry. It takes a minute.', c: ['@inquire'] },
+    { w: 2, k: ['contact', 'email', 'phone', 'call', 'talk', 'human', 'person', 'inquir', 'start', 'hire', 'book', 'get started', 'interested', 'avail'], a: 'Great! Send a short inquiry, or message us on WhatsApp at <b>0920 247 8918</b>.', c: ['@inquire', '@wa'] },
     { k: ['thank', 'salamat', 'great', 'awesome', 'nice', 'cool'], a: 'You’re welcome! Anything else I can help with?', c: ['What do you offer?', '@inquire'] }
   ];
   const ALIAS = { 'Branding': 'brand', 'Payment on my website': 'payment', 'Inventory': 'inventory', 'Show me a brand kit': 'brand kit', 'Video editing': 'video' };
-  const chipLabel = c => c === '@inquire' ? 'Send an inquiry' : c.startsWith('@open:') ? `Preview ${P(c.slice(6)).name}` : c.startsWith('@kit:') ? `${P(c.slice(5)).name} brand kit` : c;
+  const chipLabel = c => c === '@inquire' ? 'Send an inquiry' : c === '@wa' ? 'Chat on WhatsApp' : c.startsWith('@open:') ? `Preview ${P(c.slice(6)).name}` : c.startsWith('@kit:') ? `${P(c.slice(5)).name} brand kit` : c;
   const add = (html, who) => { const d = document.createElement('div'); d.className = 'msg ' + who; if (who === 'me') d.textContent = html; else d.innerHTML = html; msgs.append(d); msgs.scrollTop = msgs.scrollHeight; return d; };
   const chips = list => {
     $$('.chips-row', msgs).forEach(r => r.remove());
     if (!list?.length) return;
     const r = document.createElement('div'); r.className = 'chips-row';
-    list.forEach((c, i) => { const b = document.createElement('button'); b.type = 'button'; b.textContent = chipLabel(c); if (c === '@inquire') b.className = 'main'; b.style.animationDelay = i * 60 + 'ms'; b.addEventListener('click', () => act(c)); r.append(b); });
+    list.forEach((c, i) => { const b = document.createElement('button'); b.type = 'button'; b.textContent = chipLabel(c); if (c === '@inquire') b.className = 'main'; if (c === '@wa') { b.className = 'main'; b.style.background = '#15803d'; } b.style.animationDelay = i * 60 + 'ms'; b.addEventListener('click', () => act(c)); r.append(b); });
     msgs.append(r); msgs.scrollTop = msgs.scrollHeight;
   };
   const say = (html, list, wait = 650) => {
@@ -1023,6 +1031,7 @@ const CONTACT = { email: 'hellogiovanni07@gmail.com', messenger: '' };
   };
   function act(c) {
     if (c === '@inquire') { add('I’d like to send an inquiry', 'me'); preset = []; renderForm(); setOpen(inq, true, chatBtn); return; }
+    if (c === '@wa') { add('Chat on WhatsApp', 'me'); window.open(waLink(), '_blank', 'noopener'); say('I opened WhatsApp for you. If it didn’t open, message <b>0920 247 8918</b>.', ['What do you offer?']); return; }
     if (c.startsWith('@open:')) { add(chipLabel(c), 'me'); openProject(c.slice(6), 'tab-preview'); return; }
     if (c.startsWith('@kit:')) { add(chipLabel(c), 'me'); openProject(c.slice(5), 'tab-brand'); return; }
     ask(c);
