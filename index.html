@@ -3,14 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Selected Work</title>
+<title>HelloGiovanni07 · Website portfolio: Glaze Bomb, Pizza Max, ExpoBusiness</title>
 <meta name="description" content="Three website builds: a donut shop, a pizzeria and a Canton Fair travel agency, plus the web, marketing and Odoo services behind them.">
 <meta name="theme-color" content="#4361ee">
 <meta name="color-scheme" content="light">
+<link rel="canonical" href="https://hellogiovanni07-commits.github.io/portfolio/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Selected Work · HelloGiovanni07">
+<meta property="og:url" content="https://hellogiovanni07-commits.github.io/portfolio/">
+<meta property="og:site_name" content="HelloGiovanni07">
+<meta property="og:title" content="HelloGiovanni07 · Website portfolio">
 <meta property="og:description" content="Three brands, three very different websites, and the services behind them.">
 <meta property="og:image" content="https://hellogiovanni07-commits.github.io/portfolio/portfolio-shots/glaze.webp">
+<meta property="og:image:width" content="2000">
+<meta property="og:image:height" content="1096">
+<meta property="og:image:alt" content="The Glaze Bomb Donuts menu page, one of the three websites in the portfolio">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ff6a13'/%3E%3Cstop offset='.5' stop-color='%23c62f26'/%3E%3Cstop offset='1' stop-color='%234361ee'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Cpath d='M18 22h28v4H18zm0 8h28v4H18zm0 8h18v4H18z' fill='%23fff'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -61,7 +67,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .top nav a:hover{color:var(--ink);background:rgba(21,26,51,.06)}
 .top nav a.on{color:var(--accent);background:rgba(21,26,51,.05)}
 .top nav .go{background:var(--accent);color:#fff!important;padding:11px 16px;transition:background .4s}
-@media (max-width:420px){.top nav .go{padding:10px 12px;font-size:13px;white-space:nowrap}.logo{font-size:15px}.top .wrap{padding-left:12px}}
+@media (max-width:420px){.top nav .go{padding:10px 12px;font-size:13px;white-space:nowrap}.logo .lt{display:none}.top .wrap{padding-left:12px}}
 .menu-btn{display:none;width:42px;height:42px;border-radius:12px;background:rgba(21,26,51,.06);place-items:center}
 .menu-btn svg{width:20px;height:20px}
 .progress{position:absolute;left:18px;right:18px;bottom:-1px;height:3px;border-radius:3px;overflow:hidden;pointer-events:none}
@@ -261,7 +267,7 @@ a.mcat:hover{transform:translateY(-3px);background:#fff}
 @media (min-width:1000px){.p-stage{grid-template-columns:1.25fr 1fr;grid-template-areas:"title copy" "pizza ticket";align-items:end}}
 .p-title{grid-area:title}
 .p-copy{grid-area:copy}
-.p-title .kick{display:block;font:700 24px/1 var(--hand);color:#c62f26;margin-bottom:10px;rotate:-2deg}
+.p-title .kick{display:block;font:700 24px/1 var(--hand);color:#c62f26;margin-bottom:18px;rotate:-2deg}
 .pizza h2{font-size:clamp(40px,4.6vw,62px);font-weight:800;line-height:.98;letter-spacing:-.04em;color:#1f1f1f}
 .pizza h2 em{font-style:normal;color:#2e7d32}
 .pizza .lede{font-size:17.6px;line-height:1.55;color:#3a3a3a;max-width:34ch;margin-bottom:22px}
@@ -402,15 +408,16 @@ a.mcat:hover{transform:translateY(-3px);background:#fff}
 .sec-head h2{font:800 clamp(36px,4.6vw,56px)/1.05 var(--head);letter-spacing:-.03em;color:var(--ink);margin:6px 0 14px}
 .sec-head p{color:var(--muted);font-size:17px}
 .svc-grid{display:grid;gap:22px}
+@media (min-width:680px) and (max-width:959px){.svc-grid{grid-template-columns:1fr 1fr}.svc:last-child{grid-column:1/-1}}
 @media (min-width:960px){.svc-grid{grid-template-columns:repeat(3,1fr)}}
-.svc{position:relative;background:#fff;border-radius:24px;padding:28px 22px 22px;box-shadow:0 1px 0 rgba(21,26,51,.04),0 24px 50px -30px rgba(21,26,51,.35);transition:transform .4s var(--spring),box-shadow .4s;transform-style:preserve-3d}
+.svc{position:relative;background:#fff;border-radius:24px;padding:28px 22px 22px;box-shadow:0 1px 0 rgba(21,26,51,.04),0 24px 50px -30px rgba(21,26,51,.35);transition:transform .4s var(--spring),box-shadow .4s,opacity .8s var(--ease);transform-style:preserve-3d}
 .svc:hover{box-shadow:0 30px 60px -30px var(--c2)}
 .svc .ic{width:56px;height:56px;border-radius:16px;display:grid;place-items:center;background:linear-gradient(135deg,var(--c1),var(--c2));box-shadow:0 12px 24px -10px var(--c2);margin-bottom:18px;transition:transform .5s var(--spring)}
 .svc:hover .ic{transform:rotate(-8deg) scale(1.08)}
 .svc .ic svg{width:26px;height:26px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .svc .hand{font-size:22px;color:var(--c2)}
 .svc h3{font:800 24px/1.15 var(--head);color:var(--ink);letter-spacing:-.02em;margin:2px 0 14px}
-.svc .addon{position:absolute;top:24px;right:22px;font:700 11px/1 var(--head);letter-spacing:.1em;text-transform:uppercase;color:var(--c2);background:var(--soft);padding:7px 10px;border-radius:999px}
+.svc .addon{position:absolute;top:24px;right:22px;font:700 11px/1 var(--head);letter-spacing:.1em;text-transform:uppercase;color:#1d6b3f;background:var(--soft);padding:7px 10px;border-radius:999px}
 .svc li+li{margin-top:6px}
 .pick{display:flex;gap:12px;width:100%;text-align:left;padding:12px;border-radius:14px;transition:background .2s,box-shadow .2s}
 .pick:hover{background:var(--soft)}
@@ -440,7 +447,20 @@ a.mcat:hover{transform:translateY(-3px);background:#fff}
 @keyframes fly{from{offset-distance:0%}to{offset-distance:100%}}
 footer{background:#fff;border-top:1px solid #eceef5}
 footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:22px 0;font:600 13px/1.4 var(--head);color:var(--muted)}
-footer a{text-decoration:none;color:var(--ink)}
+footer a{text-decoration:none;color:var(--ink);display:inline-block;padding:12px 4px;margin:-12px -4px}
+
+
+/* motion control: paused off-screen, or everywhere when the visitor asks */
+.off *,.off *::before,.off *::after,html.still *,html.still *::before,html.still *::after{animation-play-state:paused!important}
+.motion-btn{width:42px;height:42px;border-radius:12px;background:rgba(21,26,51,.06);display:grid;place-items:center;color:var(--ink);transition:background .2s}
+.motion-btn:hover{background:rgba(21,26,51,.12)}
+.motion-btn svg{width:16px;height:16px}
+.motion-btn .play,html.still .motion-btn .pause{display:none}
+html.still .motion-btn .play{display:block}
+@media (max-width:999px){
+  .g-cloud .hc{display:none}
+  .g-cloud .spr{opacity:.3}
+}
 
 /* =========================================================
    Responsive + motion preferences
@@ -473,12 +493,13 @@ footer a{text-decoration:none;color:var(--ink)}
 
 <header class="top">
   <div class="wrap">
-    <a class="logo" href="#top"><i aria-hidden="true"></i>HelloGiovanni07</a>
+    <a class="logo" href="#top" aria-label="HelloGiovanni07, back to top"><i aria-hidden="true"></i><span class="lt">HelloGiovanni07</span></a>
     <nav id="site-nav" aria-label="Main">
       <a class="lk" href="#glaze" data-sec="glaze">Glaze Bomb</a>
       <a class="lk" href="#pizza" data-sec="pizza">Pizza Max</a>
       <a class="lk" href="#expo" data-sec="expo">ExpoBusiness</a>
       <a class="lk" href="#services" data-sec="services">Services</a>
+      <button class="motion-btn" type="button" aria-pressed="false" aria-label="Pause animations" title="Pause animations"><svg class="pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 4h4v16H6zM14 4h4v16h-4z"/></svg><svg class="play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4l13 8-13 8z"/></svg></button>
       <a class="go" href="#contact">Start a project</a>
       <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
     </nav>
@@ -527,8 +548,8 @@ footer a{text-decoration:none;color:var(--ink)}
       <img class="float f3" data-depth="70" src="portfolio-shots/decor/tomato.webp" alt="" width="420" height="415">
       <img class="float f4" data-depth="-30" src="portfolio-shots/decor/strawberry-sprinkle.webp" alt="" width="480" height="480">
       <div class="deck">
-        <div class="card3d" data-pos="0" data-target="#glaze"><div class="bar"><i></i><i></i><i></i><span>glaze-bomb-donuts</span></div><img src="portfolio-shots/glaze.webp" alt="" width="2000" height="1096"></div>
-        <div class="card3d" data-pos="1" data-target="#pizza"><div class="bar"><i></i><i></i><i></i><span>pizza-max</span></div><img src="portfolio-shots/pizza.webp" alt="" width="2000" height="1099"></div>
+        <div class="card3d" data-pos="0" data-target="#glaze"><div class="bar"><i></i><i></i><i></i><span>glaze-bomb-donuts</span></div><img src="portfolio-shots/glaze.webp" alt="" width="2000" height="1096" fetchpriority="high"></div>
+        <div class="card3d" data-pos="1" data-target="#pizza"><div class="bar"><i></i><i></i><i></i><span>pizza-max</span></div><img src="portfolio-shots/pizza.webp" alt="" width="2000" height="1100"></div>
         <div class="card3d" data-pos="2" data-target="#expo"><div class="bar"><i></i><i></i><i></i><span>expobusiness-travel</span></div><img src="portfolio-shots/travel.webp" alt="" width="2000" height="1096"></div>
       </div>
       <div class="tag-note"><b>tap a card!</b><span id="deck-name">Glaze Bomb · donut shop</span></div>
@@ -641,7 +662,7 @@ footer a{text-decoration:none;color:var(--ink)}
   <div class="wrap">
     <div class="proj-grid">
       <div class="rv">
-        <span class="hx-live">Project 03 · Canton Fair Phase 1 is open now</span>
+        <span class="hx-live">Project 03 · <span id="liveLabel">Next Canton Fair: Spring 2027, Phase 1</span></span>
         <h2 id="expo-title"><span class="w"><span>The Canton Fair,</span></span> <span class="w"><span class="hl">fully managed</span></span> <span class="w"><span>for your business.</span></span></h2>
         <p class="lede">ExpoBusiness Travel Services: corporate travel and MICE for Philippine companies. Buyer badges, China visas, flights, hotels near the venue, interpreters and factory visits, under one coordinator.</p>
         <div class="g-acts">
@@ -754,6 +775,32 @@ footer a{text-decoration:none;color:var(--ink)}
 <script>
 (() => {
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  /* motion: loops only run for sections on screen, and not at all when the visitor pauses them */
+  let still = false;
+  try { still = localStorage.getItem('pf-still') === '1'; } catch {}
+  const live = new Set(), resumers = [];
+  const moving = id => !reduce && !still && !document.hidden && live.has(id);
+  const resumeAll = () => resumers.forEach(f => f());
+  const seen = new IntersectionObserver(es => {
+    es.forEach(e => {
+      e.target.classList.toggle('off', !e.isIntersecting);
+      if (e.isIntersecting) live.add(e.target.id); else live.delete(e.target.id);
+    });
+    resumeAll();
+  }, { rootMargin: '120px 0px' });
+  document.querySelectorAll('main > section').forEach(sec => seen.observe(sec));
+  document.addEventListener('visibilitychange', resumeAll);
+  const motionBtn = document.querySelector('.motion-btn');
+  const setStill = v => {
+    still = v; document.documentElement.classList.toggle('still', v);
+    motionBtn.setAttribute('aria-pressed', v);
+    motionBtn.setAttribute('aria-label', v ? 'Play animations' : 'Pause animations');
+    motionBtn.title = v ? 'Play animations' : 'Pause animations';
+    try { localStorage.setItem('pf-still', v ? '1' : '0'); } catch {}
+    resumeAll();
+  };
+  if (reduce) motionBtn.hidden = true; else setStill(still);
+  motionBtn.addEventListener('click', () => setStill(!still));
   const fine = matchMedia('(pointer: fine)').matches;
   const root = document.documentElement;
   const $ = (s, el = document) => el.querySelector(s);
@@ -772,7 +819,7 @@ footer a{text-decoration:none;color:var(--ink)}
   requestAnimationFrame(() => $('#hero').classList.add('ready'));
   const words = $$('.rotator b'); let w = 0;
   if (!reduce) setInterval(() => {
-    if (document.hidden) return;
+    if (!moving('hero')) return;
     const cur = words[w]; cur.classList.remove('on'); cur.classList.add('out');
     setTimeout(() => cur.classList.remove('out'), 700);
     w = (w + 1) % words.length; words[w].classList.add('on');
@@ -801,7 +848,7 @@ footer a{text-decoration:none;color:var(--ink)}
   const chipRow = $('.chips');
   chipRow.addEventListener('focusin', () => paused = true);
   chipRow.addEventListener('focusout', () => paused = false);
-  if (!reduce) setInterval(() => { if (!paused && !document.hidden) setActive(active + 1); }, 3200);
+  if (!reduce) setInterval(() => { if (!paused && moving('hero')) setActive(active + 1); }, 3200);
 
   const blob = $('.cursor-blob'), deck = $('.deck'), hero = $('#hero');
   let tx = innerWidth * .6, ty = innerHeight * .4, bx = tx, by = ty;
@@ -814,11 +861,14 @@ footer a{text-decoration:none;color:var(--ink)}
       $$('.float', hero).forEach(f => { const d = +f.dataset.depth; f.style.transform = `translate(${nx * d}px,${ny * d}px)`; });
     });
     hero.addEventListener('pointerleave', () => deck.style.transform = '');
-    (function loop() {
+    let blobRaf = 0;
+    const loop = () => {
       bx += (tx - bx) * .08; by += (ty - by) * .08;
       blob.style.transform = `translate(${bx - 170}px,${by - 170}px)`;
-      requestAnimationFrame(loop);
-    })();
+      blobRaf = Math.abs(tx - bx) + Math.abs(ty - by) > .5 ? requestAnimationFrame(loop) : 0;
+    };
+    hero.addEventListener('pointermove', () => { if (!blobRaf) blobRaf = requestAnimationFrame(loop); });
+    loop();
   } else blob.style.display = 'none';
 
   /* counters (numbers are already in the HTML; this only animates them) */
@@ -864,25 +914,28 @@ footer a{text-decoration:none;color:var(--ink)}
   onScroll();
 
   /* shared: drag-to-spin helper */
-  const spinner = (el, target, idle, onSet) => {
+  const spinner = (el, target, idle, secId) => {
     let angle = 0, v = reduce ? 0 : idle, dragging = false, last = 0;
     const at = e => { const r = el.getBoundingClientRect(); return Math.atan2(e.clientY - (r.top + r.height / 2), e.clientX - (r.left + r.width / 2)) * 180 / Math.PI; };
-    const set = () => { target.style.rotate = angle + 'deg'; el.setAttribute('aria-valuenow', ((Math.round(angle) % 360) + 360) % 360); };
+    const set = aria => { target.style.rotate = angle + 'deg'; if (aria) el.setAttribute('aria-valuenow', ((Math.round(angle) % 360) + 360) % 360); };
     el.addEventListener('pointerdown', e => { if (e.target.closest('button')) return; dragging = true; last = at(e); el.setPointerCapture(e.pointerId); });
     el.addEventListener('pointermove', e => {
       if (!dragging) return;
       let d = at(e) - last; if (d > 180) d -= 360; if (d < -180) d += 360;
-      angle += d; v = d; last = at(e); set();
+      angle += d; v = d; last = at(e); set(true);
     });
     const stop = () => dragging = false;
     el.addEventListener('pointerup', stop); el.addEventListener('pointercancel', stop);
-    el.addEventListener('keydown', e => { if (e.key === 'ArrowRight' || e.key === 'ArrowUp') { angle += 15; set(); e.preventDefault(); } if (e.key === 'ArrowLeft' || e.key === 'ArrowDown') { angle -= 15; set(); e.preventDefault(); } });
-    const kickSpin = s => { v = s; };
-    if (!reduce) (function tick() {
-      if (!dragging) { v += (idle - v) * .02; angle += v; set(); }
-      requestAnimationFrame(tick);
-    })();
-    return { kick: kickSpin };
+    el.addEventListener('keydown', e => { if (e.key === 'ArrowRight' || e.key === 'ArrowUp') { angle += 15; set(true); e.preventDefault(); } if (e.key === 'ArrowLeft' || e.key === 'ArrowDown') { angle -= 15; set(true); e.preventDefault(); } });
+    let raf = 0;
+    const tick = () => {
+      if (!moving(secId) && !dragging) { raf = 0; return; }
+      if (!dragging) { v += (idle - v) * .02; angle += v; set(false); }
+      raf = requestAnimationFrame(tick);
+    };
+    const resume = () => { if (!raf && moving(secId)) raf = requestAnimationFrame(tick); };
+    resumers.push(resume);
+    return { kick: sp => { v = sp; resume(); } };
   };
 
   /* ---------- 01 Glaze: the menu hero (orbits, cloud, flavour of the week) ---------- */
@@ -896,9 +949,9 @@ footer a{text-decoration:none;color:var(--ink)}
   const CLOUD = [['choco-sprinkle', 3, 12, 92, .6, 0, -14, 1], ['iced-spanish-latte', 17, 7, 64, .3, 2, 14, 0], ['almond-snowcap', 33, 5, 78, .5, 0, -6, 0], ['berry-coconut-snow', 0, 47, 112, .9, 0, 12, 1], ['iced-americano', 4, 84, 84, .7, 0, -10, 1], ['cappuccino-swirl', 20, 93, 100, .8, 0, 8, 0], ['cookie-speckle', 55, 25, 54, .25, 3, -8, 0], ['caramel-macchiato', 96, 9, 78, .6, 0, 16, 1], ['tiramisu-dust', 91, 92, 72, .4, 2, 10, 1], ['original-glaze', 64, 5, 60, .3, 2, -20, 0], ['hazelnut-crunch', 50, 96, 120, 1.2, 1.5, -18, 0]];
   const HSPR = ['#ff6a13', '#ffd23f', '#3ec6ff', '#7cf29c', '#a974ff', '#ff8fb4', '#3a1e10'];
   const spr = Array.from({ length: 26 }, (_, k) => `<i class="spr" style="--x:${(k * 37 + 11) % 100}%;--y:${(k * 53 + 7) % 100}%;--c:${HSPR[k % HSPR.length]};--r:${(k * 47) % 180}deg;--t:${(3 + (k % 5) * .7).toFixed(1)}s"></i>`).join('');
-  $('#gCloud').innerHTML = spr + CLOUD.map(([s, x, y, sz, dp, bl, r, m]) => `<span class="hc${m ? ' hc--m' : ''}" data-depth="${dp * 40}" style="--x:${x}%;--y:${y}%;--s:${sz}px;--r:${r}deg;--b:${bl}px;--t:${(3.6 + (sz % 7) * .55).toFixed(2)}s"><img src="${G}${s}-sm.webp" alt="" width="160" height="160" loading="lazy"></span>`).join('');
+  $('#gCloud').innerHTML = spr + CLOUD.map(([s, x, y, sz, dp, bl, r, m]) => `<span class="hc${m ? ' hc--m' : ''}${x >= 88 ? ' hc--r' : ''}" data-depth="${dp * 40}" style="--x:${x}%;--y:${y}%;--s:${sz}px;--r:${r}deg;--b:${bl}px;--t:${(3.6 + (sz % 7) * .55).toFixed(2)}s"><img src="${G}${s}-sm.webp" alt="" width="160" height="160" loading="lazy"></span>`).join('');
   const gMain = $('.g-main'), gImg = $('#gImg');
-  const gSpin = spinner(gMain, gImg, .06);
+  const gSpin = spinner(gMain, gImg, .06, 'glaze');
   const boop = () => { gMain.classList.remove('boop'); void gMain.offsetWidth; gMain.classList.add('boop'); gSpin.kick(14); };
   let fotw = true;
   $$('.oi').forEach(b => b.addEventListener('click', () => {
@@ -921,7 +974,7 @@ footer a{text-decoration:none;color:var(--ink)}
   /* ---------- 02 Pizza: board, pull a slice, pizzas, today's oven ---------- */
   const PIZZAS = [['garden', 'Veggie Garden', 13.2], ['salami', 'Salami Max', 13.0], ['marg', 'Margherita Deluxe', 12.5], ['funghi', 'Funghi Fresco', 12.9], ['diavolo', 'Diavolo', 13.5]];
   const pPizza = $('#pPizza'), pSpin = $('#pSpin');
-  spinner(pPizza, pSpin, .1);
+  spinner(pPizza, pSpin, .1, 'pizza');
   $('#pullSlice').addEventListener('click', () => pPizza.classList.toggle('pulled'));
   let pz = 0;
   $('#pName').addEventListener('click', () => {
@@ -934,13 +987,18 @@ footer a{text-decoration:none;color:var(--ink)}
   });
   $('#pAdd').addEventListener('click', e => { const b = e.currentTarget, h = b.innerHTML; b.textContent = 'Added ✓'; setTimeout(() => b.innerHTML = h, 1300); });
   (() => {
-    const now = new Date(), d = now.getDay(), h = now.getHours() + now.getMinutes() / 60;
-    $('#todayDate').textContent = now.toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short' }).toUpperCase();
-    const hours = d === 0 ? [12, 23] : (d === 5 || d === 6) ? [11, 25] : [11, 23];
-    const open = (h >= hours[0] && h < hours[1]) || (hours[1] > 24 && h < hours[1] - 24);
-    const close = hours[1] > 24 ? '01:00' : hours[1] + ':00';
+    // the shop is in Berlin, so its hours follow Berlin time whatever the visitor's clock says
+    const now = new Date();
+    const P = Object.fromEntries(new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Berlin', weekday: 'short', day: 'numeric', month: 'short', hour: 'numeric', minute: 'numeric', hourCycle: 'h23' }).formatToParts(now).map(x => [x.type, x.value]));
+    const d = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(P.weekday), h = +P.hour + +P.minute / 60;
+    $('#todayDate').textContent = `${P.weekday} ${P.day} ${P.month}`.toUpperCase();
+    const HOURS = [[12, 23], [11, 23], [11, 23], [11, 23], [11, 23], [11, 25], [11, 25]]; // Sun..Sat; 25 = 01:00 the next night
+    const [o, c] = HOURS[d], prev = HOURS[(d + 6) % 7];
+    const late = prev[1] > 24 && h < prev[1] - 24;
+    const open = late || (h >= o && h < Math.min(c, 24)) || (c > 24 && h >= o);
+    const close = late || c > 24 ? '01:00' : `${c}:00`;
     const el = $('#todayOpen'); el.classList.toggle('is-closed', !open);
-    el.lastElementChild.textContent = open ? `Open now · until ${close}` : `Closed now · opens at ${hours[0]}:00`;
+    el.lastElementChild.textContent = open ? `Open now · until ${close}` : h < o ? `Closed now · opens today at ${o}:00` : `Closed now · opens tomorrow at ${HOURS[(d + 1) % 7][0]}:00`;
   })();
   const AREAS = [['Pankow', ['13187', '13189']], ['Niederschönhausen', ['13156']], ['Rosenthal, Wilhelmsruh', ['13158']], ['Prenzlauer Berg', ['10437', '10439', '10409']], ['Weißensee', ['13086', '13088']]];
   $('#zipForm').addEventListener('submit', e => {
@@ -952,6 +1010,14 @@ footer a{text-decoration:none;color:var(--ink)}
     msg.textContent = hit ? `Yes, we deliver to ${hit[0]} in about 30 min.` : 'Sorry, that is outside the delivery area. Pickup is always possible.';
     msg.classList.add(hit ? 'ok' : 'no');
   });
+
+  /* ---------- 03 Expo: live fair label (dates from the ExpoBusiness site) ---------- */
+  (() => {
+    const SESSIONS = [['Spring 2027', [['2027-04-15', '2027-04-19'], ['2027-04-23', '2027-04-27'], ['2027-05-01', '2027-05-05']]], ['Autumn 2027', [['2027-10-15', '2027-10-19'], ['2027-10-23', '2027-10-27'], ['2027-10-31', '2027-11-04']]]];
+    const all = SESSIONS.flatMap(([n, ph]) => ph.map(([a, b], i) => ({ n, p: i + 1, start: new Date(a + 'T09:30:00+08:00'), end: new Date(b + 'T18:00:00+08:00') })));
+    const t = new Date(), on = all.find(x => t >= x.start && t <= x.end), next = on || all.find(x => x.start > t);
+    if (next) $('#liveLabel').textContent = on ? `Canton Fair Phase ${on.p} is open now` : `Next Canton Fair: ${next.n}, Phase ${next.p}`;
+  })();
 
   /* ---------- 03 Expo: the lanyard (pendulum, flip, expos, industries) ---------- */
   (() => {
@@ -967,7 +1033,7 @@ footer a{text-decoration:none;color:var(--ink)}
       const still = Math.abs(w) < .0008 && Math.abs(th) < .0008 && Math.abs(card) < .0008 && Math.abs(cardW) < .001;
       if (visible && (!still || dragging)) raf = requestAnimationFrame(step); else { raf = 0; last = 0; }
     };
-    const kick = () => { if (!raf && !reduce) raf = requestAnimationFrame(step); };
+    const kick = () => { if (!raf && !reduce && !still) raf = requestAnimationFrame(step); };
     const anchor = () => { const r = pend.getBoundingClientRect(); return { x: r.left, y: r.top }; };
     const angTo = e => { const a = anchor(); return Math.max(-.32, Math.min(.32, Math.atan2(-(e.clientX - a.x), e.clientY - a.y))); };
     if (!reduce) {
@@ -1003,7 +1069,7 @@ footer a{text-decoration:none;color:var(--ink)}
       [...dots.children].forEach((d, j) => d.setAttribute('aria-pressed', String(j === ev)));
       w += reduce ? 0 : .18; kick();
     };
-    const autoCycle = () => { clearTimeout(cycleT); if (!reduce) cycleT = setTimeout(() => { if (!dragging && !badge.classList.contains('flipped') && visible) showEvent(ev + 1); autoCycle(); }, 6500); };
+    const autoCycle = () => { clearTimeout(cycleT); if (!reduce) cycleT = setTimeout(() => { if (!dragging && !badge.classList.contains('flipped') && visible && !still) showEvent(ev + 1); autoCycle(); }, 6500); };
     [...dots.children].forEach((d, j) => d.addEventListener('click', () => { showEvent(j); autoCycle(); }));
     autoCycle();
     // industries type into the badge
