@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Hello Giovanni · Website portfolio: Glaze Bomb, Pizza Max, ExpoBusiness</title>
-<meta name="description" content="Websites I designed and built: Glaze Bomb Donuts, Pizza Max Berlin and ExpoBusiness Travel Services. Open any project to preview the site, its branding and the business behind it.">
+<title>Hello Giovanni · Website portfolio: GioCoffee, Glaze Bomb, Pizza Max, ExpoBusiness</title>
+<meta name="description" content="Websites I designed and built: GioCoffee, Glaze Bomb Donuts, Pizza Max Berlin and ExpoBusiness Travel Services. Open any project to preview the site, its branding and the business behind it.">
 <meta name="theme-color" content="#4a1fc0">
 <meta name="color-scheme" content="light">
 <link rel="canonical" href="https://hellogiovanni07-commits.github.io/portfolio/">
@@ -12,7 +12,7 @@
 <meta property="og:url" content="https://hellogiovanni07-commits.github.io/portfolio/">
 <meta property="og:site_name" content="Hello Giovanni">
 <meta property="og:title" content="Hello Giovanni · Website portfolio">
-<meta property="og:description" content="Three brands, three very different websites. Preview each site, its branding and the business behind it.">
+<meta property="og:description" content="Four brands, four very different websites. Preview each site, its branding and the business behind it.">
 <meta property="og:image" content="https://hellogiovanni07-commits.github.io/portfolio/portfolio-shots/glaze.webp">
 <meta property="og:image:width" content="2000">
 <meta property="og:image:height" content="1096">
@@ -480,14 +480,14 @@ footer a{text-decoration:none;color:var(--ink);display:inline-block;padding:12px
       <div>
         <span class="tagline">“Your brand, built to be remembered.”</span>
         <h1 id="hero-title"><span>Websites</span> <span class="tp">people</span> <b>remember.</b></h1>
-        <p>Three brands, three very different websites. Open any project to preview the site, its brand kit and its business plan.</p>
+        <p>Four brands, four very different websites. Open any project to preview the site, its brand kit and its business plan.</p>
       </div>
       <div class="hero-side">
       <ul class="offer" aria-label="What we offer"><li><i aria-hidden="true"></i><span>Website design</span></li><li><i aria-hidden="true"></i><span>Branding</span></li><li><i aria-hidden="true"></i><span>Social media &amp; video</span></li></ul>
       <div class="stats" aria-label="At a glance">
-        <div class="stat"><b>3</b><span>Websites</span></div>
-        <div class="stat"><b>27</b><span>Pages</span></div>
-        <div class="stat"><b>3</b><span>Brand kits</span></div>
+        <div class="stat"><b>4</b><span>Websites</span></div>
+        <div class="stat"><b>31</b><span>Pages</span></div>
+        <div class="stat"><b>4</b><span>Brand kits</span></div>
       </div>
       </div>
     </div>
@@ -591,6 +591,32 @@ footer a{text-decoration:none;color:var(--ink);display:inline-block;padding:12px
    ========================================================= */
 const BASE = 'https://hellogiovanni07-commits.github.io';
 const PROJECTS = [
+  {
+    id: 'giocoffee', name: 'GioCoffee', short: 'GC', color: '#0e6b4e', cat: 'Food & drink', status: 'mock',
+    shot: 'portfolio-shots/giocoffee.webp', url: `${BASE}/giocoffee/`, brand: `${BASE}/giocoffee/brand/`,
+    pages: [['Home', 'index.html'], ['Menu', 'menu.html'], ['Rewards', 'rewards.html'], ['Stores', 'stores.html'], ['Brand kit', 'brand/']],
+    count: '4 pages', desc: 'A coffee chain for BGC and Makati: the barista builds your 3D cup and writes your name on it, 41 Blender-rendered products, a -ber months display, a 3D storefront at dusk, GioStars and “Gio”, a barista chat that takes your order.',
+    tags: ['3D cups', 'Blender renders', 'Drink builder', 'Rewards', 'Brand kit'],
+    brandKit: {
+      logoBg: 'radial-gradient(120% 80% at 70% 30%,#fbf8f2,#f3ebdd)',
+      logo: '<span style="display:flex;align-items:center;gap:12px"><svg width="54" height="54" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="31" fill="#0E6B4E"/><circle cx="32" cy="32" r="27" fill="none" stroke="#fff" stroke-width="1.6"/><path d="M38.2 10.6a7 7 0 1 0 1.9 7.6H34" fill="none" stroke="#C9A15B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><rect x="19" y="25" width="26" height="4.6" rx="2.3" fill="#fff"/><path d="M21 31h22l-2.6 18.4a3 3 0 0 1-3 2.6H26.6a3 3 0 0 1-3-2.6z" fill="#fff"/><path d="M22.1 36.4h19.8l-.9 6.6H23z" fill="#C9A15B"/><circle cx="32" cy="39.7" r="2.1" fill="#fff"/></svg><b style="font:800 30px/1 var(--head);color:#14332b;letter-spacing:-.03em">Gio<span style="color:#0e6b4e;font-weight:600">Coffee</span></b></span>',
+      colors: [['Gio green', '#0E6B4E'], ['House green', '#14332B'], ['Mint', '#D7EBE2'], ['Crema', '#F3EBDD'], ['Gold', '#C9A15B'], ['Gold light', '#F2DDB0'], ['Espresso', '#3B2418']],
+      type: [['Plus Jakarta Sans', 800, 'Brewed for you, by name.', 'Headings'], ['Inter', 400, 'Benguet arabica, roasted in Manila.', 'Body text'], ['Caveat', 700, 'Giovanni', 'The barista’s handwriting']],
+      voice: ['Warm', 'Crafted', 'Neighbourly']
+    },
+    details: {
+      'Business overview': 'GioCoffee is a concept specialty-coffee chain for Metro Manila: handcrafted espresso drinks, Filipino favourites (ube, Spanish latte, ensaymada) and a ritual built around your name written on every cup. Flagship Reserve store on 5th Ave, BGC, plus Uptown (24 hours), Legazpi Village and Rockwell.',
+      Industry: 'Food & drink · specialty coffee chain',
+      Location: 'Bonifacio Global City (Taguig) and Makati, Metro Manila, Philippines',
+      'Target customers': 'Office workers in BGC and Makati (25–40) who buy coffee daily, students and remote workers who stay with a laptop, and weekend families at Rockwell and Uptown.',
+      'Products & pricing': 'Drinks ₱140–₱235 (Americano to seasonal frappés) in four sizes, bakery ₱95–₱175, whole-bean coffee ₱560–₱620 per 250 g, tumblers and mugs ₱690–₱1,250, gift cards ₱300–₱5,000.',
+      'Website & brand': 'Website design and build (4 pages): a live 3D cup assembled with the customer’s name; 41 products modelled and rendered in Blender (Cycles); a -ber months plinth display on the menu; a Blender storefront diorama at dusk with live store status on the stores page; drink builder, GioStars rewards and redeem catalogue, roast slider and origin routes, gift-card designer, store finder with hours, cart with pick-up, drive-thru and delivery, and “Gio”, a barista chat. Brand kit in 22 chapters: logo, colour, type, textures, UI kit, motion, 3D render rules, positioning and personas, the -ber months campaign, always-on campaigns, social system, CRM emails, delivery and merch, launch checklist and downloads.',
+      'Marketing plan': 'Launch with “your name on the cup” social posts and a free-drink sign-up offer for GioStars. The -ber months campaign “Pasko na, basically.” runs September to December across Instagram, TikTok, Grab and foodpanda, EDSA and BGC out-of-home, email and push. Always on: double-star Tuesdays for Gold members, the tumbler discount (₱10 off and 5 ★), office-tower sampling in BGC and Makati, and Taglish social content on three pillars (the cup with your name, the stores, the beans).',
+      'Goals & milestones': 'Year 1: 4 stores and 40,000 GioStars members, 45% of orders through order-ahead. Year 2: 2 more stores (Ortigas, Alabang) and a roastery café.',
+      'Revenue model': 'In-store and order-ahead drink sales (about 75%), bakery (15%), beans and merch (7%), gift cards and corporate catering (3%). Rewards programme drives repeat visits.',
+      'Budget & timeline': 'Proposed (concept): about ₱20M for the first four stores (fit-out ₱3.5–4.5M each, ₱6M for the 5th Ave Reserve with its slow bar and drive-thru) and ₱1.2M for launch marketing. Twelve months from first lease to fourth opening: 5th Ave Reserve in month 4, Uptown in month 6, Legazpi Village in month 9, Rockwell in month 12.'
+    }
+  },
   {
     id: 'glaze', name: 'Glaze Bomb Donuts', short: 'GB', color: '#e85706', cat: 'Food & drink', status: 'mock',
     shot: 'portfolio-shots/glaze.webp', url: `${BASE}/glaze-bomb-donuts/`, brand: `${BASE}/glaze-bomb-donuts/brand/`,
