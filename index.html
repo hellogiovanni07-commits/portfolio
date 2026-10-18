@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Hello Giovanni · Website portfolio: Glaze Bomb, Pizza Max, ExpoBusiness</title>
 <meta name="description" content="Websites I designed and built: Glaze Bomb Donuts, Pizza Max Berlin and ExpoBusiness Travel Services. Open any project to preview the site, its branding and the business behind it.">
-<meta name="theme-color" content="#1f2a6b">
+<meta name="theme-color" content="#4a1fc0">
 <meta name="color-scheme" content="light">
 <link rel="canonical" href="https://hellogiovanni07-commits.github.io/portfolio/">
 <meta property="og:type" content="website">
@@ -18,10 +18,10 @@
 <meta property="og:image:height" content="1096">
 <meta property="og:image:alt" content="The Glaze Bomb Donuts menu page, one of the websites in the portfolio">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231f2a6b'/%3E%3Cpath d='M18 22h28v4H18zm0 8h28v4H18zm0 8h18v4H18z' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%235b2bd9'/%3E%3Cstop offset='.6' stop-color='%239447d6'/%3E%3Cstop offset='1' stop-color='%23ec93cf'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Arial,Helvetica,sans-serif' font-weight='900' font-size='28' fill='%23fff'%3Ehg%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&family=Caveat:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,500;0,600;0,700;0,800;1,800&family=Inter:wght@400;500;600&family=Caveat:wght@700&display=swap" rel="stylesheet">
 <style>
 /* =========================================================
    Tokens (TechNext deck style)
@@ -32,7 +32,8 @@
   --hand:"Caveat",cursive;
   --ink:#1f1f3d; --text:#4c4c63; --muted:#6c6c80;
   --line:#e7e4e9; --soft:#faf9fb; --chip:#f3f2f6;
-  --blue:#3167ca; --blue-d:#2552a8; --navy:#1f2a6b; --sky:#a9c8ff;
+  --blue:#5b2bd9; --blue-d:#4a1fc0; --navy:#2a1170; --sky:#e4dafe; --pink:#b8327f; --orchid:#ec93cf; --lav:#efe9ff; --lav-2:#d9ccfb;
+  --grad:linear-gradient(115deg,#4317b8 0%,#5b2bd9 38%,#9447d6 70%,#d877c4 100%);
   --green:#1f8a5b;
   --shadow:0 1px 2px rgba(31,31,61,.05),0 10px 24px -16px rgba(31,31,61,.22);
   --shadow-up:0 2px 4px rgba(31,31,61,.06),0 24px 40px -22px rgba(31,31,61,.35);
@@ -54,9 +55,9 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .skip:focus{top:12px}
 .hand{font:700 30px/1 var(--hand);color:var(--sky)}
 .caps{font:700 11.5px/1 var(--head);letter-spacing:.08em;text-transform:uppercase}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:42px;padding:0 18px;border-radius:10px;font:700 14.5px/1 var(--head);text-decoration:none;transition:background .2s,box-shadow .2s,transform .2s}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:42px;padding:0 18px;border-radius:999px;font:700 14.5px/1 var(--head);text-decoration:none;transition:background .2s,box-shadow .2s,transform .2s}
 .btn svg{width:16px;height:16px}
-.btn-blue{background:var(--blue);color:#fff}
+.btn-blue{background:var(--blue);color:#fff;box-shadow:0 8px 18px -10px rgba(91,43,217,.8)}
 .btn-blue:hover{background:var(--blue-d)}
 .btn-line{background:#fff;color:var(--ink);box-shadow:inset 0 0 0 1px var(--line)}
 .btn-line:hover{box-shadow:inset 0 0 0 1px #c9c6d1}
@@ -66,7 +67,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .status{display:inline-flex;align-items:center;gap:6px;padding:4px 8px;border-radius:999px;font:700 11px/1 var(--head);letter-spacing:.06em;text-transform:uppercase}
 .status::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
 .status.live{background:#e5f6ee;color:var(--green)}
-.status.mock{background:#eef2fd;color:var(--blue)}
+.status.mock{background:#f3edff;color:var(--blue)}
 .rv{opacity:0;transform:translateY(16px)}
 .rv.in{opacity:1;transform:none;transition:opacity .7s var(--ease),transform .7s var(--ease)}
 
@@ -78,8 +79,9 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .top.solid{background:rgba(255,255,255,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line)}
 .logo{display:flex;align-items:center;gap:10px;text-decoration:none;font:800 17px/1 var(--head);color:#fff;transition:color .3s}
 .top.solid .logo{color:var(--ink)}
-.logo i{width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,#6fa0f5,#3167ca);display:grid;place-items:center;box-shadow:inset 0 0 0 1px rgba(255,255,255,.25)}
-.logo i::before{content:"";width:13px;height:2px;border-radius:2px;background:#fff;box-shadow:0 -5px 0 #fff,0 5px 0 #fff}
+.logo i{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,#5b2bd9,#9447d6 60%,#ec93cf);display:grid;place-items:center;font:800 14px/1 var(--head);font-style:normal;letter-spacing:-.04em;color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.25)}
+.logo b{display:flex;flex-direction:column;font-weight:800;font-size:16px;line-height:1;letter-spacing:.06em}.logo b span{margin-top:3px;font-weight:600;font-size:9.5px;letter-spacing:.32em;color:var(--sky);transition:color .3s}
+.top.solid .logo b span{color:var(--blue)}
 .top nav{display:flex;align-items:center;gap:6px}
 .top nav a{font:600 14.5px/1 var(--head);text-decoration:none;color:rgba(255,255,255,.82);padding:10px 12px;border-radius:9px;transition:color .2s,background .2s}
 .top nav a:hover{color:#fff;background:rgba(255,255,255,.1)}
@@ -92,20 +94,42 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 /* =========================================================
    Hero (launcher header)
    ========================================================= */
-.hero{position:relative;color:#fff;padding:120px 0 120px;background:
-  radial-gradient(60% 90% at 90% 0%,rgba(111,160,245,.4),transparent 60%),
-  radial-gradient(50% 70% at 0% 100%,rgba(33,183,153,.14),transparent 60%),
-  linear-gradient(135deg,#1a2257,#1f2a6b 45%,#3a55c4);overflow:hidden;isolation:isolate}
-.hero::before{content:"";position:absolute;inset:0;z-index:-1;background-image:radial-gradient(rgba(255,255,255,.12) 1px,transparent 1px);background-size:22px 22px;-webkit-mask:linear-gradient(180deg,#000,transparent 85%);mask:linear-gradient(180deg,#000,transparent 85%)}
+.hero{position:relative;color:#fff;padding:124px 0 190px;background:var(--grad);overflow:hidden;isolation:isolate}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:26px;z-index:1;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 26' preserveAspectRatio='none'%3E%3Cpath d='M0 14L12 8L22 15L35 6L47 13L58 9L70 16L83 7L96 14L108 10L121 17L133 8L146 13L158 6L170 15L183 9L195 14L208 7L221 15L232 10L240 13V26H0Z' fill='%23faf9fb'/%3E%3C/svg%3E") 0 0/480px 100% repeat-x}
+.deco{position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+.deco i{position:absolute;display:block}
+.deco .panel{top:0;bottom:0;right:16%;width:20%;background:linear-gradient(180deg,rgba(236,147,207,0),rgba(236,147,207,.38))}
+.deco .panel.lv{right:auto;left:62%;width:9%;background:linear-gradient(180deg,rgba(217,204,251,.22),rgba(217,204,251,.05))}
+.deco .rays{right:-30%;bottom:-60%;width:120%;aspect-ratio:1;border-radius:50%;background:repeating-conic-gradient(rgba(255,255,255,.07) 0 5deg,transparent 5deg 13deg);-webkit-mask:radial-gradient(closest-side,#000 30%,transparent);mask:radial-gradient(closest-side,#000 30%,transparent)}
+.deco .dots{left:-40px;top:70px;width:300px;height:260px;background:radial-gradient(circle,rgba(255,255,255,.32) 1.6px,transparent 2.2px) 0 0/13px 13px;-webkit-mask:radial-gradient(closest-side,#000 25%,transparent);mask:radial-gradient(closest-side,#000 25%,transparent)}
+.deco .cloud{bottom:-40px;height:150px;border-radius:50%;background:radial-gradient(closest-side,rgba(255,255,255,.55),rgba(255,255,255,0));filter:blur(4px)}
+.deco .c1{left:-6%;width:44%}.deco .c2{left:30%;width:36%;bottom:-70px;opacity:.7}.deco .c3{right:-8%;width:42%}
+.tape{position:absolute;left:-5%;right:-5%;z-index:0;overflow:hidden;background:#2a1170;color:#fff;padding:9px 0;box-shadow:0 10px 24px -10px rgba(20,6,60,.6);transform:rotate(-4deg)}
+.tape>div{display:inline-flex;white-space:nowrap;animation:marq 40s linear infinite;font:italic 800 14px/1 var(--head);letter-spacing:.16em;text-transform:uppercase}
+.tape span{padding:0 18px}.tape span::after{content:"";display:inline-block;width:7px;height:7px;margin-left:36px;vertical-align:middle;background:var(--orchid);transform:rotate(45deg)}
+.hero .tape{bottom:96px}
+@keyframes marq{to{transform:translateX(-50%)}}
 .hero-grid{display:grid;gap:36px;align-items:end}
 @media (min-width:900px){.hero-grid{grid-template-columns:1.4fr auto}}
-.hero h1{font:800 clamp(40px,5vw,62px)/1.04 var(--head);letter-spacing:-.025em;margin:12px 0 16px;max-width:15ch}
-.hero h1 .hl{background:linear-gradient(transparent 72%,rgba(111,160,245,.55) 72%,rgba(111,160,245,.55) 91%,transparent 91%)}
-.hero p{font-size:clamp(16px,1.4vw,18px);color:#d6dcf3;max-width:52ch}
+.hero h1{font:300 clamp(40px,5.4vw,70px)/1 var(--head);letter-spacing:-.02em;text-transform:uppercase;margin:16px 0 18px;text-shadow:0 4px 18px rgba(30,8,90,.25)}
+.hero h1>span{display:block}
+.hero h1 b{display:block;font-weight:800;letter-spacing:-.03em}
+.tp{display:inline-block;background:#fff;color:var(--blue);padding:.04em .22em .02em;font-weight:800;text-shadow:none;transform:rotate(-2.5deg);box-shadow:0 12px 24px -12px rgba(30,8,90,.7)}
+.hero h1 .tp{display:table;margin:.08em 0 .1em -.05em;font-size:.82em}
+.hero p{font-size:clamp(16px,1.4vw,18px);color:#fff;max-width:52ch;text-shadow:0 1px 10px rgba(30,8,90,.35)}
+.tagline{display:block;font:italic 600 clamp(16px,1.5vw,19px)/1.3 var(--body);color:#fff;opacity:.92}
+.offer{display:grid;gap:10px;margin-top:22px}
+.offer li{display:flex;align-items:center;gap:10px}
+.offer li:nth-child(odd) span{transform:rotate(-2deg)}.offer li:nth-child(even) span{transform:rotate(1.5deg)}
+.offer i{flex:none;width:26px;height:26px;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:0 6px 14px -6px rgba(46,16,101,.6)}
+.offer i::before{content:"";width:9px;height:5px;margin-top:-2px;border-left:2.5px solid #5b2bd9;border-bottom:2.5px solid #5b2bd9;transform:rotate(-45deg)}
+.offer span{padding:5px 12px;background:#fff;color:#5b2bd9;font:italic 800 13px/1.2 var(--head);letter-spacing:.04em;text-transform:uppercase;box-shadow:0 8px 16px -10px rgba(46,16,101,.7)}
 .stats{display:flex;gap:10px;flex-wrap:wrap}
-.stat{min-width:96px;padding:14px 16px;border-radius:14px;background:rgba(255,255,255,.08);box-shadow:inset 0 0 0 1px rgba(255,255,255,.18);backdrop-filter:blur(6px)}
+.stat{min-width:96px;padding:14px 16px;border-radius:14px;background:rgba(255,255,255,.12);box-shadow:inset 0 0 0 1px rgba(255,255,255,.28);backdrop-filter:blur(6px)}
 .stat b{display:block;font:800 30px/1 var(--head);letter-spacing:-.02em}
-.stat span{display:block;margin-top:6px;font:700 10.5px/1.2 var(--head);letter-spacing:.08em;text-transform:uppercase;color:#c9d3f2}
+.stat span{display:block;margin-top:6px;font:700 10.5px/1.2 var(--head);letter-spacing:.08em;text-transform:uppercase;color:#f1e8ff}
+.hero-side{display:grid;gap:18px;justify-items:start}
+@media (min-width:900px){.hero-side{justify-items:end}}
 
 /* =========================================================
    Work: filter bar + cards
@@ -115,15 +139,15 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .seg{display:flex;gap:4px;flex-wrap:wrap}
 .seg button{display:inline-flex;align-items:center;gap:7px;height:36px;padding:0 13px;border-radius:9px;font:600 14px/1 var(--head);color:var(--text);transition:background .2s,color .2s}
 .seg button:hover{background:var(--chip);color:var(--ink)}
-.seg button[aria-pressed="true"]{background:var(--blue);color:#fff}
+.seg button[aria-pressed="true"]{background:var(--grad);color:#fff}
 .seg button small{font:700 11px/1 var(--head);padding:3px 6px;border-radius:999px;background:var(--chip);color:var(--muted)}
 .seg button[aria-pressed="true"] small{background:rgba(255,255,255,.22);color:#fff}
 .search{display:flex;align-items:center;gap:8px;height:36px;padding:0 12px;border-radius:9px;background:var(--soft);box-shadow:inset 0 0 0 1px var(--line);min-width:min(260px,100%)}
 .search svg{width:15px;height:15px;color:var(--muted);flex:none}
 .search input{border:0;background:none;font:500 14px/1 var(--body);color:var(--ink);width:100%;outline:none}
 .sec-title{display:flex;align-items:baseline;gap:10px;margin:40px 0 4px}
-.sec-title h2{font:800 22px/1.2 var(--head);color:var(--ink);letter-spacing:-.01em}
-.sec-title .count{font:700 11px/1 var(--head);padding:4px 7px;border-radius:999px;background:#e9eefb;color:var(--blue)}
+.sec-title h2{display:inline-block;padding:6px 14px 5px;background:#fff;font:800 22px/1.2 var(--head);color:var(--blue);letter-spacing:.02em;text-transform:uppercase;transform:rotate(-1.5deg);box-shadow:0 10px 22px -12px rgba(42,17,112,.55)}
+.sec-title .count{font:700 11px/1 var(--head);padding:4px 7px;border-radius:999px;background:#e6dcff;color:var(--blue)}
 .sec-sub{font-size:15px;color:var(--muted);margin-bottom:18px}
 .grid{display:grid;gap:22px;grid-template-columns:1fr}
 @media (min-width:680px){.grid{grid-template-columns:repeat(2,1fr)}}
@@ -139,9 +163,9 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .card:hover .thumb .open,.thumb:focus-visible .open{opacity:1;transform:none}
 .body{display:flex;flex-direction:column;gap:10px;padding:18px 20px 20px;flex:1}
 .meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-.meta .cat{color:var(--blue)}
+.meta .cat{color:var(--pink)}
 .meta .n{color:var(--muted)}
-.card h3{font:800 23px/1.18 var(--head);color:var(--ink);letter-spacing:-.02em}
+.card h3{font:800 21px/1.2 var(--head);color:var(--ink);letter-spacing:-.01em}
 .card h3 button{text-align:left}
 .card h3 button:hover{color:var(--blue)}
 .card p{font-size:15px;line-height:1.55;color:var(--text)}
@@ -153,11 +177,14 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 /* =========================================================
    Services
    ========================================================= */
-.svc-sec{background:#fff;border-block:1px solid var(--line);padding:clamp(70px,8vw,110px) 0}
+.svc-sec{position:relative;background:linear-gradient(180deg,var(--lav-2),var(--lav));padding:clamp(80px,9vw,120px) 0 clamp(70px,8vw,110px)}
+.svc-sec::before{content:"";position:absolute;left:0;right:0;top:-1px;height:24px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 24' preserveAspectRatio='none'%3E%3Cpath d='M0 0H240V10L229 15L216 8L204 16L191 9L178 14L166 7L153 15L140 10L127 17L115 8L102 14L90 9L77 16L64 8L52 13L39 7L26 15L13 9L0 13Z' fill='%23faf9fb'/%3E%3C/svg%3E") 0 0/480px 100% repeat-x}
 .head{max-width:640px;margin-bottom:34px}
-.head .hand{color:var(--blue);font-size:28px}
-.head h2{font:800 clamp(32px,3.6vw,44px)/1.1 var(--head);letter-spacing:-.025em;color:var(--ink);margin:6px 0 10px}
-.head p{color:var(--muted)}
+.head .hand{color:var(--pink);font-size:30px}
+.head h2{font:300 clamp(30px,3.6vw,46px)/1.08 var(--head);letter-spacing:-.02em;text-transform:uppercase;color:var(--navy);margin:6px 0 12px}
+.head h2 b{font-weight:800}
+.head h2 .tp{font-size:.9em;margin:.1em 0}
+.head p{color:var(--text)}
 .svc-grid{display:grid;gap:22px}
 @media (min-width:680px) and (max-width:979px){.svc-grid{grid-template-columns:1fr 1fr}.svc:last-child{grid-column:1/-1}}
 @media (min-width:980px){.svc-grid{grid-template-columns:repeat(3,1fr)}}
@@ -184,11 +211,19 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
    Closing + footer
    ========================================================= */
 .end{padding:clamp(70px,8vw,110px) 0}
-.end-card{display:grid;gap:24px;align-items:center;padding:clamp(28px,4vw,48px);border-radius:24px;color:#fff;background:radial-gradient(60% 100% at 100% 0%,rgba(111,160,245,.45),transparent 60%),linear-gradient(135deg,#1f2a6b,#3a55c4);box-shadow:var(--shadow-up)}
+.end-card{position:relative;overflow:hidden;display:grid;gap:24px;align-items:center;padding:clamp(28px,4vw,48px);border-radius:24px;color:#fff;background:var(--grad);box-shadow:var(--shadow-up)}
 @media (min-width:860px){.end-card{grid-template-columns:1fr auto}}
 .end-card h2{font:800 clamp(28px,3.4vw,40px)/1.12 var(--head);letter-spacing:-.02em;margin-top:6px}
 .end-card p{color:#d6dcf3;margin-top:8px;max-width:50ch}
-.end-card .btn{background:#fff;color:var(--ink)}
+.end-card h2{text-transform:uppercase;font-weight:300}
+.end-card h2 b{font-weight:800}
+.end-card p{color:#fff}
+.end-card .hand{color:#fff}
+.end-card::before{content:"\201C";position:absolute;right:clamp(16px,22%,300px);top:-30px;font:800 220px/1 var(--head);color:rgba(255,255,255,.14);pointer-events:none}
+.end-card::after{content:"";position:absolute;right:-40px;bottom:-60px;width:320px;height:200px;border-radius:50%;background:radial-gradient(closest-side,rgba(255,255,255,.35),transparent);pointer-events:none}
+.end-card>*{position:relative;z-index:1}
+.end-card .btn{min-height:52px;padding:0 8px 0 22px;background:#fff;color:#4a1fc0;font:800 15px/1 var(--head);letter-spacing:.06em;text-transform:uppercase;gap:12px}
+.end-card .btn i{width:36px;height:36px;border-radius:50%;background:var(--grad);display:grid;place-items:center;color:#fff;font-style:normal;font-size:16px}
 footer{border-top:1px solid var(--line);background:#fff}
 footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:22px 0;font:600 13px/1.4 var(--head);color:var(--muted)}
 footer a{text-decoration:none;color:var(--ink);display:inline-block;padding:12px 4px;margin:-12px -4px}
@@ -261,7 +296,7 @@ footer a{text-decoration:none;color:var(--ink);display:inline-block;padding:12px
 .d-item dd{margin-top:6px;font:600 15.5px/1.45 var(--head);color:var(--ink)}
 .d-item dd.todo{font:500 14px/1.45 var(--body);color:#9a98a8;font-style:italic}
 .d-item.wide{grid-column:1/-1}
-.note{display:flex;gap:10px;align-items:flex-start;margin-bottom:14px;padding:12px 14px;border-radius:12px;background:#eef2fd;color:#2b4a8f;font-size:14px}
+.note{display:flex;gap:10px;align-items:flex-start;margin-bottom:14px;padding:12px 14px;border-radius:12px;background:#f3edff;color:#4a1fc0;font-size:14px}
 .note svg{flex:none;width:18px;height:18px;margin-top:2px}
 @media (max-width:640px){
   .pv{width:100%;height:100dvh;border-radius:0}
@@ -283,7 +318,7 @@ footer a{text-decoration:none;color:var(--ink);display:inline-block;padding:12px
 
 <header class="top" id="top-bar">
   <div class="wrap">
-    <a class="logo" href="#top"><i aria-hidden="true"></i>Hello Giovanni</a>
+    <a class="logo" href="#top" aria-label="Hello Giovanni, back to top"><i aria-hidden="true">hg</i><b>HELLO <span>GIOVANNI</span></b></a>
     <nav aria-label="Main">
       <a class="hide" href="#work">Work</a>
       <a class="hide" href="#services">Services</a>
@@ -294,16 +329,21 @@ footer a{text-decoration:none;color:var(--ink);display:inline-block;padding:12px
 
 <main id="top">
   <section class="hero" aria-labelledby="hero-title">
+    <div class="deco" aria-hidden="true"><i class="rays"></i><i class="panel lv"></i><i class="panel"></i><i class="dots"></i><i class="cloud c1"></i><i class="cloud c2"></i><i class="cloud c3"></i></div>
+    <div class="tape" aria-hidden="true"><div><span>Website design</span><span>Branding</span><span>Social media</span><span>Video editing</span><span>SEO · AEO · GEO</span><span>Odoo ERP</span><span>Website design</span><span>Branding</span><span>Social media</span><span>Video editing</span><span>SEO · AEO · GEO</span><span>Odoo ERP</span></div></div>
     <div class="wrap hero-grid">
       <div>
-        <span class="hand">portfolio</span>
-        <h1 id="hero-title">Websites people <span class="hl">remember.</span></h1>
+        <span class="tagline">“Your brand, built to be remembered.”</span>
+        <h1 id="hero-title"><span>Websites</span> <span class="tp">people</span> <b>remember.</b></h1>
         <p>Three brands, three very different websites. Open any project to preview the site, its brand kit and its business plan.</p>
       </div>
+      <div class="hero-side">
+      <ul class="offer" aria-label="What we offer"><li><i aria-hidden="true"></i><span>Website design</span></li><li><i aria-hidden="true"></i><span>Branding</span></li><li><i aria-hidden="true"></i><span>Social media &amp; video</span></li></ul>
       <div class="stats" aria-label="At a glance">
         <div class="stat"><b>3</b><span>Websites</span></div>
         <div class="stat"><b>27</b><span>Pages</span></div>
         <div class="stat"><b>3</b><span>Brand kits</span></div>
+      </div>
       </div>
     </div>
   </section>
@@ -323,7 +363,7 @@ footer a{text-decoration:none;color:var(--ink);display:inline-block;padding:12px
     <div class="wrap">
       <div class="head rv">
         <span class="hand">what we can do for you</span>
-        <h2 id="svc-title">Everything your website needs</h2>
+        <h2 id="svc-title">Everything your <span class="tp">website</span> <b>needs.</b></h2>
         <p>Tap what you need and copy the list.</p>
       </div>
       <div class="svc-grid" id="svc-grid"></div>
@@ -335,15 +375,15 @@ footer a{text-decoration:none;color:var(--ink);display:inline-block;padding:12px
     <div class="end-card rv">
       <div>
         <span class="hand">your brand next?</span>
-        <h2 id="end-title">Let's build a site people remember.</h2>
+        <h2 id="end-title">Let's build a site <b>people remember.</b></h2>
         <p>Got a shop, a restaurant or a service that deserves a better website? Pick your services, copy the list and send it our way.</p>
       </div>
-      <a class="btn" href="#services">Pick your services</a>
+      <a class="btn" href="#services">Inquire now <i aria-hidden="true">→</i></a>
     </div>
   </section>
 </main>
 
-<footer><div class="wrap"><span>Hello Giovanni · Selected work 2026</span><a href="#top">Back to top ↑</a></div></footer>
+<footer><div class="wrap"><span><b style="color:var(--ink);letter-spacing:.06em">HELLO GIOVANNI</b> · Selected work 2026</span><a href="#top">Back to top ↑</a></div></footer>
 
 <!-- Project view -->
 <dialog class="pv" id="pv" aria-labelledby="pv-name">
@@ -436,7 +476,7 @@ const PROJECTS = [
 ];
 
 const SERVICES = [
-  { name: 'Website', cap: 'the site itself', c: '#3167ca', tint: '#eef2fd', icon: '<rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 8h18M8 21h8M12 18v3"/>',
+  { name: 'Website', cap: 'the site itself', c: '#5b2bd9', tint: '#f3edff', icon: '<rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 8h18M8 21h8M12 18v3"/>',
     items: [['Domain', 'Finding, registering and connecting your web address.'], ['Website design', 'A custom site for your brand, fast on any phone.'], ['Keywords, SEO, AEO & GEO', 'Found on Google and in AI answers like ChatGPT and Gemini.'], ['Analytics', 'See who visits, from where, and what makes them get in touch.']] },
   { name: 'Marketing materials', cap: 'get the word out', c: '#c9460b', tint: '#fdf0e8', icon: '<path d="M4 10v4a1 1 0 0 0 1 1h2l5 4V5L7 9H5a1 1 0 0 0-1 1z"/><path d="M16 9a4 4 0 0 1 0 6M19 6a8 8 0 0 1 0 12"/>',
     items: [['Social media posting', 'Posts designed and planned for your channels.'], ['Video editing', 'Reels, promos and explainers, cut and captioned.'], ['Branding', 'Logo, colours and fonts that stay the same everywhere.']] },
