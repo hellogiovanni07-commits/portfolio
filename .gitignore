@@ -1,6 +1,7 @@
-# Only the portfolio page lives in this repo; each site has its own repo.
+# Only the portfolio (index.html) lives in this repo; each site has its own repo.
 /*
 !/.gitignore
+!/index.html
 !/portfolio.html
 !/portfolio-shots/
 !/.nojekyll

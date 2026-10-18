@@ -1,0 +1,1114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Selected Work</title>
+<meta name="description" content="Four website builds: a donut shop, a pizzeria, a Canton Fair travel agency and a Cebu tour agency, plus the web, marketing and Odoo services behind them.">
+<meta name="theme-color" content="#4361ee">
+<meta name="color-scheme" content="light">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Selected Work · HelloGiovanni07">
+<meta property="og:description" content="Four brands, four very different websites, and the services behind them.">
+<meta property="og:image" content="https://hellogiovanni07-commits.github.io/portfolio/portfolio-shots/glaze.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ff6a13'/%3E%3Cstop offset='.5' stop-color='%23c62f26'/%3E%3Cstop offset='1' stop-color='%234361ee'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Cpath d='M18 22h28v4H18zm0 8h28v4H18zm0 8h18v4H18z' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<style>
+/* =========================================================
+   Base (TechNext type: Plus Jakarta Sans, Inter, Caveat)
+   ========================================================= */
+:root{
+  --head:"Plus Jakarta Sans",system-ui,sans-serif;
+  --body:"Inter",system-ui,sans-serif;
+  --hand:"Caveat",cursive;
+  --tn:#4361ee;
+  --ink:#151a33; --text:#3b4060; --muted:#5e6485;
+  --ease:cubic-bezier(.22,1,.36,1);
+  --spring:cubic-bezier(.34,1.56,.64,1);
+  --accent:var(--tn);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:84px}
+body{background:#fff;color:var(--text);font:400 16px/1.6 var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+img{display:block;max-width:100%;height:auto}
+ul{list-style:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.wrap{width:min(1200px,100% - 32px);margin-inline:auto}
+@media (min-width:760px){.wrap{width:min(1200px,100% - 64px)}}
+.hand{font-family:var(--hand);font-weight:700}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:8px}
+.skip{position:absolute;left:12px;top:-60px;z-index:100;background:var(--ink);color:#fff;padding:10px 14px;border-radius:10px;text-decoration:none;font:700 14px/1 var(--head)}
+.skip:focus{top:12px}
+.rv{opacity:0;transform:translateY(26px)}
+.rv.in{opacity:1;transform:none;transition:opacity .8s var(--ease),transform .9s var(--ease)}
+.rv.d1.in{transition-delay:.12s}.rv.d2.in{transition-delay:.24s}
+
+/* =========================================================
+   Header
+   ========================================================= */
+.top{position:fixed;inset:0 0 auto;z-index:50;padding:12px 0}
+.top .wrap{position:relative;display:flex;align-items:center;justify-content:space-between;gap:12px;background:rgba(255,255,255,.8);backdrop-filter:blur(14px) saturate(1.4);-webkit-backdrop-filter:blur(14px) saturate(1.4);border:1px solid rgba(21,26,51,.08);border-radius:18px;padding:8px 8px 8px 16px;box-shadow:0 10px 30px -18px rgba(21,26,51,.35)}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font:800 16px/1 var(--head);color:var(--ink)}
+.logo i{width:30px;height:30px;border-radius:10px;background:conic-gradient(from 200deg,#ff6a13,#c62f26,#43a047,#16163a,#bc5700,#4361ee,#ff6a13);box-shadow:inset 0 0 0 3px rgba(255,255,255,.55);animation:spin 14s linear infinite}
+.top nav{display:flex;align-items:center;gap:4px}
+.top nav a{font:600 14px/1 var(--head);text-decoration:none;color:var(--muted);padding:10px 12px;border-radius:12px;transition:color .2s,background .2s}
+.top nav a:hover{color:var(--ink);background:rgba(21,26,51,.06)}
+.top nav a.on{color:var(--accent);background:rgba(21,26,51,.05)}
+.top nav .go{background:var(--accent);color:#fff!important;padding:11px 16px;transition:background .4s}
+@media (max-width:420px){.top nav .go{padding:10px 12px;font-size:13px;white-space:nowrap}.logo{font-size:15px}.top .wrap{padding-left:12px}}
+.menu-btn{display:none;width:42px;height:42px;border-radius:12px;background:rgba(21,26,51,.06);place-items:center}
+.menu-btn svg{width:20px;height:20px}
+.progress{position:absolute;left:18px;right:18px;bottom:-1px;height:3px;border-radius:3px;overflow:hidden;pointer-events:none}
+.progress i{display:block;height:100%;width:100%;transform-origin:0 50%;transform:scaleX(0);background:var(--accent);transition:background .4s}
+@media (max-width:880px){
+  .menu-btn{display:grid}
+  .top nav .lk{display:none}
+  .top.open nav{position:absolute;top:calc(100% + 8px);left:0;right:0;flex-direction:column;align-items:stretch;background:#fff;border-radius:18px;padding:10px;box-shadow:0 24px 50px -20px rgba(21,26,51,.45)}
+  .top.open nav .lk{display:block;padding:14px}
+}
+
+/* =========================================================
+   Shared bits
+   ========================================================= */
+@keyframes spin{to{rotate:360deg}}
+@keyframes bob{50%{transform:translateY(-10px)}}
+@keyframes marq{to{transform:translateX(-50%)}}
+.btn{position:relative;display:inline-flex;align-items:center;gap:10px;font:700 15px/1 var(--head);text-decoration:none;border-radius:14px;padding:16px 22px;transition:transform .3s var(--spring),box-shadow .3s,background .4s}
+.btn svg,.arrow{width:18px;height:18px;transition:transform .3s var(--spring)}
+.btn:hover svg,a:hover>.arrow,button:hover>.arrow{transform:translateX(4px)}
+.btn-main{background:var(--accent);color:#fff;box-shadow:0 14px 30px -12px var(--accent)}
+.btn-ghost{background:#fff;color:var(--ink);box-shadow:inset 0 0 0 1.5px rgba(21,26,51,.14)}
+.proj{position:relative;overflow:hidden;isolation:isolate;min-height:min(100svh,940px);display:flex;flex-direction:column;justify-content:center;padding:clamp(110px,11vw,140px) 0 clamp(70px,8vw,100px)}
+.proj-grid{display:grid;gap:clamp(36px,5vw,56px);align-items:center}
+@media (min-width:1000px){.proj-grid{grid-template-columns:1fr 1.05fr}}
+.proj-grid>*,.hero-grid>*{min-width:0}
+.proj h2{font-family:var(--head);font-weight:800;letter-spacing:-.035em;line-height:1.03}
+.proj h2 .w{display:inline-block;overflow:clip;vertical-align:top;padding-bottom:.08em;margin-bottom:-.08em}
+.proj h2 .w>span{display:inline-block;transform:translateY(105%);transition:transform .9s var(--ease)}
+.proj .in h2 .w>span,.proj h2.in .w>span{transform:none}
+.proj .stage{position:relative;height:clamp(380px,46vw,580px)}
+.num-tag{position:absolute;top:clamp(84px,9vw,100px);right:clamp(16px,4vw,48px);font:800 clamp(80px,12vw,170px)/1 var(--head);letter-spacing:-.06em;opacity:.07;pointer-events:none;z-index:-1}
+
+/* =========================================================
+   HERO (TechNext, light, interactive)
+   ========================================================= */
+.hero{position:relative;min-height:min(100svh,1000px);display:flex;flex-direction:column;justify-content:center;padding:120px 0 0;overflow:hidden;background:#f6f8ff;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:0;z-index:-2;background-image:radial-gradient(rgba(67,97,238,.16) 1.2px,transparent 1.2px);background-size:24px 24px;-webkit-mask:radial-gradient(ellipse 80% 70% at 60% 40%,#000,transparent);mask:radial-gradient(ellipse 80% 70% at 60% 40%,#000,transparent)}
+.blob{position:absolute;z-index:-1;border-radius:50%;filter:blur(70px);opacity:.55;pointer-events:none;will-change:transform}
+.b1{width:520px;height:520px;background:#ffb27a;left:-120px;top:-80px;animation:drift1 16s ease-in-out infinite}
+.b2{width:460px;height:460px;background:#9fb3ff;right:-80px;top:10%;animation:drift2 19s ease-in-out infinite}
+.b3{width:380px;height:380px;background:#a8e0ad;left:35%;bottom:-160px;animation:drift3 22s ease-in-out infinite}
+.cursor-blob{width:340px;height:340px;background:var(--accent);opacity:.22;left:0;top:0;transition:background .6s}
+@keyframes drift1{50%{transform:translate(120px,80px) scale(1.15)}}
+@keyframes drift2{50%{transform:translate(-100px,120px) scale(.9)}}
+@keyframes drift3{50%{transform:translate(-140px,-60px) scale(1.2)}}
+.hero-grid{display:grid;gap:40px;align-items:center}
+@media (min-width:1000px){.hero-grid{grid-template-columns:1.1fr 1fr}}
+.hello{display:inline-flex;align-items:center;gap:10px;font-size:26px;color:var(--accent);transition:color .5s}
+.hello .wave{display:inline-block;transform-origin:70% 80%;animation:wave 2.4s ease-in-out infinite}
+@keyframes wave{0%,60%,100%{transform:rotate(0)}10%,30%{transform:rotate(16deg)}20%,40%{transform:rotate(-8deg)}}
+.hero h1{font:800 clamp(38px,5.2vw,76px)/1.04 var(--head);letter-spacing:-.035em;color:var(--ink);margin:10px 0 22px}
+.hero h1 .line{display:block;overflow:hidden;padding-bottom:.06em}
+.hero h1 .line>span{display:inline-block;transform:translateY(105%);transition:transform 1s var(--ease)}
+.hero.ready h1 .line>span{transform:none}
+.hero.ready h1 .line:nth-child(2)>span{transition-delay:.12s}
+.rotator{position:relative;display:inline-grid;justify-items:start;vertical-align:bottom}
+.rotator b{grid-area:1/1;font-weight:800;opacity:0;transform:translateY(60%) rotateX(-70deg);transform-origin:50% 100%;transition:opacity .5s var(--ease),transform .7s var(--ease);white-space:nowrap}
+.rotator b.on{opacity:1;transform:none}
+.rotator b.out{opacity:0;transform:translateY(-60%) rotateX(70deg)}
+.hero .lede{font-size:clamp(16px,1.5vw,19px);color:var(--muted);max-width:44ch}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin:28px 0 30px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:flex;align-items:center;gap:8px;padding:7px 14px 7px 7px;border-radius:999px;background:#fff;font:700 13px/1 var(--head);color:var(--ink);box-shadow:0 0 0 1.5px rgba(21,26,51,.08),0 6px 14px -10px rgba(21,26,51,.4);transition:transform .3s var(--spring),box-shadow .3s}
+.chip i{width:22px;height:22px;border-radius:50%;background:var(--c)}
+.chip:hover,.chip.on{transform:translateY(-3px);box-shadow:0 0 0 2px var(--c),0 12px 20px -12px var(--c)}
+.deck-wrap{position:relative;height:clamp(300px,42vw,520px);perspective:1400px}
+.deck{position:absolute;inset:0;transform-style:preserve-3d;transition:transform .5s var(--ease)}
+.card3d{position:absolute;left:8%;top:12%;width:78%;border-radius:16px;background:#fff;overflow:hidden;cursor:pointer;box-shadow:0 40px 70px -30px rgba(21,26,51,.5),0 0 0 1px rgba(21,26,51,.08);transition:transform .9s var(--ease),opacity .6s,filter .6s}
+.card3d .bar,.shot .bar{height:26px;display:flex;align-items:center;gap:6px;padding:0 12px;background:#f1f2f7}
+.card3d .bar i,.shot .bar i{width:9px;height:9px;border-radius:50%;background:#d6d8e3}
+.card3d .bar i:first-child,.shot .bar i:first-child{background:#ff6b5f}.card3d .bar i:nth-child(2),.shot .bar i:nth-child(2){background:#ffc23d}.card3d .bar i:nth-child(3),.shot .bar i:nth-child(3){background:#2fcf63}
+.card3d .bar span,.shot .bar span{margin-left:8px;font:600 10px/1 var(--head);color:#8a8fa8}
+.card3d img{width:100%;aspect-ratio:2000/1096;object-fit:cover;object-position:top}
+.card3d[data-pos="0"]{transform:translate3d(0,0,80px) rotateY(-8deg) rotateX(4deg);z-index:4}
+.card3d[data-pos="1"]{transform:translate3d(14%,-14%,-40px) rotateY(-14deg) rotateZ(4deg) scale(.86);z-index:3;filter:saturate(.85)}
+.card3d[data-pos="2"]{transform:translate3d(24%,-26%,-140px) rotateY(-18deg) rotateZ(7deg) scale(.74);z-index:2;filter:saturate(.7) brightness(.97)}
+.card3d[data-pos="3"]{transform:translate3d(-16%,20%,-200px) rotateY(-4deg) rotateZ(-6deg) scale(.7);z-index:1;opacity:.65;filter:saturate(.6)}
+.float{position:absolute;pointer-events:none;will-change:transform;filter:drop-shadow(0 18px 18px rgba(21,26,51,.25))}
+.f1{width:110px;left:-2%;top:2%}.f2{width:120px;right:-2%;bottom:6%}.f3{width:70px;right:10%;top:-2%}.f4{width:88px;left:2%;bottom:0}
+.tag-note{position:absolute;right:4%;top:58%;z-index:6;background:#fff;border-radius:14px;padding:10px 14px;font:700 13px/1.3 var(--head);color:var(--ink);box-shadow:0 18px 30px -16px rgba(21,26,51,.45);animation:bob 4s ease-in-out infinite}
+.tag-note b{display:block;font:700 22px/1 var(--hand);color:var(--accent);transition:color .5s}
+.stats{display:flex;gap:28px;margin-top:34px;flex-wrap:wrap}
+.stats strong{display:block;font:800 30px/1 var(--head);color:var(--ink);letter-spacing:-.02em}
+.stats span{font:600 12px/1 var(--head);color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.marquee{margin-top:56px;border-top:1px solid rgba(21,26,51,.08);background:rgba(255,255,255,.6);overflow:hidden;white-space:nowrap}
+.marquee div{display:inline-flex;gap:40px;padding:18px 0;animation:marq 38s linear infinite;font:700 15px/1 var(--head);color:var(--ink)}
+.marquee span{display:inline-flex;align-items:center;gap:40px}
+.marquee span::after{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent);transition:background .5s}
+.scroll-cue{position:absolute;left:50%;bottom:84px;translate:-50% 0;width:26px;height:42px;border-radius:14px;box-shadow:inset 0 0 0 2px rgba(21,26,51,.25)}
+.scroll-cue::after{content:"";position:absolute;left:50%;top:8px;width:4px;height:8px;margin-left:-2px;border-radius:2px;background:var(--accent);animation:cue 1.8s ease-in-out infinite}
+@keyframes cue{60%{transform:translateY(12px);opacity:0}}
+@media (max-width:999px){.scroll-cue,.tag-note{display:none}}
+
+/* =========================================================
+   01 GLAZE BOMB — mirrors its hero
+   ========================================================= */
+.glaze{--accent:#ff6a13;color:#6e4630;background:radial-gradient(120% 80% at 70% 30%,#fff4ea 0,#fff8f1 45%,#fdeee0 100%)}
+.glaze::before{content:"";position:absolute;inset:0;z-index:-2;background:repeating-linear-gradient(90deg,transparent 0 118px,rgba(255,255,255,.7) 118px 120px,transparent 120px 240px)}
+.glaze::after{content:"";position:absolute;right:-10%;top:5%;width:70%;aspect-ratio:1;z-index:-1;border-radius:50%;background:radial-gradient(circle,rgba(255,150,80,.35),transparent 65%);pointer-events:none}
+.g-open{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.62);border-radius:999px;padding:8px 16px;font:700 14px/1 var(--body);color:#3a1e10;box-shadow:0 8px 20px -14px rgba(58,30,16,.5),inset 0 0 0 1px rgba(255,255,255,.9);margin-bottom:22px}
+.g-open::before{content:"";width:8px;height:8px;border-radius:50%;background:#ff6a13;animation:pulse-o 1.8s infinite}
+@keyframes pulse-o{0%{box-shadow:0 0 0 0 rgba(255,106,19,.6)}70%,100%{box-shadow:0 0 0 9px rgba(255,106,19,0)}}
+.glaze h2{font-size:clamp(40px,4.4vw,60px);color:#3a1e10;letter-spacing:-.025em}
+.glaze h2 .o{color:#d64f00}
+.glaze .lede{font-size:17px;color:#6e4630;max-width:44ch;margin:20px 0 28px}
+.g-acts{display:flex;flex-wrap:wrap;gap:12px}
+.g-btn{display:inline-flex;align-items:center;gap:10px;height:54px;padding:0 28px;border-radius:999px;font:700 17px/1 var(--head);letter-spacing:-.005em;text-decoration:none;transition:transform .3s var(--spring),box-shadow .3s}
+.g-btn.fill{background:#ff6a13;color:#2a1408;box-shadow:0 10px 22px -10px rgba(255,106,19,.7)}
+.g-btn.line{color:#3a1e10;box-shadow:inset 0 0 0 2px #3a1e10}
+.g-btn:hover{transform:translateY(-3px)}
+.g-btn.line:hover{background:#3a1e10;color:#fff}
+.g-stats{display:flex;gap:clamp(20px,4vw,48px);margin-top:30px;padding-top:24px;border-top:1px solid rgba(58,30,16,.14)}
+.g-stats strong{display:block;font:800 26px/1 var(--head);color:#d64f00;letter-spacing:-.02em}
+.g-stats span{font:500 13px/1.3 var(--body);color:#6e4630}
+.g-follow{display:flex;align-items:center;gap:10px;margin-top:22px;flex-wrap:wrap}
+.g-follow .hand{font-size:22px;color:#3a1e10;margin-right:6px}
+.g-follow a{height:38px;padding:0 14px;border-radius:999px;display:inline-flex;align-items:center;background:#fff;font:600 13px/1 var(--head);text-decoration:none;color:#3a1e10;box-shadow:inset 0 0 0 1.5px rgba(58,30,16,.1);transition:transform .25s var(--spring)}
+.g-follow a:hover{transform:translateY(-2px);box-shadow:inset 0 0 0 1.5px #ff6a13}
+.g-ring{position:absolute;left:50%;top:44%;width:min(88%,470px);aspect-ratio:1;translate:-50% -50%;border-radius:50%;background:radial-gradient(circle,rgba(255,150,80,.45),rgba(255,150,80,0) 64%);box-shadow:inset 0 0 0 2px rgba(255,106,19,.35)}
+.g-ticks{position:absolute;inset:-34px;border-radius:50%;background:repeating-conic-gradient(rgba(214,79,0,.55) 0 1.1deg,transparent 1.1deg 10deg);-webkit-mask:radial-gradient(circle,transparent 64%,#000 65%,#000 68%,transparent 69%);mask:radial-gradient(circle,transparent 64%,#000 65%,#000 68%,transparent 69%);animation:spin 50s linear infinite}
+.g-donut{position:absolute;left:50%;top:44%;width:min(72%,400px);translate:-50% -50%;cursor:grab;touch-action:none;z-index:2}
+.g-donut img{width:100%;filter:drop-shadow(0 34px 30px rgba(110,70,48,.4));transition:opacity .25s;animation:float-d 5s ease-in-out infinite;-webkit-user-drag:none;user-select:none}
+@keyframes float-d{50%{transform:translateY(-14px)}}
+.g-donut.swap img{opacity:0}
+.g-ped{position:absolute;left:50%;bottom:13%;width:min(54%,300px);height:46px;translate:-50% 0;border-radius:50%;background:radial-gradient(ellipse at 50% 30%,#fff 0,#ffe6d2 60%,#f7c9a6 100%);box-shadow:0 0 0 2px rgba(255,106,19,.35),0 20px 30px -14px rgba(214,79,0,.5)}
+.g-label{position:absolute;left:50%;bottom:calc(13% + 26px);translate:-50% 0;z-index:3;display:flex;align-items:center;gap:14px;background:#fff;border-radius:999px;padding:10px 16px;font:600 15px/1 var(--head);color:#3a1e10;white-space:nowrap;box-shadow:0 12px 26px -14px rgba(58,30,16,.6)}
+.g-label b{color:#b33c00}
+.g-picker{position:absolute;left:50%;bottom:0;translate:-50% 0;z-index:3;display:flex;gap:6px;background:rgba(255,255,255,.75);backdrop-filter:blur(8px);border-radius:999px;padding:6px}
+.g-picker button{width:46px;height:46px;border-radius:50%;padding:3px;transition:transform .25s var(--spring),box-shadow .25s}
+.g-picker button:hover{transform:translateY(-3px)}
+.g-picker button[aria-pressed="true"]{box-shadow:0 0 0 2.5px #ff6a13,0 0 14px rgba(255,106,19,.5)}
+.g-call{position:absolute;z-index:4;display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.88);backdrop-filter:blur(6px);border-radius:16px;padding:9px 14px 9px 9px;box-shadow:0 14px 28px -16px rgba(58,30,16,.55);animation:bob 5s ease-in-out infinite}
+.g-call i{width:30px;height:30px;border-radius:50%;background:#ff6a13;display:grid;place-items:center;color:#fff;font-style:normal;font-size:14px;box-shadow:0 0 0 4px rgba(255,106,19,.18)}
+.g-call strong{display:block;font:700 13.5px/1.2 var(--head);color:#3a1e10}
+.g-call span{font:500 11.5px/1.2 var(--body);color:#6e4630}
+.c1{left:0;top:10%}.c2{right:0;top:38%;animation-delay:-1.5s}.c3{left:4%;top:56%;animation-delay:-3s}
+.g-note{position:absolute;right:6%;top:2%;font-size:24px;color:#d64f00;rotate:-6deg}
+
+/* =========================================================
+   02 PIZZA MAX — mirrors its hero
+   ========================================================= */
+.pizza{--accent:#c62f26;background:#f7f6f3;color:#3a3a3a;padding-top:clamp(150px,14vw,180px)}
+.pizza::before{content:"";position:absolute;inset:0;z-index:-2;background:repeating-linear-gradient(180deg,transparent 0 148px,rgba(0,0,0,.045) 148px 150px),repeating-linear-gradient(90deg,rgba(0,0,0,.012) 0 2px,transparent 2px 7px)}
+.p-bar{position:absolute;top:0;left:0;right:0;background:#2e7d32;color:#fff;font:600 14px/1 var(--head);z-index:2}
+.p-bar .wrap{display:flex;align-items:center;gap:22px;height:46px}
+.p-bar .live{display:inline-flex;align-items:center;gap:8px;margin-left:auto}
+.p-bar .live::before{content:"";width:8px;height:8px;border-radius:50%;background:#c8f7cb;animation:pulse-g 1.8s infinite}
+@keyframes pulse-g{0%{box-shadow:0 0 0 0 rgba(200,247,203,.8)}70%,100%{box-shadow:0 0 0 9px rgba(200,247,203,0)}}
+.p-bar .ct{border:1.5px solid rgba(255,255,255,.85);border-radius:6px;padding:7px 14px;letter-spacing:.14em;font:700 12px/1 var(--head);text-decoration:none;transition:background .2s}
+.p-bar .ct:hover{background:#fff;color:#2e7d32}
+.p-nav{position:absolute;top:46px;left:0;right:0;height:56px;background:#fff;border-bottom:1px solid #e6e2dc;z-index:1}
+.p-nav .wrap{display:flex;justify-content:center;align-items:center;height:100%;gap:clamp(14px,2.4vw,32px);font:700 12.5px/1 var(--head);letter-spacing:.14em;color:#1f1f1f;padding-left:clamp(0px,14vw,160px)}
+.p-logo{position:absolute;top:0;left:max(16px,calc((100% - 1200px)/2 + 32px));z-index:3;width:150px;background:#fff;padding:12px 16px 14px;border-radius:0 0 10px 10px;box-shadow:0 14px 26px -16px rgba(0,0,0,.4);text-align:left;transform-origin:50% 0;animation:hang 6s ease-in-out infinite}
+@keyframes hang{50%{rotate:1.5deg}}
+.p-logo .pz{font:800 italic 17px/1 var(--head);color:#43a047}
+.p-logo .mx{font:800 italic 42px/.95 var(--head);color:#c62f26;letter-spacing:-.04em}
+.p-logo .sw{height:4px;margin:2px 0 4px;border-radius:50%;background:#43a047;transform:rotate(-2deg)}
+.p-logo .tb{font:700 15px/1 var(--hand);color:#c62f26;text-align:right}
+@media (max-width:760px){.p-nav{display:none}.p-logo{width:118px}.p-logo .mx{font-size:32px}.p-bar .hide-sm,.p-bar .live{display:none}.p-bar .ct{margin-left:auto}}
+.pizza h2{font-size:clamp(42px,4.6vw,62px);color:#1f1f1f}
+.pizza h2 .r{color:#c62f26}
+.pizza .lede{font-size:17.6px;color:#3a3a3a;max-width:40ch;margin:20px 0 28px}
+.p-btn{display:inline-flex;align-items:center;gap:10px;padding:14px 28px;border-radius:8px;font:700 16px/1.25 var(--head);letter-spacing:.01em;text-decoration:none;transition:transform .2s,box-shadow .2s,background .2s}
+.p-btn.red{background:#c62f26;color:#fff;box-shadow:0 6px 16px rgba(30,20,10,.16)}
+.p-btn.red:hover{background:#a3231c;transform:translateY(-2px)}
+.p-btn.white{background:rgba(255,255,255,.85);color:#1f1f1f;box-shadow:inset 0 0 0 1.5px #d6d2ca}
+.p-btn.white:hover{box-shadow:inset 0 0 0 1.5px #1f1f1f}
+.p-feats{display:grid;grid-template-columns:repeat(2,max-content);gap:12px 28px;margin-top:28px;padding-top:22px;border-top:1px solid #e6e2dc;font:500 14.5px/1.3 var(--body);color:#3a3a3a}
+.p-feats li{display:flex;align-items:center;gap:10px}
+.p-feats svg{width:18px;height:18px;stroke:#2e7d32;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+@media (max-width:560px){.p-feats{grid-template-columns:1fr}}
+.pie{position:absolute;left:50%;top:46%;width:min(90%,520px);aspect-ratio:1;translate:-50% -50%;cursor:grab;touch-action:none;transition:scale .6s var(--spring)}
+.pie:active{cursor:grabbing}
+.pie-board{position:absolute;inset:-3.5%;border-radius:50%;background:radial-gradient(circle at 40% 35%,#d9a868,#b9824a 70%,#94632f);box-shadow:0 34px 50px -22px rgba(0,0,0,.45),inset 0 0 0 6px rgba(0,0,0,.05)}
+.pie img{position:relative;width:100%;height:100%!important;filter:drop-shadow(0 8px 10px rgba(0,0,0,.25));-webkit-user-drag:none;user-select:none}
+.pie .steam{position:absolute;left:30%;top:-12%;width:40%;height:30%;pointer-events:none}
+.pie .steam i{position:absolute;bottom:0;width:10px;height:60px;border-radius:10px;background:linear-gradient(transparent,rgba(255,255,255,.9));filter:blur(4px);animation:steam 3s ease-in infinite;opacity:0}
+.pie .steam i:nth-child(1){left:10%}.pie .steam i:nth-child(2){left:45%;animation-delay:1s}.pie .steam i:nth-child(3){left:80%;animation-delay:2s}
+@keyframes steam{20%{opacity:.8}100%{transform:translateY(-70px) scaleX(2);opacity:0}}
+.prop{position:absolute;z-index:3;pointer-events:none;will-change:transform;filter:drop-shadow(0 14px 14px rgba(0,0,0,.25))}
+.pr-tomato{width:76px;left:30%;top:-4%}
+.pr-sauce{width:120px;right:-2%;top:-4%}
+.pr-olives{width:100px;right:0;bottom:12%}
+.pr-chili{width:170px;left:-4%;bottom:6%;rotate:-12deg}
+.pr-basil{width:96px;left:-26px;top:auto;bottom:30px;z-index:0;rotate:-20deg}
+@media (max-width:999px){.pr-basil{display:none}}
+.pull{position:absolute;left:-2%;top:14%;font-size:27px;color:#c62f26;rotate:-8deg;z-index:4}
+.pull svg{width:50px;height:20px;vertical-align:middle;margin-left:4px}
+.board{position:absolute;right:0;bottom:-2%;z-index:4;display:flex;align-items:center;gap:12px;font:500 14px/1 var(--body);color:#3a3a3a;flex-wrap:wrap;justify-content:flex-end}
+.board b{font:700 14px/1 var(--head);color:#1f1f1f}
+.board select{appearance:none;-webkit-appearance:none;background:#fff;border-radius:999px;padding:9px 30px 9px 14px;font:600 14px/1 var(--head);color:#1f1f1f;border:1px solid #e6e2dc;background-image:linear-gradient(45deg,transparent 50%,#1f1f1f 50%),linear-gradient(135deg,#1f1f1f 50%,transparent 50%);background-position:calc(100% - 15px) 52%,calc(100% - 10px) 52%;background-size:5px 5px;background-repeat:no-repeat;cursor:pointer}
+
+/* =========================================================
+   03 EXPOBUSINESS — mirrors its hero
+   ========================================================= */
+.expo{--accent:#f26a1b;background:#16163a;color:#d4d3e4}
+.expo .bg{position:absolute;inset:0;z-index:-2;background:url("https://images.unsplash.com/photo-1768396855393-42624b5f0be5?w=1400&q=62") center/cover no-repeat;transform:scale(1.08);will-change:transform}
+.expo::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(22,22,58,.94) 20%,rgba(22,22,58,.7) 55%,rgba(22,22,58,.45)),linear-gradient(0deg,rgba(22,22,58,.95),rgba(22,22,58,0) 45%)}
+.hx-live{display:inline-flex;align-items:center;gap:10px;margin-bottom:22px;padding:7px 12px 7px 14px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(8px);font:600 13.5px/1 var(--head);color:#fff}
+.hx-live::before{content:"";width:8px;height:8px;border-radius:50%;background:#ff4d3d;animation:pulse-r 1.6s infinite}
+@keyframes pulse-r{0%{box-shadow:0 0 0 0 rgba(255,77,61,.8)}70%,100%{box-shadow:0 0 0 10px rgba(255,77,61,0)}}
+.expo h2{font-size:clamp(2.6rem,5vw,4.4rem);color:#fff;max-width:14ch}
+.expo h2 .hl{color:#ff8a3d}
+.expo .lede{font-size:clamp(16.5px,1.3vw,18.5px);color:#d4d3e4;max-width:52ch;margin:22px 0 30px}
+.x-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 24px;border-radius:10px;font:700 15.5px/1 var(--head);text-decoration:none;transition:background .2s,transform .3s var(--spring)}
+.x-btn.o{background:#c9460b;color:#fff;box-shadow:0 14px 30px -12px rgba(242,106,27,.8)}
+.x-btn.o:hover{background:#f26a1b;transform:translateY(-2px)}
+.x-btn.ln{color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.55)}
+.x-btn.ln:hover{background:rgba(255,255,255,.1)}
+.x-trust{display:flex;gap:10px 30px;flex-wrap:wrap;margin-top:28px;font:600 14.5px/1.2 var(--head);color:#fff}
+.x-trust li{display:flex;align-items:center;gap:8px}
+.x-trust li::before{content:"";width:16px;height:16px;border-radius:50%;background:#ff8a3d url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2316163a' stroke-width='4' stroke-linecap='round'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E") center/10px no-repeat}
+.lanyard{position:absolute;left:50%;top:-14%;width:min(62%,320px);margin-left:calc(min(62%,320px) / -2);z-index:4;transform-origin:50% 0;touch-action:none;cursor:grab}
+.lanyard.idle{animation:swing 5s ease-in-out infinite}
+@keyframes swing{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+.strap{width:30px;height:clamp(110px,14vw,170px);margin:0 auto;background:repeating-linear-gradient(180deg,#f26a1b 0 10px,#d9560f 10px 12px);border-radius:0 0 4px 4px;box-shadow:inset 7px 0 0 rgba(255,255,255,.15)}
+.clip{width:38px;height:24px;margin:-2px auto 0;border-radius:6px;background:linear-gradient(#f2f2f6,#c9cad6);box-shadow:0 4px 8px rgba(0,0,0,.3)}
+.badge{position:relative;display:block;width:100%;margin-top:-4px;perspective:900px;text-align:left}
+.badge-in{position:relative;transform-style:preserve-3d;transition:transform .8s var(--spring)}
+.badge.flip .badge-in{transform:rotateY(180deg)}
+.face{border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 40px 60px -24px rgba(0,0,0,.75);backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.face.back{position:absolute;inset:0;transform:rotateY(180deg);background:linear-gradient(160deg,#25254f,#16163a);color:#fff;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:12px;padding:26px;text-align:center}
+.face.back img{width:100%;border-radius:10px;box-shadow:0 10px 20px -8px rgba(0,0,0,.6)}
+.face.back strong{font:800 18px/1.15 var(--head)}
+.face.back span{font:500 13px/1.4 var(--body);opacity:.8}
+.b-top{position:relative;overflow:hidden;padding:26px 20px 16px;background:linear-gradient(135deg,#1f1f3d,#2b2b5a)}
+.b-top::before{content:"";position:absolute;left:50%;top:9px;width:44px;height:6px;margin-left:-22px;border-radius:4px;background:#e8e8ef}
+.b-top::after{content:"";position:absolute;right:-30px;top:-30px;width:130px;height:130px;border-radius:50%;background:radial-gradient(circle,rgba(242,106,27,.75),transparent 70%)}
+.b-top small{display:block;font:500 11px/1 var(--body);color:#c9c9dd;margin-top:8px}
+.b-top strong{display:block;font:800 26px/1.05 var(--head);color:#fff;margin-top:4px}
+.b-role{background:linear-gradient(90deg,#f26a1b,#d7261e);color:#fff;font:800 24px/1 var(--head);letter-spacing:.3em;padding:12px 20px}
+.b-body{padding:16px 20px 18px;color:#1f1f3d}
+.b-co{display:flex;align-items:center;gap:12px;font:700 15px/1.2 var(--head);padding-bottom:14px;border-bottom:1px solid #ecebf1}
+.b-co i{width:44px;height:44px;border-radius:10px;background:#fdeee3}
+.b-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:12px;font:500 10px/1.2 var(--body);color:#5a5a72;text-transform:uppercase;letter-spacing:.06em}
+.b-grid b{display:block;font:700 13px/1.4 var(--head);color:#1f1f3d;text-transform:none;letter-spacing:0}
+.b-foot{display:flex;justify-content:space-between;align-items:flex-end;margin-top:12px;font:500 10px/1.3 var(--body);color:#5a5a72;text-transform:uppercase;letter-spacing:.06em}
+.b-foot b{display:block;font:700 13px/1.3 var(--head);color:#1f1f3d;text-transform:none;letter-spacing:0}
+.qr{width:62px;height:62px;background:conic-gradient(from 90deg at 3px 3px,#1f1f3d 25%,transparent 0) 0 0/7px 7px,conic-gradient(from 0deg at 4px 4px,#1f1f3d 25%,transparent 0) 2px 1px/11px 9px}
+.b-hint{position:absolute;right:0;top:0;font:500 13px/1 var(--body);color:rgba(255,255,255,.6)}
+.sourcing{margin-top:clamp(40px,5vw,70px);padding-top:22px;border-top:1px solid rgba(255,255,255,.14);display:flex;gap:10px 8px;flex-wrap:wrap;align-items:center;font:700 14.5px/1 var(--head);color:#fff}
+.sourcing>span{color:rgba(255,255,255,.6);font-weight:600;margin-right:14px}
+.sourcing button{padding:9px 14px;border-radius:999px;transition:background .2s,color .2s}
+.sourcing button:hover,.sourcing button[aria-pressed="true"]{background:#fff;color:#16163a}
+
+/* =========================================================
+   04 IMMACULATE CONNECTIONS — mirrors its hero
+   ========================================================= */
+.imc{--accent:#bc5700;background:#091630;color:rgba(255,255,255,.86)}
+.imc .bg{position:absolute;inset:-4%;z-index:-2;background:url("portfolio-shots/immaculate.webp") 60% 40%/cover no-repeat;filter:blur(16px) saturate(1.2);opacity:.6;animation:kb 26s ease-in-out infinite alternate}
+@keyframes kb{to{transform:scale(1.12) translate(-2%,2%)}}
+.imc::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(9,22,48,.92) 25%,rgba(9,22,48,.55) 70%,rgba(9,22,48,.35)),linear-gradient(0deg,rgba(9,22,48,.9),transparent 40%)}
+.imc h2{font-size:clamp(38px,3.7vw,52px);font-weight:700;color:#fff;letter-spacing:-.025em;max-width:15ch}
+.imc h2 .u{position:relative;white-space:nowrap}
+.imc h2 .u::after{content:"";position:absolute;left:0;right:0;bottom:-.1em;height:.1em;border-radius:1em;background:linear-gradient(90deg,#ffb730,#e9a23b);transform-origin:0 50%;transform:scaleX(0);transition:transform 1.2s var(--ease) .5s}
+.imc .in h2 .u::after{transform:scaleX(1)}
+.imc .kick{font-size:24px;color:#ffb730;display:block;margin-bottom:8px}
+.imc .lede{font-size:17px;color:rgba(255,255,255,.86);max-width:46ch;margin:20px 0 28px}
+.i-btn{display:inline-flex;align-items:center;gap:10px;padding:17px 28px;border-radius:999px;font:700 15.2px/1 var(--body);text-decoration:none;transition:transform .3s var(--spring),background .2s}
+.i-btn.o{background:#bc5700;color:#fff;box-shadow:0 14px 30px -12px rgba(188,87,0,.9)}
+.i-btn.o:hover{transform:translateY(-3px);background:#cf6300}
+.i-btn.ln{background:rgba(9,22,48,.62);color:#fff;box-shadow:inset 0 0 0 2px rgba(255,255,255,.75)}
+.i-btn.ln:hover{background:rgba(255,255,255,.12)}
+.i-stats{display:grid;grid-template-columns:repeat(2,minmax(0,220px));gap:20px 34px;margin-top:32px}
+.i-stats div{border-left:3px solid #ffb730;padding-left:16px}
+.i-stats strong{display:block;font:700 30px/1.1 var(--head);color:#fff}
+.i-stats span{font:600 11.5px/1.3 var(--body);color:rgba(255,255,255,.75);text-transform:uppercase;letter-spacing:.14em}
+.polas{position:absolute;inset:2% 6% 22%;cursor:pointer}
+.pola{position:absolute;inset:0 0 auto;background:#fbf8f1;padding:3% 3% 0;border-radius:3px;box-shadow:0 30px 60px -20px rgba(0,0,0,.75);transition:transform .9s var(--ease),opacity .6s}
+.pola .ph{overflow:hidden;background:#ccc}
+.pola img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.pola p{font:600 clamp(22px,2.3vw,30px)/1 var(--hand);color:#2b2b2b;text-align:center;padding:14px 0 18px}
+.pola[data-pos="0"]{transform:rotate(-1.5deg);z-index:3}
+.pola[data-pos="1"]{transform:rotate(4deg) translate(4%,-3%);z-index:2}
+.pola[data-pos="2"]{transform:rotate(-6deg) translate(-5%,-1%);z-index:1}
+.pola.toss{transform:rotate(16deg) translate(80%,-14%)!important;opacity:0;z-index:4!important;transition:transform .45s var(--ease),opacity .45s}
+.thumbs{position:absolute;left:4%;right:4%;bottom:9%;display:flex;align-items:center;gap:8px;justify-content:center}
+.thumbs .arr{flex:none;width:42px;height:42px;border-radius:50%;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.5);display:grid;place-items:center;color:#fff;transition:background .2s}
+.thumbs .arr:hover{background:rgba(255,255,255,.14)}
+.thumbs .arr svg{width:16px;height:16px}
+.thumbs .t{width:52px;height:38px;border-radius:6px;overflow:hidden;opacity:.6;transition:opacity .2s,box-shadow .2s,transform .2s}
+.thumbs .t img{width:100%;height:100%!important;object-fit:cover}
+.thumbs .t.on{opacity:1;box-shadow:0 0 0 2px #ffb730;transform:translateY(-3px)}
+.i-bottom{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:clamp(36px,4vw,56px)}
+.i-pause{width:46px;height:46px;border-radius:50%;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.5);display:grid;place-items:center;color:#fff}
+.i-pause svg{width:14px;height:14px}
+.i-pin{display:inline-flex;align-items:center;gap:8px;font:600 16px/1 var(--head);color:#fff;min-width:200px}
+.i-pin svg{width:18px;height:18px;stroke:#ffb730;fill:none;stroke-width:2}
+.dests{display:flex;gap:8px;flex-wrap:wrap}
+.dests button{font:700 14px/1 var(--body);color:#fff;padding:11px 16px;border-radius:999px;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.35);transition:.25s}
+.dests button:hover{box-shadow:inset 0 0 0 1.5px #fff}
+.dests button[aria-pressed="true"]{background:#fff;color:#091630}
+
+/* =========================================================
+   SERVICES (TechNext) — pick what you need
+   ========================================================= */
+.svc-sec{position:relative;background:#f6f8ff;padding:clamp(80px,10vw,130px) 0;overflow:hidden;isolation:isolate}
+.svc-sec::before{content:"";position:absolute;inset:0;z-index:-1;background-image:radial-gradient(rgba(67,97,238,.14) 1.2px,transparent 1.2px);background-size:24px 24px;-webkit-mask:linear-gradient(180deg,#000,transparent 70%);mask:linear-gradient(180deg,#000,transparent 70%)}
+.sec-head{text-align:center;max-width:720px;margin:0 auto clamp(40px,5vw,64px)}
+.sec-head .hand{font-size:28px;color:var(--tn)}
+.sec-head h2{font:800 clamp(36px,4.6vw,56px)/1.05 var(--head);letter-spacing:-.03em;color:var(--ink);margin:6px 0 14px}
+.sec-head p{color:var(--muted);font-size:17px}
+.svc-grid{display:grid;gap:22px}
+@media (min-width:960px){.svc-grid{grid-template-columns:repeat(3,1fr)}}
+.svc{position:relative;background:#fff;border-radius:24px;padding:28px 22px 22px;box-shadow:0 1px 0 rgba(21,26,51,.04),0 24px 50px -30px rgba(21,26,51,.35);transition:transform .4s var(--spring),box-shadow .4s;transform-style:preserve-3d}
+.svc:hover{box-shadow:0 30px 60px -30px var(--c2)}
+.svc .ic{width:56px;height:56px;border-radius:16px;display:grid;place-items:center;background:linear-gradient(135deg,var(--c1),var(--c2));box-shadow:0 12px 24px -10px var(--c2);margin-bottom:18px;transition:transform .5s var(--spring)}
+.svc:hover .ic{transform:rotate(-8deg) scale(1.08)}
+.svc .ic svg{width:26px;height:26px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.svc .hand{font-size:22px;color:var(--c2)}
+.svc h3{font:800 24px/1.15 var(--head);color:var(--ink);letter-spacing:-.02em;margin:2px 0 14px}
+.svc .addon{position:absolute;top:24px;right:22px;font:700 11px/1 var(--head);letter-spacing:.1em;text-transform:uppercase;color:var(--c2);background:var(--soft);padding:7px 10px;border-radius:999px}
+.svc li+li{margin-top:6px}
+.pick{display:flex;gap:12px;width:100%;text-align:left;padding:12px;border-radius:14px;transition:background .2s,box-shadow .2s}
+.pick:hover{background:var(--soft)}
+.pick .box{flex:none;width:24px;height:24px;margin-top:1px;border-radius:8px;box-shadow:inset 0 0 0 2px #d5d9ea;display:grid;place-items:center;transition:background .2s,box-shadow .2s}
+.pick .box svg{width:14px;height:14px;stroke:#fff;fill:none;stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round;opacity:0;transform:scale(.4);transition:.25s var(--spring)}
+.pick[aria-pressed="true"]{background:var(--soft);box-shadow:inset 0 0 0 1.5px var(--c2)}
+.pick[aria-pressed="true"] .box{background:var(--c2);box-shadow:none}
+.pick[aria-pressed="true"] .box svg{opacity:1;transform:none}
+.pick strong{display:block;font:700 15px/1.3 var(--head);color:var(--ink)}
+.pick span{display:block;font-size:13.5px;line-height:1.45;color:var(--muted)}
+.tray{position:sticky;bottom:16px;z-index:20;margin:28px auto 0;max-width:760px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;justify-content:space-between;background:var(--ink);color:#fff;border-radius:18px;padding:12px 12px 12px 20px;box-shadow:0 24px 50px -20px rgba(21,26,51,.6);transform:translateY(20px);opacity:0;pointer-events:none;transition:.4s var(--spring)}
+.tray.show{transform:none;opacity:1;pointer-events:auto}
+.tray p{font:600 14.5px/1.35 var(--head)}
+.tray p b{color:#9fb3ff}
+.tray .btn{padding:12px 18px;font-size:14px}
+
+/* =========================================================
+   CTA + footer
+   ========================================================= */
+.end{position:relative;padding:clamp(80px,10vw,120px) 0;overflow:hidden;isolation:isolate;background:linear-gradient(135deg,#eef1ff,#e4ebff 50%,#fff1e6)}
+.end-card{position:relative;text-align:center;max-width:820px;margin:0 auto}
+.end h2{font:800 clamp(40px,6vw,76px)/1.02 var(--head);letter-spacing:-.035em;color:var(--ink)}
+.end h2 span{background:linear-gradient(90deg,#4361ee,#ff6a13 45%,#c62f26 70%,#bc5700,#4361ee);-webkit-background-clip:text;background-clip:text;color:transparent;background-size:200% 100%;animation:shine 6s linear infinite}
+@keyframes shine{to{background-position:200% 0}}
+.end p{font-size:18px;color:var(--muted);margin:18px auto 30px;max-width:46ch}
+.plane{position:absolute;z-index:-1;width:56px;height:56px;color:var(--tn);offset-path:path("M -100 420 C 200 120, 500 520, 820 200 S 1300 120, 1600 300");animation:fly 14s linear infinite}
+@keyframes fly{from{offset-distance:0%}to{offset-distance:100%}}
+footer{background:#fff;border-top:1px solid #eceef5}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:22px 0;font:600 13px/1.4 var(--head);color:var(--muted)}
+footer a{text-decoration:none;color:var(--ink)}
+
+/* =========================================================
+   Dialogs: Preview + Branding kit
+   ========================================================= */
+dialog{border:0;padding:0;background:transparent;max-width:min(1100px,100% - 24px);width:100%;margin:auto;color:var(--text)}
+dialog::backdrop{background:rgba(12,14,30,.6);backdrop-filter:blur(6px)}
+dialog[open]{animation:pop .45s var(--spring)}
+@keyframes pop{from{opacity:0;transform:translateY(20px) scale(.96)}}
+.dlg{position:relative;background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 40px 80px -30px rgba(0,0,0,.6);max-height:calc(100dvh - 32px);overflow-y:auto}
+.x{position:absolute;top:14px;right:14px;z-index:2;width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.92);display:grid;place-items:center;box-shadow:0 6px 16px -6px rgba(0,0,0,.4)}
+.x svg{width:18px;height:18px}
+.pv-bar{display:flex;align-items:center;gap:8px;padding:14px 64px 14px 18px;background:#f1f2f7;font:600 13px/1 var(--head);color:#6b7090}
+.pv-bar i{width:11px;height:11px;border-radius:50%;background:#d6d8e3}
+.pv-bar i:nth-child(1){background:#ff6b5f}.pv-bar i:nth-child(2){background:#ffc23d}.pv-bar i:nth-child(3){background:#2fcf63}
+.pv-bar span{margin-left:10px;background:#fff;border-radius:8px;padding:7px 12px;flex:1;max-width:420px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#pv-img{width:100%}
+.pv-foot{display:flex;justify-content:flex-end;padding:14px 18px;background:#fafbff}
+.bk-head{position:relative;padding:36px 30px 28px;background:var(--b-bg);color:var(--b-fg);overflow:hidden}
+.bk-head .hand{font-size:24px;color:var(--b-acc)}
+.bk-head h3{font:800 clamp(28px,4vw,40px)/1.05 var(--head);letter-spacing:-.03em;margin-top:4px}
+.bk-logo{display:inline-flex;align-items:center;gap:12px;margin-top:22px;background:#fff;border-radius:16px;padding:14px 18px;box-shadow:0 14px 30px -18px rgba(0,0,0,.6);color:#1f1f1f}
+.bk-body{display:grid;gap:26px;padding:28px 30px 30px}
+@media (min-width:820px){.bk-body{grid-template-columns:1.2fr 1fr}}
+.bk-body h4{font:700 12px/1 var(--head);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+.sw-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:10px}
+.sw{text-align:left;border-radius:14px;overflow:hidden;box-shadow:0 0 0 1px #eceef5;transition:transform .25s var(--spring)}
+.sw:hover{transform:translateY(-3px)}
+.sw i{display:block;height:64px;background:var(--c)}
+.sw b{display:block;font:700 13px/1.2 var(--head);color:var(--ink);padding:9px 10px 0}
+.sw small{display:block;font:500 12px/1.2 var(--body);color:var(--muted);padding:3px 10px 10px}
+.sw.copied small{color:#2f9a5a}
+.ty{border-radius:14px;box-shadow:0 0 0 1px #eceef5;padding:14px 16px}
+.ty+.ty{margin-top:10px}
+.ty .s{font-size:30px;line-height:1.1;color:var(--ink)}
+.ty small{display:block;font:500 12px/1.3 var(--body);color:var(--muted);margin-top:6px}
+.voice{display:flex;flex-wrap:wrap;gap:8px}
+.voice span{font:600 13px/1 var(--head);padding:9px 14px;border-radius:999px;background:#f3f4fa;color:var(--ink)}
+.bk-line{margin-top:18px;padding:16px;border-radius:14px;background:#f8f9fd;font:italic 500 17px/1.4 var(--head);color:var(--ink)}
+.bk-foot{display:flex;gap:10px;flex-wrap:wrap;padding:0 30px 30px}
+
+/* =========================================================
+   Responsive + motion preferences
+   ========================================================= */
+@media (max-width:999px){
+  .proj{min-height:0}
+  .proj .stage{height:clamp(360px,90vw,520px)}
+  .deck-wrap{height:clamp(260px,70vw,420px)}
+  .expo .stage{height:clamp(500px,140vw,640px)}
+  .lanyard{top:0}
+}
+@media (max-width:560px){
+  .hero h1{font-size:clamp(34px,10.5vw,44px)}
+  .f3,.f4,.c3,.g-note,.b-hint,.pr-sauce{display:none}
+  .g-call{transform:scale(.88)}
+  .g-label{font-size:13px}
+  .g-picker button{width:38px;height:38px}
+  .i-stats{grid-template-columns:1fr 1fr;gap:16px}
+  .i-stats strong{font-size:24px}
+  .thumbs .t{display:none}.thumbs .t.on{display:block}
+  .board{left:0;justify-content:flex-start}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rv{opacity:1;transform:none}
+  .hero h1 .line>span,.proj h2 .w>span{transform:none}
+  .imc h2 .u::after{transform:scaleX(1)}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#glaze">Skip to the work</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top"><i aria-hidden="true"></i>HelloGiovanni07</a>
+    <nav id="site-nav" aria-label="Main">
+      <a class="lk" href="#glaze" data-sec="glaze">Glaze Bomb</a>
+      <a class="lk" href="#pizza" data-sec="pizza">Pizza Max</a>
+      <a class="lk" href="#expo" data-sec="expo">ExpoBusiness</a>
+      <a class="lk" href="#imc" data-sec="imc">Immaculate</a>
+      <a class="lk" href="#services" data-sec="services">Services</a>
+      <a class="go" href="#contact">Start a project</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </nav>
+    <div class="progress" aria-hidden="true"><i></i></div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="hero" aria-labelledby="hero-title">
+  <div class="blob b1" aria-hidden="true"></div>
+  <div class="blob b2" aria-hidden="true"></div>
+  <div class="blob b3" aria-hidden="true"></div>
+  <div class="blob cursor-blob" aria-hidden="true"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="hello hand">hello! here's our work <span class="wave" aria-hidden="true">👋</span></span>
+      <h1 id="hero-title">
+        <span class="line"><span>Websites people</span></span>
+        <span class="line"><span><span class="rotator" aria-hidden="true">
+          <b class="on" style="color:#e85706">crave.</b>
+          <b style="color:#c62f26">order from.</b>
+          <b style="color:#c9460b">fly with.</b>
+          <b style="color:#bc5700">travel with.</b>
+        </span><span class="sr">remember.</span></span></span>
+      </h1>
+      <p class="lede">Four brands, four very different websites. Each one has its own look, its own voice and one moment people remember: a donut you can spin, a pizza you can turn, a badge you can flip.</p>
+      <div class="cta-row">
+        <a class="btn btn-main" href="#glaze">See the work <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-ghost" href="#services">What we do</a>
+      </div>
+      <div class="chips" role="group" aria-label="Preview a project">
+        <button class="chip on" type="button" aria-pressed="true" style="--c:#ff6a13"><i></i>Glaze Bomb</button>
+        <button class="chip" type="button" aria-pressed="false" style="--c:#c62f26"><i></i>Pizza Max</button>
+        <button class="chip" type="button" aria-pressed="false" style="--c:#f26a1b"><i></i>ExpoBusiness</button>
+        <button class="chip" type="button" aria-pressed="false" style="--c:#bc5700"><i></i>Immaculate</button>
+      </div>
+      <div class="stats">
+        <div><strong data-count="4">4</strong><span>Brands</span></div>
+        <div><strong data-count="38" data-suffix="+">38+</strong><span>Pages</span></div>
+        <div><strong data-count="3">3</strong><span>Countries</span></div>
+      </div>
+    </div>
+    <div class="deck-wrap" aria-hidden="true">
+      <img class="float f1" data-depth="40" src="portfolio-shots/decor/choco-sprinkle.webp" alt="" width="480" height="480">
+      <img class="float f2" data-depth="-50" src="portfolio-shots/decor/pizza.webp" alt="" width="480" height="480">
+      <img class="float f3" data-depth="70" src="portfolio-shots/decor/tomato.webp" alt="" width="420" height="415">
+      <img class="float f4" data-depth="-30" src="portfolio-shots/decor/strawberry-sprinkle.webp" alt="" width="480" height="480">
+      <div class="deck">
+        <div class="card3d" data-pos="0" data-target="#glaze"><div class="bar"><i></i><i></i><i></i><span>glaze-bomb-donuts</span></div><img src="portfolio-shots/glaze.webp" alt="" width="2000" height="1096"></div>
+        <div class="card3d" data-pos="1" data-target="#pizza"><div class="bar"><i></i><i></i><i></i><span>pizza-max</span></div><img src="portfolio-shots/pizza.webp" alt="" width="2000" height="1099"></div>
+        <div class="card3d" data-pos="2" data-target="#expo"><div class="bar"><i></i><i></i><i></i><span>expobusiness-travel</span></div><img src="portfolio-shots/travel.webp" alt="" width="2000" height="1096"></div>
+        <div class="card3d" data-pos="3" data-target="#imc"><div class="bar"><i></i><i></i><i></i><span>immaculateconnectionsph.com</span></div><img src="portfolio-shots/immaculate.webp" alt="" width="2000" height="1097"></div>
+      </div>
+      <div class="tag-note"><b>tap a card!</b><span id="deck-name">Glaze Bomb · donut shop</span></div>
+    </div>
+  </div>
+  <div class="scroll-cue" aria-hidden="true"></div>
+  <div class="marquee" aria-hidden="true"><div>
+    <span>Domain</span><span>Website design</span><span>SEO · AEO · GEO</span><span>Analytics</span><span>Social media posting</span><span>Video editing</span><span>Branding</span><span>Odoo ERP</span>
+    <span>Domain</span><span>Website design</span><span>SEO · AEO · GEO</span><span>Analytics</span><span>Social media posting</span><span>Video editing</span><span>Branding</span><span>Odoo ERP</span>
+  </div></div>
+</section>
+
+<!-- ================= 01 GLAZE BOMB ================= -->
+<section class="proj glaze" id="glaze" aria-labelledby="glaze-title">
+  <span class="num-tag" aria-hidden="true" style="color:#d64f00">01</span>
+  <div class="wrap proj-grid">
+    <div class="rv">
+      <span class="g-open">Project 01 · Filled donut shop</span>
+      <h2 id="glaze-title"><span class="w"><span>Glaze Bomb,</span></span> <br><span class="w"><span class="o">glazed by hand.</span></span></h2>
+      <p class="lede">A product-led site you can play with: spin a live 3D donut, build your own, watch six donuts drop into a box, and ask “Glazy” the chat helper to add to your order.</p>
+      <div class="g-acts">
+        <a class="g-btn fill" href="https://hellogiovanni07-commits.github.io/glaze-bomb-donuts/" target="_blank" rel="noopener">Visit the site <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="g-btn line" href="https://hellogiovanni07-commits.github.io/glaze-bomb-donuts/brand/" target="_blank" rel="noopener">Branding</a>
+        <button class="g-btn line" type="button" data-preview="glaze">Preview</button>
+      </div>
+      <div class="g-stats">
+        <div><strong>4</strong><span>pages</span></div>
+        <div><strong>84</strong><span>3D renders</span></div>
+        <div><strong>44</strong><span>menu items</span></div>
+      </div>
+      <div class="g-follow"><span class="hand">Peek inside</span>
+        <a href="https://hellogiovanni07-commits.github.io/glaze-bomb-donuts/menu.html" target="_blank" rel="noopener">Menu</a>
+        <a href="https://hellogiovanni07-commits.github.io/glaze-bomb-donuts/gallery.html" target="_blank" rel="noopener">Gallery</a>
+        <a href="https://hellogiovanni07-commits.github.io/glaze-bomb-donuts/location.html" target="_blank" rel="noopener">Location</a>
+      </div>
+    </div>
+
+    <div class="stage rv d1">
+      <div class="g-ring" aria-hidden="true"><div class="g-ticks"></div></div>
+      <div class="g-donut" role="slider" tabindex="0" aria-label="Spin the donut with the arrow keys" aria-valuemin="0" aria-valuemax="360" aria-valuenow="0"><img id="g-img" src="portfolio-shots/decor/caramel-biscuit-crunch.webp" alt="" width="480" height="480" draggable="false"></div>
+      <div class="g-call c1" aria-hidden="true"><i>✦</i><div><strong>Hand-dipped</strong><span>thick glossy glaze</span></div></div>
+      <div class="g-call c2" aria-hidden="true"><i>◉</i><div><strong>Live 3D donut</strong><span>spin it, build it</span></div></div>
+      <div class="g-call c3" aria-hidden="true"><i>☀</i><div><strong>Baked at 6 AM</strong><span>every single day</span></div></div>
+      <span class="g-note hand" aria-hidden="true">drag to spin!</span>
+      <div class="g-ped" aria-hidden="true"></div>
+      <div class="g-label" aria-live="polite"><span id="g-name">Caramel Biscuit Crunch</span><b id="g-price">$3.80</b></div>
+      <div class="g-picker" role="group" aria-label="Pick a flavour">
+        <button type="button" aria-pressed="true" data-src="caramel-biscuit-crunch" data-name="Caramel Biscuit Crunch" data-price="$3.80"><img src="portfolio-shots/decor/caramel-biscuit-crunch-sm.webp" alt="Caramel Biscuit Crunch" width="160" height="160"></button>
+        <button type="button" aria-pressed="false" data-src="cookie-speckle" data-name="Cookie Speckle" data-price="$3.40"><img src="portfolio-shots/decor/cookie-speckle-sm.webp" alt="Cookie Speckle" width="160" height="160" loading="lazy"></button>
+        <button type="button" aria-pressed="false" data-src="midnight-marble" data-name="Midnight Marble" data-price="$3.60"><img src="portfolio-shots/decor/midnight-marble-sm.webp" alt="Midnight Marble" width="160" height="160" loading="lazy"></button>
+        <button type="button" aria-pressed="false" data-src="choco-sprinkle" data-name="Choco Sprinkle" data-price="$3.20"><img src="portfolio-shots/decor/choco-sprinkle-sm.webp" alt="Choco Sprinkle" width="160" height="160" loading="lazy"></button>
+        <button type="button" aria-pressed="false" data-src="ube-halaya" data-name="Ube Halaya" data-price="$3.60"><img src="portfolio-shots/decor/ube-halaya-sm.webp" alt="Ube Halaya" width="160" height="160" loading="lazy"></button>
+        <button type="button" aria-pressed="false" data-src="matcha-drizzle" data-name="Matcha Drizzle" data-price="$3.60"><img src="portfolio-shots/decor/matcha-drizzle-sm.webp" alt="Matcha Drizzle" width="160" height="160" loading="lazy"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 02 PIZZA MAX ================= -->
+<section class="proj pizza" id="pizza" aria-labelledby="pizza-title">
+  <div class="p-bar"><div class="wrap">
+    <span class="hide-sm" style="margin-left:clamp(130px,14vw,170px)">Berlin-Pankow</span>
+    <span class="live">Project 02 · Restaurant</span>
+    <a class="ct" href="https://hellogiovanni07-commits.github.io/pizza-max/brand/" target="_blank" rel="noopener">BRANDING</a>
+  </div></div>
+  <div class="p-nav" aria-hidden="true"><div class="wrap"><span>DEALS</span><span>PIZZA</span><span>BURGERS</span><span>PASTA</span><span>SALADS</span><span>DESSERTS</span><span>DRINKS</span></div></div>
+  <div class="p-logo" aria-hidden="true"><div class="pz">Pizza</div><div class="mx">MAX</div><div class="sw"></div><div class="tb">...tasty in the box!</div></div>
+  <img class="prop pr-basil" data-depth="-30" src="portfolio-shots/decor/basil.webp" alt="" width="254" height="420">
+  <span class="num-tag" aria-hidden="true" style="color:#c62f26;top:auto;bottom:40px">02</span>
+  <div class="wrap proj-grid">
+    <div class="rv">
+      <h2 id="pizza-title"><span class="w"><span>Hot from the</span></span> <br><span class="w"><span class="r">stone oven.</span></span></h2>
+      <p class="lede">Pizza Max, Berlin. Visitors lift the lid of a pizza box to get in. Inside: a stone-oven menu in three sizes, deals, Blender-made ingredients, pickup and delivery.</p>
+      <div class="g-acts">
+        <a class="p-btn red" href="https://hellogiovanni07-commits.github.io/pizza-max/" target="_blank" rel="noopener">Visit the site</a>
+        <button class="p-btn white" type="button" data-preview="pizza">Preview</button>
+        <a class="p-btn white" href="https://hellogiovanni07-commits.github.io/pizza-max/brand/" target="_blank" rel="noopener">Branding</a>
+      </div>
+      <ul class="p-feats">
+        <li><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 9h8M8 13h8M8 17h5"/></svg>3 pages, incl. legal</li>
+        <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Box-lid intro animation</li>
+        <li><svg viewBox="0 0 24 24"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>Pickup &amp; delivery</li>
+        <li><svg viewBox="0 0 24 24"><path d="M12 3l9 16H3z"/></svg>3 sizes: 26 · 32 · 38 cm</li>
+      </ul>
+    </div>
+
+    <div class="stage rv d1">
+      <img class="prop pr-tomato" data-depth="40" src="portfolio-shots/decor/tomato.webp" alt="" width="420" height="415">
+      <img class="prop pr-sauce" data-depth="-45" src="portfolio-shots/decor/sauce.webp" alt="">
+      <span class="pull hand" aria-hidden="true">drag to spin!<svg viewBox="0 0 50 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 8c14-6 30-6 44 4M40 6l6 6-8 2"/></svg></span>
+      <div class="pie" role="slider" tabindex="0" aria-label="Spin the pizza with the arrow keys" aria-valuemin="0" aria-valuemax="360" aria-valuenow="0">
+        <div class="pie-board"></div>
+        <div class="steam" aria-hidden="true"><i></i><i></i><i></i></div>
+        <img src="portfolio-shots/decor/pizza.webp" alt="" width="480" height="480" draggable="false">
+      </div>
+      <img class="prop pr-chili" data-depth="25" src="portfolio-shots/decor/chili.webp" alt="" width="420" height="130">
+      <img class="prop pr-olives" data-depth="-35" src="portfolio-shots/decor/olives.webp" alt="" width="420" height="312">
+      <div class="board">On the board: <b>Salami</b>
+        <label class="sr" for="size">Pizza size</label>
+        <select id="size"><option value=".82">Standard 26 cm</option><option value=".92">Maxi 32 cm</option><option value="1" selected>Wumbo 38 cm</option></select>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 03 EXPOBUSINESS ================= -->
+<section class="proj expo" id="expo" aria-labelledby="expo-title">
+  <div class="bg" aria-hidden="true"></div>
+  <span class="num-tag" aria-hidden="true" style="color:#fff">03</span>
+  <div class="wrap">
+    <div class="proj-grid">
+      <div class="rv">
+        <span class="hx-live">Project 03 · Canton Fair Phase 1 is open now</span>
+        <h2 id="expo-title"><span class="w"><span>The Canton Fair,</span></span> <span class="w"><span class="hl">fully managed</span></span> <span class="w"><span>for your business.</span></span></h2>
+        <p class="lede">ExpoBusiness Travel Services: corporate travel and MICE for Philippine companies. Buyer badges, China visas, flights, hotels near the venue, interpreters and factory visits, under one coordinator.</p>
+        <div class="g-acts">
+          <a class="x-btn o" href="https://hellogiovanni07-commits.github.io/expobusiness-travel/" target="_blank" rel="noopener">Visit the site <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="x-btn ln" href="https://hellogiovanni07-commits.github.io/expobusiness-travel/brand-kit/" target="_blank" rel="noopener">Branding</a>
+          <button class="x-btn ln" type="button" data-preview="expo">Preview</button>
+        </div>
+        <ul class="x-trust"><li>14 pages</li><li>8 industry guides</li><li>China visa guide</li></ul>
+      </div>
+      <div class="stage rv d1">
+        <span class="b-hint">Drag to swing, tap to flip</span>
+        <div class="lanyard idle">
+          <div class="strap"></div><div class="clip"></div>
+          <button class="badge" type="button" aria-label="Flip the buyer badge">
+            <span class="badge-in" style="display:block">
+              <span class="face" style="display:block">
+                <span class="b-top" style="display:block"><small>中国进出口商品交易会</small><strong>Canton Fair</strong><small>Next session · Spring 2027</small></span>
+                <span class="b-role" style="display:block">BUYER</span>
+                <span class="b-body" style="display:block">
+                  <span class="b-co"><i></i>Your Company Inc.</span>
+                  <span class="b-grid"><span>Phase<b>1·2·3</b></span><span>Venue<b>Pazhou</b></span><span>From<b>Manila</b></span></span>
+                  <span class="b-foot"><span>Badge no.<b>EB-141-0418</b>Valid<b>All phases</b></span><span class="qr"></span></span>
+                </span>
+              </span>
+              <span class="face back"><img src="portfolio-shots/travel.webp" alt="" width="2000" height="1096" loading="lazy"><strong>ExpoBusiness Travel Services</strong><span>One coordinator. One itemised quotation. Invoiced to your company.</span></span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="sourcing rv" role="group" aria-label="Industries"><span>Sourcing for</span>
+      <button type="button" aria-pressed="false">Electronics</button><button type="button" aria-pressed="false">Machinery</button><button type="button" aria-pressed="false">Lighting</button><button type="button" aria-pressed="false">Construction</button><button type="button" aria-pressed="false">Furniture</button><button type="button" aria-pressed="false">Hotel &amp; restaurant</button><button type="button" aria-pressed="false">Fashion</button><button type="button" aria-pressed="false">Retail &amp; gifts</button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 04 IMMACULATE CONNECTIONS ================= -->
+<section class="proj imc" id="imc" aria-labelledby="imc-title">
+  <div class="bg" aria-hidden="true"></div>
+  <span class="num-tag" aria-hidden="true" style="color:#ffb730">04</span>
+  <div class="wrap">
+    <div class="proj-grid">
+      <div class="rv">
+        <span class="kick hand">Project 04 · Immaculate Connections · live site</span>
+        <h2 id="imc-title"><span class="w"><span>Cebu travel agency,</span></span> <span class="w"><span>planned to the</span></span> <span class="w"><span class="u">last detail</span></span></h2>
+        <p class="lede">From Da Nang and Hanoi to Shanghai, Beijing, Tokyo and Osaka: a Cebu tour agency's site with tour packages, real trip photos, tickets, hotels, transport and a free quotation.</p>
+        <div class="g-acts">
+          <a class="i-btn o" href="https://www.immaculateconnectionsph.com/" target="_blank" rel="noopener">Visit the live site <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <button class="i-btn ln" type="button" data-brand="imc">Branding</button>
+          <button class="i-btn ln" type="button" data-preview="imc">Preview</button>
+        </div>
+        <div class="i-stats">
+          <div><strong>3</strong><span>Destination countries</span></div>
+          <div><strong>17+</strong><span>Pages</span></div>
+          <div><strong>Cebu City</strong><span>Office &amp; local team</span></div>
+          <div><strong>24/7</strong><span>Traveller support</span></div>
+        </div>
+      </div>
+      <div class="stage rv d1">
+        <div class="polas" role="button" tabindex="0" aria-label="Show the next photo">
+          <div class="pola" data-pos="2"><div class="ph"><img src="portfolio-shots/immaculate.webp" alt="" style="transform:scale(1.7);transform-origin:18% 40%" width="2000" height="1097" loading="lazy"></div><p>Planned to the last detail</p></div>
+          <div class="pola" data-pos="1"><div class="ph"><img src="portfolio-shots/immaculate.webp" alt="" width="2000" height="1097" loading="lazy"></div><p>The home page</p></div>
+          <div class="pola" data-pos="0"><div class="ph"><img src="portfolio-shots/immaculate.webp" alt="Immaculate Connections home page with a polaroid of a tour group" style="transform:scale(2.15);transform-origin:68% 47%" width="2000" height="1097" loading="lazy"></div><p>Hotel check-in</p></div>
+        </div>
+        <div class="thumbs">
+          <button class="arr" type="button" data-step="-1" aria-label="Previous photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M15 6l-6 6 6 6"/></svg></button>
+          <span class="t on"><img src="portfolio-shots/immaculate.webp" alt="" style="object-position:70% 50%" width="2000" height="1097" loading="lazy"></span>
+          <span class="t"><img src="portfolio-shots/immaculate.webp" alt="" width="2000" height="1097" loading="lazy"></span>
+          <span class="t"><img src="portfolio-shots/immaculate.webp" alt="" style="object-position:15% 40%" width="2000" height="1097" loading="lazy"></span>
+          <button class="arr" type="button" data-step="1" aria-label="Next photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></button>
+        </div>
+      </div>
+    </div>
+    <div class="i-bottom rv">
+      <button class="i-pause" type="button" aria-label="Pause the tour" aria-pressed="false"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 4h4v16H6zM14 4h4v16h-4z"/></svg></button>
+      <span class="i-pin"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span id="pin-text" aria-live="polite">Moalboal, Cebu</span></span>
+      <div class="dests" role="group" aria-label="Featured destinations">
+        <button type="button" aria-pressed="false">Bohol</button><button type="button" aria-pressed="false">Da Nang</button><button type="button" aria-pressed="false">Palawan</button><button type="button" aria-pressed="false">Japan</button><button type="button" aria-pressed="false">Boracay</button><button type="button" aria-pressed="false">Ha Long Bay</button><button type="button" aria-pressed="false">Coron</button><button type="button" aria-pressed="true">Moalboal</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section class="svc-sec" id="services" aria-labelledby="svc-title">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="hand">what we can do for you</span>
+      <h2 id="svc-title">Everything your website needs</h2>
+      <p>Tap what you need. We'll build your list as you go.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc rv" style="--c1:#6b8cff;--c2:#4361ee;--soft:#eef1ff">
+        <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 8h18M8 21h8M12 18v3"/></svg></div>
+        <span class="hand">the site itself</span>
+        <h3>Website</h3>
+        <ul>
+          <li><button class="pick" type="button" aria-pressed="false"><span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></span><span><strong>Domain</strong><span>Finding, registering and connecting your web address.</span></span></button></li>
+          <li><button class="pick" type="button" aria-pressed="false"><span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></span><span><strong>Website design</strong><span>A custom site for your brand, fast on any phone.</span></span></button></li>
+          <li><button class="pick" type="button" aria-pressed="false"><span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></span><span><strong>Keywords, SEO, AEO &amp; GEO</strong><span>Found on Google and in AI answers like ChatGPT and Gemini.</span></span></button></li>
+          <li><button class="pick" type="button" aria-pressed="false"><span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></span><span><strong>Analytics</strong><span>See who visits, from where, and what makes them get in touch.</span></span></button></li>
+        </ul>
+      </article>
+      <article class="svc rv d1" style="--c1:#ff9a5c;--c2:#e8590c;--soft:#fff1e6">
+        <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 10v4a1 1 0 0 0 1 1h2l5 4V5L7 9H5a1 1 0 0 0-1 1z"/><path d="M16 9a4 4 0 0 1 0 6M19 6a8 8 0 0 1 0 12"/></svg></div>
+        <span class="hand">get the word out</span>
+        <h3>Marketing materials</h3>
+        <ul>
+          <li><button class="pick" type="button" aria-pressed="false"><span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></span><span><strong>Social media posting</strong><span>Posts designed and planned for your channels.</span></span></button></li>
+          <li><button class="pick" type="button" aria-pressed="false"><span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></span><span><strong>Video editing</strong><span>Reels, promos and explainers, cut and captioned.</span></span></button></li>
+          <li><button class="pick" type="button" aria-pressed="false"><span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></span><span><strong>Branding</strong><span>Logo, colours and fonts that stay the same everywhere.</span></span></button></li>
+        </ul>
+      </article>
+      <article class="svc rv d2" style="--c1:#5fd08a;--c2:#2b8a52;--soft:#e9f8ef">
+        <span class="addon">Add-on</span>
+        <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div>
+        <span class="hand">additional services</span>
+        <h3>ERP system (Odoo)</h3>
+        <ul>
+          <li><button class="pick" type="button" aria-pressed="false"><span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></span><span><strong>Payment direct to website</strong><span>Customers pay online and it lands in your system.</span></span></button></li>
+          <li><button class="pick" type="button" aria-pressed="false"><span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></span><span><strong>Database</strong><span>Customers, products and orders in one place.</span></span></button></li>
+          <li><button class="pick" type="button" aria-pressed="false"><span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></span><span><strong>Accounting</strong><span>Invoices, bills and reports that update as you sell.</span></span></button></li>
+          <li><button class="pick" type="button" aria-pressed="false"><span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></span><span><strong>Inventory</strong><span>Know what's in stock and what to reorder.</span></span></button></li>
+          <li><button class="pick" type="button" aria-pressed="false"><span class="box"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></span><span><strong>Sales</strong><span>Quotes, orders and follow-ups, linked to your site.</span></span></button></li>
+        </ul>
+      </article>
+    </div>
+    <div class="tray" aria-live="polite"><p>Your list: <b id="tray-count">0 services</b></p><button class="btn btn-main" type="button" id="tray-copy" style="--accent:#4361ee">Copy my list</button></div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="end" id="contact" aria-labelledby="end-title">
+  <svg class="plane" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 11.5 21 3l-5.5 18-4.2-7.3L2 11.5zm9.3 2.2 3 5.2L18.6 5 11.3 13.7z"/></svg>
+  <div class="wrap end-card rv">
+    <span class="hand" style="font-size:28px;color:var(--tn)">your brand next?</span>
+    <h2 id="end-title">Let's build a site people <span>remember.</span></h2>
+    <p>Got a shop, a restaurant or a service that deserves a better website? Pick your services above, copy the list, and send it our way.</p>
+    <a class="btn btn-main" href="#services" style="--accent:#4361ee">Pick your services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>HelloGiovanni07 · Selected work 2026</span><a href="#top">Back to top ↑</a></div></footer>
+
+<!-- Preview dialog -->
+<dialog id="preview" aria-labelledby="pv-title">
+  <div class="dlg">
+    <button class="x" type="button" data-close aria-label="Close preview"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <div class="pv-bar"><i></i><i></i><i></i><span id="pv-title">site</span></div>
+    <img id="pv-img" src="portfolio-shots/glaze.webp" alt="" width="2000" height="1096">
+    <div class="pv-foot"><a class="btn btn-main" id="pv-go" href="#" target="_blank" rel="noopener" style="--accent:#4361ee">Open the live site</a></div>
+  </div>
+</dialog>
+
+<!-- Branding dialog -->
+<dialog id="brand" aria-labelledby="bk-title">
+  <div class="dlg">
+    <button class="x" type="button" data-close aria-label="Close brand kit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <div class="bk-head"><span class="hand">brand kit</span><h3 id="bk-title">Brand</h3><div class="bk-logo" id="bk-logo"></div></div>
+    <div class="bk-body">
+      <div><h4>Colours · tap to copy</h4><div class="sw-grid" id="bk-sw"></div><h4 style="margin-top:24px">Voice</h4><div class="voice" id="bk-voice"></div><p class="bk-line" id="bk-line"></p></div>
+      <div><h4>Typography</h4><div id="bk-type"></div></div>
+    </div>
+    <div class="bk-foot"><a class="btn btn-main" id="bk-go" href="#" target="_blank" rel="noopener">Visit the site</a></div>
+  </div>
+</dialog>
+
+<script>
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const fine = matchMedia('(pointer: fine)').matches;
+  const root = document.documentElement;
+  const $ = (s, el = document) => el.querySelector(s);
+  const $$ = (s, el = document) => [...el.querySelectorAll(s)];
+
+  /* ---------- header: mobile menu ---------- */
+  const top = $('.top'), menuBtn = $('.menu-btn');
+  menuBtn.addEventListener('click', () => {
+    const open = top.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', open);
+    menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  });
+  $$('.top nav a').forEach(a => a.addEventListener('click', () => { top.classList.remove('open'); menuBtn.setAttribute('aria-expanded', false); }));
+
+  /* ---------- hero ---------- */
+  requestAnimationFrame(() => $('#hero').classList.add('ready'));
+  const words = $$('.rotator b'); let w = 0;
+  if (!reduce) setInterval(() => {
+    if (document.hidden) return;
+    const cur = words[w]; cur.classList.remove('on'); cur.classList.add('out');
+    setTimeout(() => cur.classList.remove('out'), 700);
+    w = (w + 1) % words.length; words[w].classList.add('on');
+  }, 2400);
+
+  const cards = $$('.card3d'), chips = $$('.chip');
+  const names = ['Glaze Bomb · donut shop', 'Pizza Max · pizzeria', 'ExpoBusiness · Canton Fair travel', 'Immaculate · Cebu tours'];
+  const colors = ['#ff6a13', '#c62f26', '#f26a1b', '#bc5700'];
+  let active = 0, paused = false;
+  const setActive = i => {
+    active = (i + cards.length) % cards.length;
+    cards.forEach((c, k) => c.dataset.pos = (k - active + cards.length) % cards.length);
+    chips.forEach((c, k) => { c.classList.toggle('on', k === active); c.setAttribute('aria-pressed', k === active); });
+    $('#deck-name').textContent = names[active];
+    $('#hero').style.setProperty('--accent', colors[active]);
+  };
+  cards.forEach((c, k) => c.addEventListener('click', () => k === active ? $(c.dataset.target).scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' }) : setActive(k)));
+  chips.forEach((c, k) => {
+    c.addEventListener('mouseenter', () => { paused = true; setActive(k); });
+    c.addEventListener('mouseleave', () => paused = false);
+    c.addEventListener('click', () => setActive(k));
+  });
+  const deckWrap = $('.deck-wrap');
+  deckWrap.addEventListener('mouseenter', () => paused = true);
+  deckWrap.addEventListener('mouseleave', () => paused = false);
+  const chipRow = $('.chips');
+  chipRow.addEventListener('focusin', () => paused = true);
+  chipRow.addEventListener('focusout', () => paused = false);
+  if (!reduce) setInterval(() => { if (!paused && !document.hidden) setActive(active + 1); }, 3200);
+
+  const blob = $('.cursor-blob'), deck = $('.deck'), hero = $('#hero');
+  let tx = innerWidth * .6, ty = innerHeight * .4, bx = tx, by = ty;
+  if (fine && !reduce) {
+    hero.addEventListener('pointermove', e => {
+      const r = hero.getBoundingClientRect();
+      tx = e.clientX - r.left; ty = e.clientY - r.top;
+      const nx = e.clientX / innerWidth - .5, ny = e.clientY / innerHeight - .5;
+      deck.style.transform = `rotateY(${nx * 14}deg) rotateX(${-ny * 10}deg)`;
+      $$('.float', hero).forEach(f => { const d = +f.dataset.depth; f.style.transform = `translate(${nx * d}px,${ny * d}px)`; });
+    });
+    hero.addEventListener('pointerleave', () => deck.style.transform = '');
+    (function loop() {
+      bx += (tx - bx) * .08; by += (ty - by) * .08;
+      blob.style.transform = `translate(${bx - 170}px,${by - 170}px)`;
+      requestAnimationFrame(loop);
+    })();
+  } else blob.style.display = 'none';
+
+  /* counters (numbers are already in the HTML; this only animates them) */
+  if (!reduce) $$('[data-count]').forEach(el => {
+    const end = +el.dataset.count, suf = el.dataset.suffix || '';
+    const t0 = performance.now() + 400;
+    (function step(t) {
+      const p = Math.max(0, Math.min(1, (t - t0) / 1400)), e = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(end * e) + suf;
+      if (p < 1) requestAnimationFrame(step);
+    })(performance.now());
+  });
+
+  /* ---------- reveal + section parallax ---------- */
+  const io = new IntersectionObserver(es => es.forEach(en => {
+    if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+  }), { threshold: .12, rootMargin: '0px 0px -40px 0px' });
+  $$('.rv').forEach(el => io.observe(el));
+
+  if (fine && !reduce) $$('.proj').forEach(sec => {
+    const items = $$('[data-depth]', sec);
+    sec.addEventListener('pointermove', e => {
+      const r = sec.getBoundingClientRect();
+      const nx = (e.clientX - r.left) / r.width - .5, ny = (e.clientY - r.top) / r.height - .5;
+      items.forEach(f => { const d = +f.dataset.depth; f.style.translate = `${nx * d}px ${ny * d}px`; });
+    });
+  });
+
+  /* ---------- header: active section, accent, progress ---------- */
+  const secs = $$('main > section'), links = $$('.top nav a[data-sec]'), bar = $('.progress i'), expoBg = $('#expo .bg');
+  let ticking = false;
+  const onScroll = () => {
+    ticking = false;
+    const max = root.scrollHeight - innerHeight;
+    bar.style.transform = `scaleX(${max > 0 ? scrollY / max : 0})`;
+    let cur = secs[0];
+    secs.forEach(s => { if (s.getBoundingClientRect().top < innerHeight * .4) cur = s; });
+    links.forEach(a => { const on = a.dataset.sec === cur.id; a.classList.toggle('on', on); on ? a.setAttribute('aria-current', 'true') : a.removeAttribute('aria-current'); });
+    top.style.setProperty('--accent', getComputedStyle(cur).getPropertyValue('--accent').trim() || '#4361ee');
+    if (!reduce) { const r = expoBg.parentElement.getBoundingClientRect(); if (r.bottom > 0 && r.top < innerHeight) expoBg.style.transform = `scale(1.08) translateY(${(r.top / innerHeight) * -40}px)`; }
+  };
+  addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
+  onScroll();
+
+  /* shared: drag-to-spin helper */
+  const spinner = (el, img, idle) => {
+    let angle = 0, v = reduce ? 0 : idle, dragging = false, last = 0;
+    const at = e => { const r = el.getBoundingClientRect(); return Math.atan2(e.clientY - (r.top + r.height / 2), e.clientX - (r.left + r.width / 2)) * 180 / Math.PI; };
+    const set = () => { img.style.rotate = angle + 'deg'; el.setAttribute('aria-valuenow', ((Math.round(angle) % 360) + 360) % 360); };
+    el.addEventListener('pointerdown', e => { dragging = true; last = at(e); el.setPointerCapture(e.pointerId); });
+    el.addEventListener('pointermove', e => {
+      if (!dragging) return;
+      let d = at(e) - last; if (d > 180) d -= 360; if (d < -180) d += 360;
+      angle += d; v = d; last = at(e); set();
+    });
+    const stop = () => dragging = false;
+    el.addEventListener('pointerup', stop); el.addEventListener('pointercancel', stop);
+    el.addEventListener('keydown', e => { if (e.key === 'ArrowRight' || e.key === 'ArrowUp') { angle += 15; set(); e.preventDefault(); } if (e.key === 'ArrowLeft' || e.key === 'ArrowDown') { angle -= 15; set(); e.preventDefault(); } });
+    if (!reduce) (function tick() {
+      if (!dragging) { v += (idle - v) * .02; angle += v; set(); }
+      requestAnimationFrame(tick);
+    })();
+  };
+
+  /* ---------- 01 Glaze: spin + flavour picker ---------- */
+  const gDonut = $('.g-donut'), gImg = $('#g-img');
+  spinner(gDonut, gImg, .05);
+  $$('.g-picker button').forEach(b => b.addEventListener('click', () => {
+    $$('.g-picker button').forEach(x => x.setAttribute('aria-pressed', x === b));
+    gDonut.classList.add('swap');
+    setTimeout(() => {
+      gImg.src = `portfolio-shots/decor/${b.dataset.src}.webp`;
+      $('#g-name').textContent = b.dataset.name; $('#g-price').textContent = b.dataset.price;
+      gDonut.classList.remove('swap');
+    }, reduce ? 0 : 220);
+  }));
+
+  /* ---------- 02 Pizza: spin + size ---------- */
+  const pie = $('.pie');
+  spinner(pie, $('.pie img'), .12);
+  $('#size').addEventListener('change', e => pie.style.scale = e.target.value);
+
+  /* ---------- 03 Expo: swing + flip badge + industries ---------- */
+  const lan = $('.lanyard'), badge = $('.badge');
+  let sx = null, moved = false;
+  lan.addEventListener('pointerdown', e => { sx = e.clientX; moved = false; lan.classList.remove('idle'); lan.style.transition = 'none'; });
+  addEventListener('pointermove', e => {
+    if (sx === null) return;
+    const d = e.clientX - sx; if (Math.abs(d) > 5) moved = true;
+    if (moved) lan.style.transform = `rotate(${Math.max(-30, Math.min(30, -d / 4))}deg)`;
+  });
+  addEventListener('pointerup', () => {
+    if (sx === null) return; sx = null;
+    if (!moved) { if (!reduce) lan.classList.add('idle'); return; }
+    lan.style.transition = reduce ? 'none' : 'transform 1.4s cubic-bezier(.34,1.9,.64,1)'; lan.style.transform = 'rotate(0deg)';
+    setTimeout(() => { lan.style.transition = ''; lan.style.transform = ''; if (!reduce) lan.classList.add('idle'); }, 1400);
+  });
+  badge.addEventListener('click', e => { if (moved) { moved = false; e.preventDefault(); return; } badge.classList.toggle('flip'); });
+  $$('.sourcing button').forEach(b => b.addEventListener('click', () => {
+    const on = b.getAttribute('aria-pressed') !== 'true';
+    $$('.sourcing button').forEach(x => x.setAttribute('aria-pressed', 'false'));
+    b.setAttribute('aria-pressed', on);
+    $('.b-co').lastChild.textContent = on ? `${b.textContent} buyer` : 'Your Company Inc.';
+    badge.classList.remove('flip');
+    if (on && !reduce) { lan.classList.remove('idle'); lan.animate([{ transform: 'rotate(-14deg)' }, { transform: 'rotate(10deg)' }, { transform: 'rotate(-5deg)' }, { transform: 'rotate(0)' }], { duration: 1100, easing: 'ease-out' }).onfinish = () => lan.classList.add('idle'); }
+  }));
+
+  /* ---------- 04 Immaculate: polaroids, thumbs, auto-play, destinations ---------- */
+  const polas = $('.polas'), thumbs = $$('.thumbs .t'), pin = $('#pin-text');
+  let slide = 0, playing = !reduce, busy = false;
+  const go = step => {
+    if (busy) return; busy = true;
+    const ps = $$('.pola', polas), topP = ps.find(p => p.dataset.pos === '0');
+    if (!reduce) topP.classList.add('toss');
+    setTimeout(() => {
+      topP.classList.remove('toss');
+      ps.forEach(p => p.dataset.pos = (+p.dataset.pos + (step > 0 ? 2 : 1)) % 3);
+      slide = (slide + (step > 0 ? 1 : 2)) % 3;
+      thumbs.forEach((t, k) => t.classList.toggle('on', k === slide));
+      busy = false;
+    }, reduce ? 0 : 400);
+  };
+  polas.addEventListener('click', () => go(1));
+  polas.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(1); } });
+  $$('.thumbs .arr').forEach(b => b.addEventListener('click', () => go(+b.dataset.step)));
+  const pauseBtn = $('.i-pause');
+  const setPlay = p => {
+    playing = p; pauseBtn.setAttribute('aria-pressed', !p);
+    pauseBtn.setAttribute('aria-label', p ? 'Pause the tour' : 'Play the tour');
+    pauseBtn.innerHTML = p ? '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 4h4v16H6zM14 4h4v16h-4z"/></svg>' : '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4l13 8-13 8z"/></svg>';
+  };
+  setPlay(playing);
+  pauseBtn.addEventListener('click', () => setPlay(!playing));
+  const places = { 'Bohol': 'Chocolate Hills, Bohol', 'Da Nang': 'Ba Na Hills, Da Nang', 'Palawan': 'El Nido, Palawan', 'Japan': 'Mt. Fuji, Japan', 'Boracay': 'White Beach, Boracay', 'Ha Long Bay': 'Ha Long Bay, Vietnam', 'Coron': 'Coron, Palawan', 'Moalboal': 'Moalboal, Cebu' };
+  const dests = $$('.dests button');
+  let dIdx = dests.length - 1;
+  const setDest = k => {
+    dIdx = k; dests.forEach((x, j) => x.setAttribute('aria-pressed', j === k));
+    pin.textContent = places[dests[k].textContent];
+  };
+  dests.forEach((b, k) => b.addEventListener('click', () => { setDest(k); go(1); }));
+  let imcVisible = false;
+  new IntersectionObserver(([e]) => imcVisible = e.isIntersecting).observe($('#imc'));
+  setInterval(() => { if (playing && imcVisible && !document.hidden) { setDest((dIdx + 1) % dests.length); go(1); } }, 4200);
+
+  /* ---------- Services picker ---------- */
+  const picks = $$('.pick'), tray = $('.tray');
+  const updateTray = () => {
+    const on = picks.filter(p => p.getAttribute('aria-pressed') === 'true');
+    $('#tray-count').textContent = on.length === 1 ? '1 service' : `${on.length} services`;
+    tray.classList.toggle('show', on.length > 0);
+  };
+  picks.forEach(p => p.addEventListener('click', () => { p.setAttribute('aria-pressed', p.getAttribute('aria-pressed') !== 'true'); updateTray(); }));
+  $('#tray-copy').addEventListener('click', async e => {
+    const btn = e.currentTarget;
+    const list = picks.filter(p => p.getAttribute('aria-pressed') === 'true').map(p => '• ' + p.querySelector('strong').textContent).join('\n');
+    try { await navigator.clipboard.writeText('Services I need:\n' + list); btn.textContent = 'Copied!'; } catch { btn.textContent = 'Copy failed'; }
+    setTimeout(() => btn.textContent = 'Copy my list', 1600);
+  });
+  if (fine && !reduce) $$('.svc').forEach(c => {
+    c.addEventListener('pointermove', e => { const r = c.getBoundingClientRect(); const nx = (e.clientX - r.left) / r.width - .5, ny = (e.clientY - r.top) / r.height - .5; c.style.transform = `perspective(900px) rotateY(${nx * 6}deg) rotateX(${-ny * 6}deg) translateY(-4px)`; });
+    c.addEventListener('pointerleave', () => c.style.transform = '');
+  });
+
+  /* ---------- Dialogs ---------- */
+  const SITES = {
+    glaze: { name: 'Glaze Bomb', url: 'https://hellogiovanni07-commits.github.io/glaze-bomb-donuts/', shot: 'glaze', addr: 'hellogiovanni07-commits.github.io/glaze-bomb-donuts',
+      bg: 'radial-gradient(120% 80% at 70% 30%,#fff4ea,#fdeee0)', fg: '#3a1e10', acc: '#d64f00', btn: '#d64f00',
+      logo: '<img src="portfolio-shots/decor/caramel-biscuit-crunch.webp" alt="" width="44" height="44"><b style="font:800 24px/1 var(--head);color:#3a1e10;letter-spacing:-.02em">Glaze <span style="color:#ff6a13">Bomb</span></b>',
+      colors: [['Glaze orange', '#FF6A13'], ['Deep orange', '#D64F00'], ['Brioche brown', '#3A1E10'], ['Caramel', '#6E4630'], ['Peach', '#FFE6D2'], ['Cream', '#FFF8F1']],
+      type: [['Plus Jakarta Sans', 800, 'Filled donuts, glazed by hand.', 'Headings · 800'], ['Inter', 400, 'Soft brioche filled with custard.', 'Body text · 400'], ['Caveat', 700, 'tap a donut to spin it up!', 'Handwritten notes · 700']],
+      voice: ['Warm', 'Playful', 'Fresh every morning', 'Short sentences'], line: '“Baked fresh every morning, gone by the afternoon.”' },
+    pizza: { name: 'Pizza Max', url: 'https://hellogiovanni07-commits.github.io/pizza-max/', shot: 'pizza', addr: 'hellogiovanni07-commits.github.io/pizza-max',
+      bg: '#f7f6f3', fg: '#1f1f1f', acc: '#c62f26', btn: '#c62f26',
+      logo: '<span style="text-align:left"><b style="display:block;font:800 italic 15px/1 var(--head);color:#43a047">Pizza</b><b style="display:block;font:800 italic 38px/.95 var(--head);color:#c62f26;letter-spacing:-.04em">MAX</b><i style="display:block;height:4px;border-radius:50%;background:#43a047;margin:3px 0"></i><span style="font:700 15px/1 var(--hand);color:#c62f26">...tasty in the box!</span></span>',
+      colors: [['Tomato red', '#C62F26'], ['Basil green', '#43A047'], ['Deep green', '#2E7D32'], ['Charcoal', '#1F1F1F'], ['Flour white', '#F7F6F3'], ['Crust', '#D9A868']],
+      type: [['Plus Jakarta Sans', 800, 'Hot from the stone oven.', 'Headings · 800'], ['Inter', 400, 'Dough rested for 24 hours.', 'Body text · 400'], ['Caveat', 700, 'pull a slice!', 'Handwritten notes · 700']],
+      voice: ['Hot', 'Honest', 'Neighbourhood', 'Straight to your door'], line: '“90 seconds at 400 °C. From Pankow, straight to your door.”' },
+    expo: { name: 'ExpoBusiness Travel Services', url: 'https://hellogiovanni07-commits.github.io/expobusiness-travel/', shot: 'travel', addr: 'hellogiovanni07-commits.github.io/expobusiness-travel',
+      bg: 'linear-gradient(135deg,#16163a,#2b2b5a)', fg: '#ffffff', acc: '#ff8a3d', btn: '#c9460b',
+      logo: '<svg width="40" height="34" viewBox="0 0 40 34" aria-hidden="true"><rect x="2" y="18" width="7" height="14" rx="2" fill="#f26a1b"/><rect x="13" y="11" width="7" height="21" rx="2" fill="#f26a1b"/><rect x="24" y="5" width="7" height="27" rx="2" fill="#f26a1b"/><path d="M2 14C10 4 24 2 36 4" stroke="#d7261e" stroke-width="3" fill="none" stroke-linecap="round"/><circle cx="37" cy="4" r="3" fill="#d7261e"/></svg><span style="text-align:left"><b style="display:block;font:800 20px/1 var(--head);color:#16163a">ExpoBusiness</b><span style="font:600 11px/1 var(--head);letter-spacing:.2em;color:#5a5a72">TRAVEL SERVICES</span></span>',
+      colors: [['Midnight navy', '#16163A'], ['Canton orange', '#F26A1B'], ['Hot orange', '#FF8A3D'], ['Signal red', '#D7261E'], ['Ink', '#1F1F3D'], ['Tint', '#FFF7F1']],
+      type: [['Plus Jakarta Sans', 800, 'The Canton Fair, fully managed.', 'Headings · 800'], ['Inter', 400, 'One coordinator, one itemised quotation.', 'Body text · 400']],
+      voice: ['Corporate', 'Calm', 'Fully managed', 'Invoiced to your company'], line: '“Your team simply shows up and sources.”' },
+    imc: { name: 'Immaculate Connections', url: 'https://www.immaculateconnectionsph.com/', shot: 'immaculate', addr: 'immaculateconnectionsph.com',
+      bg: 'linear-gradient(135deg,#091630,#103054)', fg: '#ffffff', acc: '#ffb730', btn: '#bc5700',
+      logo: '<svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="#091630"/><path d="M8 24c6-10 18-14 26-8-8-2-14 2-18 10z" fill="#3b82f6"/><path d="M12 14c4-4 10-5 15-2" stroke="#ffb730" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg><span style="text-align:left"><b style="display:block;font:700 19px/1.1 var(--head);color:#091630">Immaculate Connections</b><span style="font:700 11px/1 var(--head);letter-spacing:.2em;color:#bc5700">TOUR SERVICES</span></span>',
+      colors: [['Night navy', '#091630'], ['Tour orange', '#BC5700'], ['Sunset gold', '#FFB730'], ['White', '#FFFFFF'], ['Ocean blue', '#3B82F6']],
+      type: [['Plus Jakarta Sans', 700, 'Planned to the last detail.', 'Headings · 700'], ['Inter', 700, 'View tour packages', 'Buttons & body · 400–700'], ['Caveat', 600, 'Ba Na Hills, Da Nang', 'Photo captions · 600']],
+      voice: ['Friendly', 'Local', 'Reassuring', 'Planned to the last detail'], line: '“Your group simply shows up and enjoys the trip.”' }
+  };
+  let opener = null;
+  const open = d => { opener = document.activeElement; d.showModal(); };
+  $$('dialog').forEach(d => {
+    d.addEventListener('click', e => { if (e.target === d || e.target.closest('[data-close]')) d.close(); });
+    d.addEventListener('close', () => opener && opener.focus());
+  });
+  $$('[data-preview]').forEach(b => b.addEventListener('click', () => {
+    const s = SITES[b.dataset.preview];
+    $('#pv-img').src = `portfolio-shots/${s.shot}.webp`; $('#pv-img').alt = `${s.name} home page`;
+    $('#pv-title').textContent = s.addr; $('#pv-go').href = s.url;
+    open($('#preview'));
+  }));
+  $('#bk-sw').addEventListener('click', async e => {
+    const sw = e.target.closest('.sw'); if (!sw) return;
+    try { await navigator.clipboard.writeText(sw.dataset.hex); sw.querySelector('small').textContent = 'Copied!'; sw.classList.add('copied'); } catch {}
+    setTimeout(() => { sw.querySelector('small').textContent = sw.dataset.hex; sw.classList.remove('copied'); }, 1300);
+  });
+  $$('[data-brand]').forEach(b => b.addEventListener('click', () => {
+    const s = SITES[b.dataset.brand], d = $('#brand');
+    d.style.setProperty('--b-bg', s.bg); d.style.setProperty('--b-fg', s.fg); d.style.setProperty('--b-acc', s.acc);
+    $('#bk-title').textContent = s.name; $('#bk-logo').innerHTML = s.logo;
+    $('#bk-sw').innerHTML = s.colors.map(([n, h]) => `<button class="sw" type="button" data-hex="${h}" style="--c:${h}" aria-label="Copy ${n} ${h}"><i></i><b>${n}</b><small>${h}</small></button>`).join('');
+    $('#bk-type').innerHTML = s.type.map(([f, wt, sample, use]) => `<div class="ty"><div class="s" style="font-family:'${f}',${f === 'Caveat' ? 'cursive' : 'sans-serif'};font-weight:${wt}">${sample}</div><small><b>${f}</b> · ${use}</small></div>`).join('');
+    $('#bk-voice').innerHTML = s.voice.map(v => `<span>${v}</span>`).join('');
+    $('#bk-line').textContent = s.line;
+    const go = $('#bk-go'); go.href = s.url; go.style.setProperty('--accent', s.btn);
+    open(d);
+  }));
+})();
+</script>
+</body>
+</html>
