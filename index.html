@@ -21,6 +21,10 @@
 <meta name="twitter:image" content="https://hellogiovanni07-commits.github.io/portfolio/portfolio-shots/share.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%235b2bd9'/%3E%3Cstop offset='.65' stop-color='%239447d6'/%3E%3Cstop offset='1' stop-color='%23ec93cf'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M20 3a16 16 0 1 1-9.6 28.8L3.5 35.5l2.6-8.5A16 16 0 0 1 20 3z' fill='url(%23g)'/%3E%3Cpath d='M26.1 13.9A8 8 0 1 0 28 19h-6.5' fill='none' stroke='%23fff' stroke-width='4.2' stroke-linecap='round'/%3E%3Ccircle cx='34' cy='6' r='3.2' fill='%23ec93cf'/%3E%3C/svg%3E">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "Hello Giovanni", "url": "https://hellogiovanni07-commits.github.io/portfolio/", "image": "https://hellogiovanni07-commits.github.io/portfolio/portfolio-shots/share.jpg", "description": "Website design, branding, social media, video editing, SEO, AEO, GEO and Odoo ERP set-up.", "email": "hellogiovanni07@gmail.com", "telephone": "+63 920 247 8918", "areaServed": "PH", "contactPoint": {"@type": "ContactPoint", "contactType": "sales", "telephone": "+63 920 247 8918", "email": "hellogiovanni07@gmail.com", "availableLanguage": ["English", "Filipino"]}}</script>
+<script>
+/* intro plays once per visit; never with reduced motion or when opening a project link */
+try { if (!sessionStorage.getItem('hg-intro') && !matchMedia('(prefers-reduced-motion: reduce)').matches && !/^#project\//.test(location.hash)) { document.documentElement.classList.add('intro'); sessionStorage.setItem('hg-intro', '1'); } } catch (e) {}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,500;0,600;0,700;0,800;1,800&family=Inter:wght@400;500;600&family=Caveat:wght@700&display=swap" rel="stylesheet">
@@ -116,7 +120,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .deco .cloud{bottom:-40px;height:150px;border-radius:50%;background:radial-gradient(closest-side,rgba(255,255,255,.55),rgba(255,255,255,0));filter:blur(4px)}
 .deco .c1{left:-6%;width:44%}.deco .c2{left:30%;width:36%;bottom:-70px;opacity:.7}.deco .c3{right:-8%;width:42%}
 .tape{position:absolute;left:-5%;right:-5%;z-index:0;overflow:hidden;background:#2a1170;color:#fff;padding:9px 0;box-shadow:0 10px 24px -10px rgba(20,6,60,.6);transform:rotate(-4deg)}
-.tape>div{display:inline-flex;white-space:nowrap;animation:marq 40s linear infinite;font:italic 800 14px/1 var(--head);letter-spacing:.16em;text-transform:uppercase}
+.tape>div{display:inline-flex;white-space:nowrap;will-change:transform;animation:marq 120s linear infinite;font:italic 800 14px/1 var(--head);letter-spacing:.16em;text-transform:uppercase}
 .tape span{padding:0 18px}.tape span::after{content:"";display:inline-block;width:7px;height:7px;margin-left:36px;vertical-align:middle;background:var(--orchid);transform:rotate(45deg)}
 .hero .tape{bottom:96px}
 @keyframes marq{to{transform:translateX(-50%)}}
@@ -472,7 +476,43 @@ footer a{text-decoration:none;color:var(--ink);display:inline-block;padding:12px
 .plat li svg{flex:none;width:22px;height:22px;fill:var(--navy);transition:fill .25s,transform .25s var(--ease)}
 .plat li:hover{transform:translateY(-3px) rotate(-1.5deg);box-shadow:inset 0 0 0 1.5px var(--b),0 12px 20px -12px rgba(42,17,112,.5)}
 .plat li:hover svg{fill:var(--b);transform:scale(1.12)}
+
+/* =========================================================
+   Intro: the logo draws itself, the name lands, the curtain lifts
+   ========================================================= */
+.intro-ov{display:none}
+html.intro{overflow:hidden}
+html.intro .intro-ov{position:fixed;inset:0;z-index:200;display:grid;place-items:center;background:var(--grad);color:#fff;cursor:pointer;animation:introOut .8s cubic-bezier(.75,0,.2,1) 2.45s forwards}
+html.intro .intro-ov.skip{animation:introOut .55s cubic-bezier(.75,0,.2,1) forwards}
+@keyframes introOut{to{transform:translateY(-106%);visibility:hidden}}
+.intro-ov::after{content:"";position:absolute;left:0;right:0;bottom:-25px;height:26px;background:linear-gradient(90deg,#4a1cc4,#6a30da 45%,#a75ad3);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 26' preserveAspectRatio='none'%3E%3Cpath d='M0 0H240V12L229 17L216 9L204 18L191 10L178 16L166 8L153 17L140 11L127 19L115 9L102 16L90 10L77 18L64 9L52 15L39 8L26 17L13 10L0 15Z'/%3E%3C/svg%3E") 0 0/480px 100% repeat-x;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 26' preserveAspectRatio='none'%3E%3Cpath d='M0 0H240V12L229 17L216 9L204 18L191 10L178 16L166 8L153 17L140 11L127 19L115 9L102 16L90 10L77 18L64 9L52 15L39 8L26 17L13 10L0 15Z'/%3E%3C/svg%3E") 0 0/480px 100% repeat-x}
+.intro-bg{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.intro-bg i{position:absolute;display:block}
+.intro-bg .rays{left:50%;top:50%;width:170vmax;height:170vmax;margin:-85vmax 0 0 -85vmax;border-radius:50%;background:repeating-conic-gradient(rgba(255,255,255,.08) 0 5deg,transparent 5deg 13deg);-webkit-mask:radial-gradient(closest-side,#000 20%,transparent 75%);mask:radial-gradient(closest-side,#000 20%,transparent 75%);animation:spin 40s linear infinite,fadeIn .8s ease both}
+.intro-bg .dots{left:6%;top:10%;width:260px;height:220px;background:radial-gradient(circle,rgba(255,255,255,.3) 1.6px,transparent 2.2px) 0 0/13px 13px;-webkit-mask:radial-gradient(closest-side,#000 25%,transparent);mask:radial-gradient(closest-side,#000 25%,transparent);animation:fadeIn 1s ease .2s both}
+.intro-bg .dots.d2{left:auto;top:auto;right:5%;bottom:12%}
+.intro-bg .spark{width:18px;height:18px;background:#fff;clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%);animation:twinkle 1.6s ease-in-out infinite}
+@keyframes fadeIn{from{opacity:0}}
+.intro-c{position:relative;display:grid;justify-items:center;gap:14px;text-align:center;padding:0 24px}
+.intro-mark{width:clamp(96px,13vw,136px);height:auto;overflow:visible;filter:drop-shadow(0 18px 30px rgba(30,8,90,.35))}
+.intro-mark .bub{fill:#fff;fill-opacity:0;stroke:#fff;stroke-width:1.6;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;animation:draw .8s cubic-bezier(.6,0,.3,1) .15s forwards,fillIn .35s ease .85s forwards}
+.intro-mark .g{fill:none;stroke:var(--blue);stroke-width:4.2;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;animation:draw .5s cubic-bezier(.6,0,.3,1) 1s forwards}
+.intro-mark .dot{fill:var(--orchid);transform-box:fill-box;transform-origin:center;transform:scale(0);animation:popIn .45s cubic-bezier(.3,1.7,.5,1) 1.35s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes fillIn{to{fill-opacity:1}}
+@keyframes popIn{to{transform:scale(1)}}
+.intro-word{display:flex;flex-direction:column;align-items:flex-start}
+.intro-word .ih{font:700 clamp(32px,4.6vw,46px)/1 var(--hand);color:#f7c6e8;margin:0 0 -6px -2px;opacity:0;transform:rotate(-5deg);transform-origin:left bottom;animation:handIn .55s var(--ease) 1.05s forwards}
+@keyframes handIn{from{opacity:0;transform:rotate(-12deg) translateY(12px)}to{opacity:1;transform:rotate(-5deg)}}
+.intro-word b{display:flex;font:800 clamp(30px,5vw,54px)/1 var(--head);letter-spacing:.14em}
+.intro-word b i{font-style:normal;display:inline-block;opacity:0;transform:translateY(70%) rotate(8deg);animation:letter .55s var(--ease) calc(1.15s + var(--i) * 50ms) forwards}
+@keyframes letter{to{opacity:1;transform:none}}
+.intro-tag{margin-top:8px;display:inline-block;background:#fff;color:var(--blue);font:800 clamp(13px,1.7vw,17px)/1 var(--head);letter-spacing:.12em;text-transform:uppercase;padding:9px 14px 8px;box-shadow:0 14px 26px -12px rgba(30,8,90,.7);--rot:-2.5deg;opacity:0;animation:slap .6s var(--ease) 1.7s forwards}
+.intro-hint{position:absolute;bottom:28px;left:0;right:0;text-align:center;font:600 12px/1 var(--head);letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.75);animation:fadeIn .6s ease .8s both}
+/* hold the hero's own entrance until the curtain lifts */
+html.intro .hero,html.intro .hero *,html.intro .side,html.intro .side *{animation-play-state:paused!important}
 @media (prefers-reduced-motion:reduce){
+  .intro-ov{display:none!important}
   .plat-row{-webkit-mask:none;mask:none}.plat-row>div{width:auto}.plat ul{flex-wrap:wrap;justify-content:center}.plat ul[aria-hidden]{display:none}
   .slap{opacity:1!important}
   *,*::before,*::after{animation:none!important;transition:none!important}
@@ -482,6 +522,11 @@ footer a{text-decoration:none;color:var(--ink);display:inline-block;padding:12px
 </style>
 </head>
 <body>
+<div class="intro-ov" id="intro" aria-hidden="true">
+  <div class="intro-bg"><i class="rays"></i><i class="dots"></i><i class="dots d2"></i><i class="spark" style="left:22%;top:28%"></i><i class="spark" style="right:20%;top:20%;width:12px;height:12px;animation-delay:.5s"></i><i class="spark" style="right:28%;bottom:24%;width:14px;height:14px;animation-delay:.9s"></i></div>
+  <div class="intro-c"><svg class="intro-mark" viewBox="0 0 40 40" aria-hidden="true"><path class="bub" pathLength="1" d="M20 3a16 16 0 1 1-9.6 28.8L3.5 35.5l2.6-8.5A16 16 0 0 1 20 3z"/><path class="g" pathLength="1" d="M26.1 13.9A8 8 0 1 0 28 19h-6.5"/><circle class="dot" cx="34" cy="6" r="3.2"/></svg><div class="intro-word"><span class="ih">hello</span><b><i style="--i:0">G</i><i style="--i:1">I</i><i style="--i:2">O</i><i style="--i:3">V</i><i style="--i:4">A</i><i style="--i:5">N</i><i style="--i:6">N</i><i style="--i:7">I</i></b></div><span class="intro-tag">Websites people remember.</span></div>
+  <p class="intro-hint">Tap to skip</p>
+</div>
 <a class="skip" href="#work">Skip to the work</a>
 <div class="progress" aria-hidden="true"></div>
 
@@ -499,7 +544,7 @@ footer a{text-decoration:none;color:var(--ink);display:inline-block;padding:12px
 <main id="top">
   <section class="hero" aria-labelledby="hero-title">
     <div class="deco" aria-hidden="true"><i class="rays"></i><i class="panel lv"></i><i class="panel"></i><i class="dots"></i><i class="cloud c1"></i><i class="cloud c2"></i><i class="cloud c3"></i><i class="spark s1"></i><i class="spark s2"></i><i class="spark s3"></i><i class="spark s4"></i></div>
-    <div class="tape" aria-hidden="true"><div><span>Website design</span><span>Branding</span><span>Social media</span><span>Video editing</span><span>SEO · AEO · GEO</span><span>Odoo ERP</span><span>Website design</span><span>Branding</span><span>Social media</span><span>Video editing</span><span>SEO · AEO · GEO</span><span>Odoo ERP</span></div></div>
+    <div class="tape" aria-hidden="true"><div><span>Website design</span><span>Branding</span><span>Social media</span><span>Video editing</span><span>SEO · AEO · GEO</span><span>Odoo ERP</span><span>Website design</span><span>Branding</span><span>Social media</span><span>Video editing</span><span>SEO · AEO · GEO</span><span>Odoo ERP</span><span>Website design</span><span>Branding</span><span>Social media</span><span>Video editing</span><span>SEO · AEO · GEO</span><span>Odoo ERP</span><span>Website design</span><span>Branding</span><span>Social media</span><span>Video editing</span><span>SEO · AEO · GEO</span><span>Odoo ERP</span><span>Website design</span><span>Branding</span><span>Social media</span><span>Video editing</span><span>SEO · AEO · GEO</span><span>Odoo ERP</span><span>Website design</span><span>Branding</span><span>Social media</span><span>Video editing</span><span>SEO · AEO · GEO</span><span>Odoo ERP</span></div></div>
     <div class="wrap hero-grid">
       <div>
         <span class="tagline">“Your brand, built to be remembered.”</span>
@@ -920,6 +965,20 @@ const waLink = (t = 'Hi Hello Giovanni! I’d like to ask about a website.') => 
 
   $('#wa-btn').href = waLink();
 
+  /* ---------- intro ---------- */
+  const root = document.documentElement, ov = $('#intro');
+  const afterIntro = fn => root.classList.contains('intro') ? addEventListener('hg:intro-done', fn, { once: true }) : fn();
+  if (root.classList.contains('intro') && ov) {
+    let over = false;
+    const end = () => { if (over) return; over = true; root.classList.remove('intro'); ov.remove(); dispatchEvent(new Event('hg:intro-done')); };
+    ov.addEventListener('animationend', e => { if (e.target === ov) end(); });
+    const skip = () => { if (!ov.classList.contains('skip')) ov.classList.add('skip'); };
+    ov.addEventListener('click', skip);
+    addEventListener('keydown', skip, { once: true });
+    addEventListener('wheel', skip, { once: true, passive: true });
+    setTimeout(end, 4200);   // safety net if animations never fire (background tab)
+  } else if (ov) ov.remove();
+
   /* ---------- scroll progress ---------- */
   const prog = $('.progress');
   const onScroll = () => { const h = document.documentElement.scrollHeight - innerHeight; prog.style.setProperty('--p', h > 0 ? Math.min(1, scrollY / h) : 0); };
@@ -933,11 +992,12 @@ const waLink = (t = 'Hi Hello Giovanni! I’d like to ask about a website.') => 
   $$('.stat b').forEach((b, i) => {
     const to = +b.textContent; if (reduce || !to) return;
     b.textContent = '0';
-    setTimeout(() => {
+    afterIntro(() => setTimeout(() => {
       const t0 = performance.now();
       const step = t => { const k = Math.min(1, (t - t0) / 1100); b.textContent = Math.round(to * (1 - Math.pow(1 - k, 3))); if (k < 1) requestAnimationFrame(step); };
       requestAnimationFrame(step);
-    }, 1350 + i * 120);
+      setTimeout(() => { b.textContent = to; }, 1300);   // lands on the real number even if frames are paused
+    }, 1350 + i * 120));
   });
 
   /* ---------- hero parallax ---------- */
@@ -982,7 +1042,7 @@ const waLink = (t = 'Hi Hello Giovanni! I’d like to ask about a website.') => 
 
   /* greeting bubble, once per visit */
   let seen = false; try { seen = sessionStorage.getItem('hg-hint') === '1'; } catch {}
-  if (!seen) setTimeout(() => { if (!$('.wpanel.open')) hint.classList.add('show'); }, 4000);
+  if (!seen) afterIntro(() => setTimeout(() => { if (!$('.wpanel.open')) hint.classList.add('show'); }, 4000));
   $('#hint-x').addEventListener('click', () => { hint.classList.remove('show'); try { sessionStorage.setItem('hg-hint', '1'); } catch {} });
   hint.addEventListener('click', e => { if (!e.target.closest('#hint-x')) chatBtn.click(); });
 
