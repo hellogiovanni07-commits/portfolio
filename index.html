@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Selected Work</title>
-<meta name="description" content="Four website builds: a donut shop, a pizzeria, a Canton Fair travel agency and a Cebu tour agency, plus the web, marketing and Odoo services behind them.">
+<meta name="description" content="Three website builds: a donut shop, a pizzeria and a Canton Fair travel agency, plus the web, marketing and Odoo services behind them.">
 <meta name="theme-color" content="#4361ee">
 <meta name="color-scheme" content="light">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Selected Work · HelloGiovanni07">
-<meta property="og:description" content="Four brands, four very different websites, and the services behind them.">
+<meta property="og:description" content="Three brands, three very different websites, and the services behind them.">
 <meta property="og:image" content="https://hellogiovanni07-commits.github.io/portfolio/portfolio-shots/glaze.webp">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ff6a13'/%3E%3Cstop offset='.5' stop-color='%23c62f26'/%3E%3Cstop offset='1' stop-color='%234361ee'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Cpath d='M18 22h28v4H18zm0 8h28v4H18zm0 8h18v4H18z' fill='%23fff'/%3E%3C/svg%3E">
@@ -157,55 +157,90 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 @media (max-width:999px){.scroll-cue,.tag-note{display:none}}
 
 /* =========================================================
-   01 GLAZE BOMB — mirrors its hero
+   01 GLAZE BOMB — mirrors its menu hero
    ========================================================= */
-.glaze{--accent:#ff6a13;color:#6e4630;background:radial-gradient(120% 80% at 70% 30%,#fff4ea 0,#fff8f1 45%,#fdeee0 100%)}
-.glaze::before{content:"";position:absolute;inset:0;z-index:-2;background:repeating-linear-gradient(90deg,transparent 0 118px,rgba(255,255,255,.7) 118px 120px,transparent 120px 240px)}
-.glaze::after{content:"";position:absolute;right:-10%;top:5%;width:70%;aspect-ratio:1;z-index:-1;border-radius:50%;background:radial-gradient(circle,rgba(255,150,80,.35),transparent 65%);pointer-events:none}
-.g-open{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.62);border-radius:999px;padding:8px 16px;font:700 14px/1 var(--body);color:#3a1e10;box-shadow:0 8px 20px -14px rgba(58,30,16,.5),inset 0 0 0 1px rgba(255,255,255,.9);margin-bottom:22px}
-.g-open::before{content:"";width:8px;height:8px;border-radius:50%;background:#ff6a13;animation:pulse-o 1.8s infinite}
-@keyframes pulse-o{0%{box-shadow:0 0 0 0 rgba(255,106,19,.6)}70%,100%{box-shadow:0 0 0 9px rgba(255,106,19,0)}}
-.glaze h2{font-size:clamp(40px,4.4vw,60px);color:#3a1e10;letter-spacing:-.025em}
-.glaze h2 .o{color:#d64f00}
-.glaze .lede{font-size:17px;color:#6e4630;max-width:44ch;margin:20px 0 28px}
-.g-acts{display:flex;flex-wrap:wrap;gap:12px}
-.g-btn{display:inline-flex;align-items:center;gap:10px;height:54px;padding:0 28px;border-radius:999px;font:700 17px/1 var(--head);letter-spacing:-.005em;text-decoration:none;transition:transform .3s var(--spring),box-shadow .3s}
+.glaze{--accent:#ff6a13;--orange-hi:#d64f00;--orange-ink:#b33c00;--brown:#3a1e10;--brown-2:#6e4630;--glass:rgba(255,255,255,.62);color:var(--brown-2);background:radial-gradient(120% 80% at 70% 30%,#fff4ea 0%,#fff8f1 45%,#fdeee0 100%);padding-bottom:0}
+.g-bg{position:absolute;inset:0;z-index:-1;pointer-events:none}
+.g-beams{position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 119px,rgba(255,106,19,.07) 119px 120px),radial-gradient(60% 50% at 70% 0%,rgba(255,178,122,.35),transparent 70%);-webkit-mask:linear-gradient(to bottom,#000 30%,transparent 70%);mask:linear-gradient(to bottom,#000 30%,transparent 70%)}
+.g-orb{position:absolute;width:38vw;height:38vw;right:6vw;top:8vh;border-radius:50%;filter:blur(70px);background:rgba(255,140,60,.32)}
+.floor{position:absolute;left:0;right:0;bottom:0;height:44%;perspective:520px;overflow:hidden;pointer-events:none;-webkit-mask:linear-gradient(to bottom,transparent,#000 40%);mask:linear-gradient(to bottom,transparent,#000 40%)}
+.floor__grid{position:absolute;left:-60%;right:-60%;top:0;height:220%;transform:rotateX(70deg);transform-origin:50% 0;background-image:linear-gradient(rgba(255,106,19,.26) 1.5px,transparent 1.5px),linear-gradient(90deg,rgba(255,106,19,.26) 1.5px,transparent 1.5px);background-size:72px 72px;animation:floorMove 3.6s linear infinite}
+@keyframes floorMove{to{background-position:0 72px,0 0}}
+.g-horizon{position:absolute;left:48%;right:0;bottom:44%;height:2px;background:linear-gradient(90deg,transparent,rgba(255,106,19,.55),transparent);box-shadow:0 0 18px rgba(255,106,19,.5)}
+.g-cloud{position:absolute;inset:0;z-index:0;pointer-events:none}
+.hc{position:absolute;left:var(--x);top:var(--y);width:var(--s);aspect-ratio:1;translate:-50% -50%;will-change:transform}
+.hc img{width:100%;height:100%;rotate:var(--r);filter:blur(var(--b)) drop-shadow(0 12px 12px rgba(58,30,16,.16));animation:clFloat var(--t) ease-in-out infinite alternate}
+@keyframes clFloat{from{translate:0 -9px}to{translate:0 10px}}
+.spr{position:absolute;left:var(--x);top:var(--y);width:15px;height:5px;border-radius:3px;background:var(--c);rotate:var(--r);opacity:.5;animation:clFloat var(--t) ease-in-out infinite alternate}
+.glaze .proj-grid{position:relative;z-index:2;grid-template-columns:1fr}
+@media (min-width:1000px){.glaze .proj-grid{grid-template-columns:1.1fr 1fr}}
+.kicker{display:block;margin:0 0 6px;font:700 clamp(26px,2.4vw,32px)/1.05 var(--hand);color:var(--orange-hi)}
+.glaze h2{font-weight:700;font-size:clamp(42px,5.2vw,76px);line-height:1;letter-spacing:-.02em;color:var(--brown)}
+.glaze h2 .accent{color:var(--orange-hi)}
+.glaze .lede{margin:18px 0 24px;max-width:34em;font-size:18px;color:var(--brown-2)}
+.mcats{display:flex;flex-wrap:wrap;gap:10px}
+.mcat{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 16px 0 8px;border-radius:999px;background:var(--glass);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:inset 0 0 0 1px rgba(255,255,255,.9),0 10px 24px -18px rgba(58,30,16,.6);font:800 15px/1 var(--body);color:var(--brown);text-decoration:none;transition:transform .25s var(--ease),background-color .2s}
+.mcat>span{width:34px;height:34px;border-radius:50%;background:#fff;display:grid;place-items:center;overflow:hidden}
+.mcat>span img{width:30px;height:30px}
+.mcat small{font-weight:700;font-size:15px;color:var(--orange-ink)}
+a.mcat:hover{transform:translateY(-3px);background:#fff}
+.g-acts{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.g-btn{display:inline-flex;align-items:center;gap:10px;height:54px;padding:0 28px;border-radius:999px;font:700 17px/1 var(--head);letter-spacing:-.005em;text-decoration:none;transition:transform .3s var(--spring),box-shadow .3s,background .2s,color .2s}
 .g-btn.fill{background:#ff6a13;color:#2a1408;box-shadow:0 10px 22px -10px rgba(255,106,19,.7)}
-.g-btn.line{color:#3a1e10;box-shadow:inset 0 0 0 2px #3a1e10}
+.g-btn.line{color:var(--brown);box-shadow:inset 0 0 0 2px var(--brown)}
 .g-btn:hover{transform:translateY(-3px)}
-.g-btn.line:hover{background:#3a1e10;color:#fff}
-.g-stats{display:flex;gap:clamp(20px,4vw,48px);margin-top:30px;padding-top:24px;border-top:1px solid rgba(58,30,16,.14)}
-.g-stats strong{display:block;font:800 26px/1 var(--head);color:#d64f00;letter-spacing:-.02em}
-.g-stats span{font:500 13px/1.3 var(--body);color:#6e4630}
-.g-follow{display:flex;align-items:center;gap:10px;margin-top:22px;flex-wrap:wrap}
-.g-follow .hand{font-size:22px;color:#3a1e10;margin-right:6px}
-.g-follow a{height:38px;padding:0 14px;border-radius:999px;display:inline-flex;align-items:center;background:#fff;font:600 13px/1 var(--head);text-decoration:none;color:#3a1e10;box-shadow:inset 0 0 0 1.5px rgba(58,30,16,.1);transition:transform .25s var(--spring)}
-.g-follow a:hover{transform:translateY(-2px);box-shadow:inset 0 0 0 1.5px #ff6a13}
-.g-ring{position:absolute;left:50%;top:44%;width:min(88%,470px);aspect-ratio:1;translate:-50% -50%;border-radius:50%;background:radial-gradient(circle,rgba(255,150,80,.45),rgba(255,150,80,0) 64%);box-shadow:inset 0 0 0 2px rgba(255,106,19,.35)}
-.g-ticks{position:absolute;inset:-34px;border-radius:50%;background:repeating-conic-gradient(rgba(214,79,0,.55) 0 1.1deg,transparent 1.1deg 10deg);-webkit-mask:radial-gradient(circle,transparent 64%,#000 65%,#000 68%,transparent 69%);mask:radial-gradient(circle,transparent 64%,#000 65%,#000 68%,transparent 69%);animation:spin 50s linear infinite}
-.g-donut{position:absolute;left:50%;top:44%;width:min(72%,400px);translate:-50% -50%;cursor:grab;touch-action:none;z-index:2}
-.g-donut img{width:100%;filter:drop-shadow(0 34px 30px rgba(110,70,48,.4));transition:opacity .25s;animation:float-d 5s ease-in-out infinite;-webkit-user-drag:none;user-select:none}
-@keyframes float-d{50%{transform:translateY(-14px)}}
-.g-donut.swap img{opacity:0}
-.g-ped{position:absolute;left:50%;bottom:13%;width:min(54%,300px);height:46px;translate:-50% 0;border-radius:50%;background:radial-gradient(ellipse at 50% 30%,#fff 0,#ffe6d2 60%,#f7c9a6 100%);box-shadow:0 0 0 2px rgba(255,106,19,.35),0 20px 30px -14px rgba(214,79,0,.5)}
-.g-label{position:absolute;left:50%;bottom:calc(13% + 26px);translate:-50% 0;z-index:3;display:flex;align-items:center;gap:14px;background:#fff;border-radius:999px;padding:10px 16px;font:600 15px/1 var(--head);color:#3a1e10;white-space:nowrap;box-shadow:0 12px 26px -14px rgba(58,30,16,.6)}
-.g-label b{color:#b33c00}
-.g-picker{position:absolute;left:50%;bottom:0;translate:-50% 0;z-index:3;display:flex;gap:6px;background:rgba(255,255,255,.75);backdrop-filter:blur(8px);border-radius:999px;padding:6px}
-.g-picker button{width:46px;height:46px;border-radius:50%;padding:3px;transition:transform .25s var(--spring),box-shadow .25s}
-.g-picker button:hover{transform:translateY(-3px)}
-.g-picker button[aria-pressed="true"]{box-shadow:0 0 0 2.5px #ff6a13,0 0 14px rgba(255,106,19,.5)}
-.g-call{position:absolute;z-index:4;display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.88);backdrop-filter:blur(6px);border-radius:16px;padding:9px 14px 9px 9px;box-shadow:0 14px 28px -16px rgba(58,30,16,.55);animation:bob 5s ease-in-out infinite}
-.g-call i{width:30px;height:30px;border-radius:50%;background:#ff6a13;display:grid;place-items:center;color:#fff;font-style:normal;font-size:14px;box-shadow:0 0 0 4px rgba(255,106,19,.18)}
-.g-call strong{display:block;font:700 13.5px/1.2 var(--head);color:#3a1e10}
-.g-call span{font:500 11.5px/1.2 var(--body);color:#6e4630}
-.c1{left:0;top:10%}.c2{right:0;top:38%;animation-delay:-1.5s}.c3{left:4%;top:56%;animation-delay:-3s}
-.g-note{position:absolute;right:6%;top:2%;font-size:24px;color:#d64f00;rotate:-6deg}
+.g-btn.line:hover{background:var(--brown);color:#fff}
+.mstage{position:relative;aspect-ratio:1;width:100%;max-width:560px;justify-self:center;margin-bottom:40px}
+.display{position:absolute;inset:0;pointer-events:none}
+.display__glow{position:absolute;left:50%;top:44%;width:92%;aspect-ratio:1;translate:-50% -50%;border-radius:50%;background:radial-gradient(circle,rgba(255,150,70,.55) 0%,rgba(255,106,19,.22) 42%,transparent 70%)}
+.display__ring{position:absolute;left:50%;top:44%;width:84%;aspect-ratio:1;translate:-50% -50%;border-radius:50%;border:2px solid rgba(255,106,19,.5);box-shadow:0 0 34px rgba(255,106,19,.28),inset 0 0 34px rgba(255,106,19,.16)}
+.display__sweep{position:absolute;inset:-3px;border-radius:50%;background:conic-gradient(from 0deg,transparent 0 70%,rgba(255,150,70,0) 70%,rgba(255,150,70,.9) 97%,#fff 100%);-webkit-mask:radial-gradient(closest-side,transparent calc(100% - 7px),#000 calc(100% - 6px));mask:radial-gradient(closest-side,transparent calc(100% - 7px),#000 calc(100% - 6px));animation:spin 5s linear infinite}
+.display__ticks{position:absolute;left:50%;top:44%;width:96%;aspect-ratio:1;translate:-50% -50%;border-radius:50%;background:repeating-conic-gradient(rgba(58,30,16,.28) 0 .6deg,transparent .6deg 7.5deg);-webkit-mask:radial-gradient(closest-side,transparent calc(100% - 9px),#000 calc(100% - 8px));mask:radial-gradient(closest-side,transparent calc(100% - 9px),#000 calc(100% - 8px));animation:spin 120s linear infinite reverse}
+.pedestal{position:absolute;left:50%;bottom:9%;width:66%;aspect-ratio:4.4;translate:-50% 0}
+.pedestal::after{content:"";position:absolute;left:-12%;right:-12%;top:70%;height:90%;border-radius:50%;background:radial-gradient(closest-side,rgba(255,106,19,.45),transparent);filter:blur(10px);z-index:-1}
+.pedestal__side{position:absolute;left:0;right:0;top:50%;height:62%;border-radius:0 0 50% 50%/0 0 70% 70%;background:linear-gradient(90deg,#dcc3ab,#fff8f0 42%,#f1e0cf 60%,#c9ab8f)}
+.pedestal__top{position:absolute;inset:0;border-radius:50%;background:radial-gradient(ellipse at 50% 38%,#fffdf9 0%,#f8eadc 62%,#ead3bd 100%);box-shadow:inset 0 -8px 16px rgba(150,80,30,.14)}
+.pedestal__rim{position:absolute;inset:-2.5% -1.5%;border-radius:50%;border:2px solid rgba(255,106,19,.75);box-shadow:0 0 22px rgba(255,106,19,.55),inset 0 0 12px rgba(255,106,19,.35);animation:rimGlow 2.6s ease-in-out infinite}
+@keyframes rimGlow{50%{box-shadow:0 0 34px rgba(255,106,19,.75),inset 0 0 18px rgba(255,106,19,.5)}}
+.orbit{position:absolute;left:50%;top:44%;width:84%;aspect-ratio:1;translate:-50% -50%;container-type:inline-size;pointer-events:none;z-index:4;animation:spin var(--dur) linear infinite}
+.orbit--in{--dur:60s}
+.orbit--out{--dur:95s;width:116%;z-index:3;animation-direction:reverse}
+.orbit--in .oi{--os:15%}.orbit--out .oi{--os:11.5%}
+.oi{position:absolute;z-index:1;left:50%;top:50%;width:var(--os);aspect-ratio:1;margin:calc(var(--os) / -2) 0 0 calc(var(--os) / -2);border-radius:50%;pointer-events:auto;cursor:pointer;transform:rotate(var(--a)) translateY(-50cqw) rotate(calc(-1 * var(--a)))}
+.oi:hover,.oi:focus-visible{z-index:3}
+.oi__in{position:relative;display:block;width:100%;height:100%;animation:spin var(--dur) linear infinite reverse}
+.orbit--out .oi__in{animation-direction:normal}
+.oi__pop{display:block;width:100%;height:100%;filter:drop-shadow(0 8px 8px rgba(58,30,16,.22));transition:scale .35s var(--ease)}
+.oi__pop img{width:100%;height:100%}
+.oi:hover .oi__pop,.oi:focus-visible .oi__pop{scale:1.25}
+.orbit:hover,.orbit:hover .oi__in,.orbit:focus-within,.orbit:focus-within .oi__in{animation-play-state:paused}
+.oi__tag{position:absolute;left:50%;top:100%;translate:-50% 2px;white-space:nowrap;padding:4px 10px;border-radius:999px;background:#fff;box-shadow:0 8px 18px -10px rgba(58,30,16,.6);font:700 12.5px/1.3 var(--body);color:var(--brown);opacity:0;pointer-events:none;transition:opacity .2s,translate .2s}
+.oi__tag b{margin-left:6px;color:var(--orange-ink)}
+.oi:hover .oi__tag,.oi:focus-visible .oi__tag{opacity:1;translate:-50% 8px}
+.g-main{position:absolute;left:50%;top:44%;width:52%;aspect-ratio:1;translate:-50% -50%;z-index:5;cursor:grab;touch-action:none}
+.g-main img{width:100%;height:100%;filter:drop-shadow(0 30px 28px rgba(110,70,48,.42));animation:float-d 5s ease-in-out infinite;transition:opacity .22s,scale .22s;-webkit-user-drag:none;user-select:none}
+@keyframes float-d{50%{translate:0 -12px}}
+.g-main.swap img{opacity:0;scale:.6}
+.g-main.boop img{animation:boop .9s var(--spring)}
+@keyframes boop{30%{scale:1.18}100%{scale:1}}
+.mhint{position:absolute;z-index:6;left:-2%;top:2%;margin:0;rotate:-8deg;font:700 23px/1 var(--hand);color:var(--orange-hi);pointer-events:none;animation:floaty 3s ease-in-out infinite}
+@keyframes floaty{50%{translate:0 -10px}}
+.fotw{position:absolute;z-index:8;left:50%;bottom:-3%;translate:-50% 0;display:flex;align-items:center;gap:14px;padding:10px 10px 10px 18px;border-radius:999px;background:var(--glass);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:inset 0 0 0 1px rgba(255,255,255,.9),0 16px 30px -18px rgba(58,30,16,.6);white-space:nowrap}
+.fotw p{line-height:1.15}
+.fotw small{display:block;font:700 19px/1 var(--hand);color:var(--orange-hi)}
+.fotw b{font:700 18px/1.2 var(--head);color:var(--brown)}
+.fotw button{height:44px;padding:0 18px;border-radius:999px;background:#ff6a13;color:#2a1408;font:700 15px/1 var(--head);box-shadow:0 10px 22px -10px rgba(255,106,19,.7);transition:transform .25s var(--spring)}
+.fotw button:hover{transform:translateY(-2px)}
+.band{position:relative;z-index:6;overflow:hidden;background:#e85706;color:#fff;padding:16px 0;margin-top:clamp(30px,4vw,50px)}
+.band div{display:inline-flex;align-items:center;white-space:nowrap;animation:marq 34s linear infinite;font:600 clamp(18px,2vw,24px)/1 var(--head)}
+.band span{padding:0 22px}
+.band i{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.7)}
 
 /* =========================================================
-   02 PIZZA MAX — mirrors its hero
+   02 PIZZA MAX — mirrors its current hero
    ========================================================= */
-.pizza{--accent:#c62f26;background:#f7f6f3;color:#3a3a3a;padding-top:clamp(150px,14vw,180px)}
-.pizza::before{content:"";position:absolute;inset:0;z-index:-2;background:repeating-linear-gradient(180deg,transparent 0 148px,rgba(0,0,0,.045) 148px 150px),repeating-linear-gradient(90deg,rgba(0,0,0,.012) 0 2px,transparent 2px 7px)}
+.pizza{--accent:#c62f26;--ink:#1f1f1f;--green-dk:#2e7d32;--leader:#b5afa5;--thermal:#fcfbf8;background:linear-gradient(rgba(242,241,238,.5),rgba(255,255,255,0) 30%),repeating-linear-gradient(90deg,transparent 0 318px,rgba(0,0,0,.035) 318px 320px),#f2f1ee;color:#3a3a3a;padding-top:clamp(150px,14vw,180px)}
+.pizza::before{content:"";position:absolute;inset:0;z-index:-1;opacity:.5;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 .p-bar{position:absolute;top:0;left:0;right:0;background:#2e7d32;color:#fff;font:600 14px/1 var(--head);z-index:2}
 .p-bar .wrap{display:flex;align-items:center;gap:22px;height:46px}
 .p-bar .live{display:inline-flex;align-items:center;gap:8px;margin-left:auto}
@@ -222,38 +257,62 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .p-logo .sw{height:4px;margin:2px 0 4px;border-radius:50%;background:#43a047;transform:rotate(-2deg)}
 .p-logo .tb{font:700 15px/1 var(--hand);color:#c62f26;text-align:right}
 @media (max-width:760px){.p-nav{display:none}.p-logo{width:118px}.p-logo .mx{font-size:32px}.p-bar .hide-sm,.p-bar .live{display:none}.p-bar .ct{margin-left:auto}}
-.pizza h2{font-size:clamp(42px,4.6vw,62px);color:#1f1f1f}
-.pizza h2 .r{color:#c62f26}
-.pizza .lede{font-size:17.6px;color:#3a3a3a;max-width:40ch;margin:20px 0 28px}
+.p-stage{display:grid;gap:22px 40px;grid-template-areas:"title" "copy" "pizza" "ticket"}
+@media (min-width:1000px){.p-stage{grid-template-columns:1.25fr 1fr;grid-template-areas:"title copy" "pizza ticket";align-items:end}}
+.p-title{grid-area:title}
+.p-copy{grid-area:copy}
+.p-title .kick{display:block;font:700 24px/1 var(--hand);color:#c62f26;margin-bottom:10px;rotate:-2deg}
+.pizza h2{font-size:clamp(40px,4.6vw,62px);font-weight:800;line-height:.98;letter-spacing:-.04em;color:#1f1f1f}
+.pizza h2 em{font-style:normal;color:#2e7d32}
+.pizza .lede{font-size:17.6px;line-height:1.55;color:#3a3a3a;max-width:34ch;margin-bottom:22px}
 .p-btn{display:inline-flex;align-items:center;gap:10px;padding:14px 28px;border-radius:8px;font:700 16px/1.25 var(--head);letter-spacing:.01em;text-decoration:none;transition:transform .2s,box-shadow .2s,background .2s}
 .p-btn.red{background:#c62f26;color:#fff;box-shadow:0 6px 16px rgba(30,20,10,.16)}
 .p-btn.red:hover{background:#a3231c;transform:translateY(-2px)}
 .p-btn.white{background:rgba(255,255,255,.85);color:#1f1f1f;box-shadow:inset 0 0 0 1.5px #d6d2ca}
 .p-btn.white:hover{box-shadow:inset 0 0 0 1.5px #1f1f1f}
-.p-feats{display:grid;grid-template-columns:repeat(2,max-content);gap:12px 28px;margin-top:28px;padding-top:22px;border-top:1px solid #e6e2dc;font:500 14.5px/1.3 var(--body);color:#3a3a3a}
-.p-feats li{display:flex;align-items:center;gap:10px}
-.p-feats svg{width:18px;height:18px;stroke:#2e7d32;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-@media (max-width:560px){.p-feats{grid-template-columns:1fr}}
-.pie{position:absolute;left:50%;top:46%;width:min(90%,520px);aspect-ratio:1;translate:-50% -50%;cursor:grab;touch-action:none;transition:scale .6s var(--spring)}
-.pie:active{cursor:grabbing}
-.pie-board{position:absolute;inset:-3.5%;border-radius:50%;background:radial-gradient(circle at 40% 35%,#d9a868,#b9824a 70%,#94632f);box-shadow:0 34px 50px -22px rgba(0,0,0,.45),inset 0 0 0 6px rgba(0,0,0,.05)}
-.pie img{position:relative;width:100%;height:100%!important;filter:drop-shadow(0 8px 10px rgba(0,0,0,.25));-webkit-user-drag:none;user-select:none}
-.pie .steam{position:absolute;left:30%;top:-12%;width:40%;height:30%;pointer-events:none}
-.pie .steam i{position:absolute;bottom:0;width:10px;height:60px;border-radius:10px;background:linear-gradient(transparent,rgba(255,255,255,.9));filter:blur(4px);animation:steam 3s ease-in infinite;opacity:0}
-.pie .steam i:nth-child(1){left:10%}.pie .steam i:nth-child(2){left:45%;animation-delay:1s}.pie .steam i:nth-child(3){left:80%;animation-delay:2s}
-@keyframes steam{20%{opacity:.8}100%{transform:translateY(-70px) scaleX(2);opacity:0}}
-.prop{position:absolute;z-index:3;pointer-events:none;will-change:transform;filter:drop-shadow(0 14px 14px rgba(0,0,0,.25))}
-.pr-tomato{width:76px;left:30%;top:-4%}
-.pr-sauce{width:120px;right:-2%;top:-4%}
-.pr-olives{width:100px;right:0;bottom:12%}
-.pr-chili{width:170px;left:-4%;bottom:6%;rotate:-12deg}
-.pr-basil{width:96px;left:-26px;top:auto;bottom:30px;z-index:0;rotate:-20deg}
-@media (max-width:999px){.pr-basil{display:none}}
-.pull{position:absolute;left:-2%;top:14%;font-size:27px;color:#c62f26;rotate:-8deg;z-index:4}
-.pull svg{width:50px;height:20px;vertical-align:middle;margin-left:4px}
-.board{position:absolute;right:0;bottom:-2%;z-index:4;display:flex;align-items:center;gap:12px;font:500 14px/1 var(--body);color:#3a3a3a;flex-wrap:wrap;justify-content:flex-end}
-.board b{font:700 14px/1 var(--head);color:#1f1f1f}
-.board select{appearance:none;-webkit-appearance:none;background:#fff;border-radius:999px;padding:9px 30px 9px 14px;font:600 14px/1 var(--head);color:#1f1f1f;border:1px solid #e6e2dc;background-image:linear-gradient(45deg,transparent 50%,#1f1f1f 50%),linear-gradient(135deg,#1f1f1f 50%,transparent 50%);background-position:calc(100% - 15px) 52%,calc(100% - 10px) 52%;background-size:5px 5px;background-repeat:no-repeat;cursor:pointer}
+.p-feats{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:20px;font:600 13.5px/1.3 var(--body);color:#5f5f5f}
+.p-feats li{display:flex;align-items:center;gap:7px}
+.p-feats li::before{content:"";width:7px;height:7px;border-radius:50%;background:#2e7d32}
+.p-visual{grid-area:pizza;position:relative}
+.p-pizza{position:relative;width:min(100%,560px);aspect-ratio:1/.92;margin:0 auto;perspective:1100px;cursor:grab;touch-action:pan-y}
+.p-pizza:active{cursor:grabbing}
+.p-tilt{position:absolute;inset:0;transform:rotateX(34deg);transform-style:preserve-3d}
+.p-spin{position:absolute;inset:4%;border-radius:50%}
+.p-board{position:absolute;inset:-2%;border-radius:50%;background:radial-gradient(circle at 42% 38%,#d7a46a,#b98149 62%,#9b6633 100%);box-shadow:0 26px 30px -14px rgba(60,35,10,.55),inset 0 -6px 0 rgba(0,0,0,.12)}
+.p-board::before{content:"";position:absolute;inset:0;border-radius:50%;background:repeating-linear-gradient(97deg,rgba(255,255,255,.06) 0 3px,transparent 3px 11px),repeating-linear-gradient(83deg,rgba(80,40,10,.07) 0 2px,transparent 2px 17px)}
+.p-pie,.p-slice{position:absolute;inset:3%;width:94%;height:94%!important;-webkit-user-drag:none;user-select:none}
+.p-pie{filter:drop-shadow(0 6px 6px rgba(0,0,0,.25))}
+.p-slice{-webkit-clip-path:polygon(50% 50%,50% -10%,110% -10%);clip-path:polygon(50% 50%,50% -10%,110% -10%);transition:transform .7s var(--spring),filter .7s;pointer-events:none;opacity:0}
+.p-pizza.pulled .p-pie{-webkit-mask:conic-gradient(from 0deg at 50% 50%,transparent 0 45deg,#000 45deg);mask:conic-gradient(from 0deg at 50% 50%,transparent 0 45deg,#000 45deg)}
+.p-pizza.pulled .p-slice{opacity:1;transform:translate(9%,-12%) translateZ(60px);filter:drop-shadow(0 22px 18px rgba(0,0,0,.35))}
+.hand-note{position:absolute;right:4%;top:-4%;z-index:4;display:inline-flex;align-items:flex-end;gap:2px;font:700 26px/1 var(--hand);color:#c62f26;rotate:-6deg;transition:transform .2s}
+.hand-note:hover{transform:scale(1.06)}
+.hand-note svg{width:60px;height:30px;transform:scaleX(-1)}
+.hero-pick{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:6px;font:500 14.5px/1.3 var(--body);color:#3a3a3a}
+.hero-pick .pname{font:700 15px/1 var(--head);color:#1f1f1f;padding:8px 10px;border-radius:8px;transition:background .2s}
+.hero-pick .pname:hover{background:#fff}
+.hero-pick .pname::after{content:" ↻";color:#c62f26}
+.mini-btn{border:1px solid #8f897f;background:#fff;border-radius:999px;min-height:44px;padding:6px 14px;font:600 14px/1 var(--head);color:#1f1f1f;transition:background .2s,color .2s}
+.mini-btn:hover{background:#1f1f1f;color:#fff}
+.today{--zig:8px;grid-area:ticket;align-self:end;position:relative;z-index:3;isolation:isolate;width:100%;max-width:360px;margin:0 auto 30px;padding:20px 20px 24px;color:#1f1f1f;transform:rotate(-.7deg);filter:drop-shadow(0 10px 12px rgba(40,25,10,.16)) drop-shadow(0 1px 1px rgba(40,25,10,.1))}
+@media (min-width:1000px){.today{margin:0 0 60px -64px}}
+.today::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--thermal);-webkit-mask:conic-gradient(from 135deg at top,#0000,#000 1deg 89deg,#0000 90deg) top/var(--zig) 51% repeat-x,conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) bottom/var(--zig) 51% repeat-x;mask:conic-gradient(from 135deg at top,#0000,#000 1deg 89deg,#0000 90deg) top/var(--zig) 51% repeat-x,conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) bottom/var(--zig) 51% repeat-x}
+.today-head{display:flex;justify-content:space-between;gap:10px;font:800 13px/1.2 var(--head);letter-spacing:.12em;text-transform:uppercase;color:#1f1f1f}
+.today-head span+span{font-weight:600;letter-spacing:.04em;color:#5f5f5f}
+.today-open{display:flex;align-items:center;gap:8px;margin:10px 0 8px;padding-bottom:10px;border-bottom:2px dashed rgba(31,31,31,.28);font:700 15px/1.3 var(--head)}
+.today-open i{flex:none;width:9px;height:9px;border-radius:50%;background:#2e7d32}
+.today-open.is-closed i{background:transparent;box-shadow:inset 0 0 0 2px #1f1f1f}
+.today-rows{font-size:14.5px}
+.today-rows li{display:grid;grid-template-columns:auto minmax(12px,1fr) auto;align-items:baseline;gap:8px;padding:3px 0}
+.today-rows .lead{border-bottom:1.5px dotted var(--leader);transform:translateY(-4px)}
+.today-rows b{font-weight:600;text-align:right}
+.today-zip{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:8px;margin-top:12px;padding-top:12px;border-top:2px dashed rgba(31,31,31,.28)}
+.today-zip label{font:700 14.5px/1 var(--head)}
+.today-zip input{width:100%;min-width:0;min-height:44px;padding:8px 12px;border:1px solid #8f897f;border-radius:8px;background:#fff;font:700 15px/1 var(--head);letter-spacing:.04em;color:#1f1f1f}
+.today-zip input:focus-visible{outline:2px solid #2e7d32;outline-offset:2px}
+.today-zip button{min-height:44px;padding:0 18px;border-radius:8px;background:#1f1f1f;color:#fff;font:700 15px/1 var(--head)}
+.today-msg{margin-top:10px;font-size:13.5px;line-height:1.45;color:#3a3a3a;min-height:1.4em}
+.today-msg.ok{color:#2e7d32;font-weight:600}.today-msg.no{color:#a3231c;font-weight:600}
 
 /* =========================================================
    03 EXPOBUSINESS — mirrors its hero
@@ -275,86 +334,63 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .x-trust{display:flex;gap:10px 30px;flex-wrap:wrap;margin-top:28px;font:600 14.5px/1.2 var(--head);color:#fff}
 .x-trust li{display:flex;align-items:center;gap:8px}
 .x-trust li::before{content:"";width:16px;height:16px;border-radius:50%;background:#ff8a3d url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2316163a' stroke-width='4' stroke-linecap='round'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E") center/10px no-repeat}
-.lanyard{position:absolute;left:50%;top:-14%;width:min(62%,320px);margin-left:calc(min(62%,320px) / -2);z-index:4;transform-origin:50% 0;touch-action:none;cursor:grab}
-.lanyard.idle{animation:swing 5s ease-in-out infinite}
-@keyframes swing{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
-.strap{width:30px;height:clamp(110px,14vw,170px);margin:0 auto;background:repeating-linear-gradient(180deg,#f26a1b 0 10px,#d9560f 10px 12px);border-radius:0 0 4px 4px;box-shadow:inset 7px 0 0 rgba(255,255,255,.15)}
-.clip{width:38px;height:24px;margin:-2px auto 0;border-radius:6px;background:linear-gradient(#f2f2f6,#c9cad6);box-shadow:0 4px 8px rgba(0,0,0,.3)}
-.badge{position:relative;display:block;width:100%;margin-top:-4px;perspective:900px;text-align:left}
-.badge-in{position:relative;transform-style:preserve-3d;transition:transform .8s var(--spring)}
-.badge.flip .badge-in{transform:rotateY(180deg)}
-.face{border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 40px 60px -24px rgba(0,0,0,.75);backface-visibility:hidden;-webkit-backface-visibility:hidden}
-.face.back{position:absolute;inset:0;transform:rotateY(180deg);background:linear-gradient(160deg,#25254f,#16163a);color:#fff;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:12px;padding:26px;text-align:center}
-.face.back img{width:100%;border-radius:10px;box-shadow:0 10px 20px -8px rgba(0,0,0,.6)}
-.face.back strong{font:800 18px/1.15 var(--head)}
-.face.back span{font:500 13px/1.4 var(--body);opacity:.8}
-.b-top{position:relative;overflow:hidden;padding:26px 20px 16px;background:linear-gradient(135deg,#1f1f3d,#2b2b5a)}
-.b-top::before{content:"";position:absolute;left:50%;top:9px;width:44px;height:6px;margin-left:-22px;border-radius:4px;background:#e8e8ef}
-.b-top::after{content:"";position:absolute;right:-30px;top:-30px;width:130px;height:130px;border-radius:50%;background:radial-gradient(circle,rgba(242,106,27,.75),transparent 70%)}
-.b-top small{display:block;font:500 11px/1 var(--body);color:#c9c9dd;margin-top:8px}
-.b-top strong{display:block;font:800 26px/1.05 var(--head);color:#fff;margin-top:4px}
-.b-role{background:linear-gradient(90deg,#f26a1b,#d7261e);color:#fff;font:800 24px/1 var(--head);letter-spacing:.3em;padding:12px 20px}
-.b-body{padding:16px 20px 18px;color:#1f1f3d}
-.b-co{display:flex;align-items:center;gap:12px;font:700 15px/1.2 var(--head);padding-bottom:14px;border-bottom:1px solid #ecebf1}
-.b-co i{width:44px;height:44px;border-radius:10px;background:#fdeee3}
-.b-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:12px;font:500 10px/1.2 var(--body);color:#5a5a72;text-transform:uppercase;letter-spacing:.06em}
-.b-grid b{display:block;font:700 13px/1.4 var(--head);color:#1f1f3d;text-transform:none;letter-spacing:0}
-.b-foot{display:flex;justify-content:space-between;align-items:flex-end;margin-top:12px;font:500 10px/1.3 var(--body);color:#5a5a72;text-transform:uppercase;letter-spacing:.06em}
-.b-foot b{display:block;font:700 13px/1.3 var(--head);color:#1f1f3d;text-transform:none;letter-spacing:0}
-.qr{width:62px;height:62px;background:conic-gradient(from 90deg at 3px 3px,#1f1f3d 25%,transparent 0) 0 0/7px 7px,conic-gradient(from 0deg at 4px 4px,#1f1f3d 25%,transparent 0) 2px 1px/11px 9px}
-.b-hint{position:absolute;right:0;top:0;font:500 13px/1 var(--body);color:rgba(255,255,255,.6)}
+.x-stage{position:relative;height:clamp(560px,52vw,640px)}
+.lanyard{position:absolute;inset:0;overflow:clip;overflow-clip-margin:24px}
+.pend{position:absolute;top:-70px;left:50%;width:0;height:0;transform-origin:0 0;will-change:transform}
+.strap{position:absolute;left:-60px;top:0;width:120px;height:300px;overflow:visible}
+.clip{position:absolute;left:-16px;top:284px;width:32px;height:30px;border-radius:6px;background:linear-gradient(#e9e8f1,#a9a8bb);box-shadow:0 4px 8px rgba(0,0,0,.35)}
+.clip i{position:absolute;left:11px;bottom:-12px;width:10px;height:18px;border:3px solid #b9b8c8;border-top:0;border-radius:0 0 6px 6px}
+@property --flip{syntax:"<angle>";inherits:false;initial-value:0deg}
+.badge3d{position:absolute;left:-132px;top:318px;width:264px;height:390px;cursor:grab;transform-style:preserve-3d;transform-origin:50% 0;transform:rotate(var(--sway,0deg)) rotateY(var(--flip,0deg));transition:--flip .9s var(--ease);color:#1f1f3d;text-align:left;touch-action:none;-webkit-tap-highlight-color:transparent}
+.badge3d:active{cursor:grabbing}
+.badge3d.flipped{--flip:180deg}
+.badge3d:focus-visible{outline:none}
+.badge3d:focus-visible .bf{box-shadow:0 0 0 3px #ff8a3d,0 30px 60px -20px rgba(0,0,0,.7)}
+.bf{position:absolute;inset:0;border-radius:18px;backface-visibility:hidden;-webkit-backface-visibility:hidden;overflow:hidden;display:flex;flex-direction:column;background:#fff;box-shadow:0 2px 4px rgba(0,0,0,.2),0 30px 60px -20px rgba(0,0,0,.7)}
+.bf-hole{position:absolute;left:50%;top:12px;width:44px;height:9px;margin-left:-22px;border-radius:9px;background:#e7e5ee;box-shadow:inset 0 2px 3px rgba(0,0,0,.25);z-index:2}
+.bf-top{padding:32px 20px 14px;background:var(--b0,#16163a);color:#fff;display:grid;gap:2px;position:relative;overflow:hidden;transition:background .4s}
+.bf-top::before{content:"";position:absolute;right:-40px;top:-60px;width:170px;height:170px;border-radius:50%;background:radial-gradient(closest-side,rgba(242,106,27,.7),transparent)}
+.bf-top small{font-size:11px;letter-spacing:.12em;color:#ffcfae;position:relative}
+.bf-top b{font:800 26px/1.05 var(--head);letter-spacing:-.03em;position:relative}
+.bf-top em{font-style:normal;font-size:12.5px;color:#c8c7dc;position:relative}
+.bf-role{padding:8px 20px;background:linear-gradient(90deg,var(--b1,#c9460b),var(--b2,#d7261e));color:#fff;font:800 22px/1 var(--head);letter-spacing:.28em;text-transform:uppercase;transition:background .4s}
+.bf-id{display:flex;gap:12px;align-items:center;padding:16px 20px 10px}
+.bf-avatar{width:52px;height:52px;border-radius:12px;background:#fdeee3;color:#c9460b;display:grid;place-items:center;flex:none}
+.bf-avatar svg{width:26px;height:26px}
+.bf-who b{display:block;font:700 16px/1.2 var(--head)}
+.bf-who small{display:block;font-size:13px;color:#c9460b;font-weight:600;min-height:1.3em}
+.bf-who small::after{content:"";display:inline-block;width:2px;height:13px;margin-left:2px;background:currentColor;vertical-align:-2px;animation:caret 1s steps(1) infinite}
+@keyframes caret{50%{opacity:0}}
+.bf-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin:4px 20px;padding:10px 0;border-top:1px dashed #dedce6;border-bottom:1px dashed #dedce6}
+.bf-meta small{display:block;font-size:11px;color:#5a5a72;text-transform:uppercase;letter-spacing:.06em}
+.bf-meta b{font-size:13px}
+.bf-foot{display:flex;justify-content:space-between;align-items:flex-end;margin:auto 20px 16px}
+.bf-idno small{display:block;font-size:10.5px;color:#5a5a72;text-transform:uppercase;letter-spacing:.06em}
+.bf-idno b{display:block;font:700 13px/1.4 var(--head)}
+.bf-qr{width:64px;height:64px;display:grid;grid-template-columns:repeat(9,1fr);gap:1px}
+.bf-qr i{background:#1f1f3d;border-radius:1px}.bf-qr i.o{background:transparent}
+.bf.back{transform:rotateY(180deg);background:#16163a;color:#fff;padding:36px 22px 18px;gap:14px}
+.bb-title{font:800 19px/1.2 var(--head)}
+.bb-list{display:grid;gap:10px}
+.bb-list span{display:flex;align-items:center;gap:10px;font-size:14px;color:#e4e3f0}
+.bb-list span::before{content:"✓";width:18px;height:18px;border-radius:50%;background:#ff8a3d;color:#16163a;font:800 11px/18px var(--head);text-align:center}
+.bb-foot{margin-top:auto;font-size:11.5px;color:#a9a8c2}
+.badge3d.swap .front{transform:rotateY(90deg)}
+.badge3d .front{transition:transform .26s cubic-bezier(.65,0,.35,1)}
+.lanyard-hint{position:absolute;top:18%;left:calc(50% + 150px);display:inline-flex;align-items:center;gap:8px;font-size:12.5px;color:#c8c7dc;white-space:nowrap}
+.lanyard-hint::before{content:"";width:12px;height:12px;border-radius:50%;box-shadow:inset 0 0 0 2px #ff8a3d,0 0 0 4px rgba(255,138,61,.25)}
+.badge-dots{position:absolute;z-index:4;left:50%;bottom:6px;transform:translateX(-50%);display:flex;gap:6px;padding:6px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(8px)}
+.badge-dots button{position:relative;width:26px;height:8px;border-radius:99px;background:rgba(255,255,255,.28);transition:width .4s var(--ease),background .3s}
+.badge-dots button[aria-pressed="true"]{width:44px;background:#ff8a3d}
+.badge-dots button span{position:absolute;bottom:16px;left:50%;transform:translate(-50%,4px);white-space:nowrap;font-size:12px;font-weight:600;color:#fff;background:#16163a;padding:5px 8px;border-radius:6px;opacity:0;pointer-events:none;transition:opacity .2s,transform .3s var(--ease)}
+.badge-dots button:hover span,.badge-dots button:focus-visible span{opacity:1;transform:translate(-50%,0)}
+.badge-dots button::after{content:"";position:absolute;inset:-10px -2px}
+@media (max-width:1100px){.lanyard-hint{left:auto;right:0}}
+@media (max-width:560px){.x-stage{height:640px}.pend{zoom:.8;top:-70px}.lanyard-hint{display:none}}
 .sourcing{margin-top:clamp(40px,5vw,70px);padding-top:22px;border-top:1px solid rgba(255,255,255,.14);display:flex;gap:10px 8px;flex-wrap:wrap;align-items:center;font:700 14.5px/1 var(--head);color:#fff}
 .sourcing>span{color:rgba(255,255,255,.6);font-weight:600;margin-right:14px}
 .sourcing button{padding:9px 14px;border-radius:999px;transition:background .2s,color .2s}
 .sourcing button:hover,.sourcing button[aria-pressed="true"]{background:#fff;color:#16163a}
-
-/* =========================================================
-   04 IMMACULATE CONNECTIONS — mirrors its hero
-   ========================================================= */
-.imc{--accent:#bc5700;background:#091630;color:rgba(255,255,255,.86)}
-.imc .bg{position:absolute;inset:-4%;z-index:-2;background:url("portfolio-shots/immaculate.webp") 60% 40%/cover no-repeat;filter:blur(16px) saturate(1.2);opacity:.6;animation:kb 26s ease-in-out infinite alternate}
-@keyframes kb{to{transform:scale(1.12) translate(-2%,2%)}}
-.imc::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(9,22,48,.92) 25%,rgba(9,22,48,.55) 70%,rgba(9,22,48,.35)),linear-gradient(0deg,rgba(9,22,48,.9),transparent 40%)}
-.imc h2{font-size:clamp(38px,3.7vw,52px);font-weight:700;color:#fff;letter-spacing:-.025em;max-width:15ch}
-.imc h2 .u{position:relative;white-space:nowrap}
-.imc h2 .u::after{content:"";position:absolute;left:0;right:0;bottom:-.1em;height:.1em;border-radius:1em;background:linear-gradient(90deg,#ffb730,#e9a23b);transform-origin:0 50%;transform:scaleX(0);transition:transform 1.2s var(--ease) .5s}
-.imc .in h2 .u::after{transform:scaleX(1)}
-.imc .kick{font-size:24px;color:#ffb730;display:block;margin-bottom:8px}
-.imc .lede{font-size:17px;color:rgba(255,255,255,.86);max-width:46ch;margin:20px 0 28px}
-.i-btn{display:inline-flex;align-items:center;gap:10px;padding:17px 28px;border-radius:999px;font:700 15.2px/1 var(--body);text-decoration:none;transition:transform .3s var(--spring),background .2s}
-.i-btn.o{background:#bc5700;color:#fff;box-shadow:0 14px 30px -12px rgba(188,87,0,.9)}
-.i-btn.o:hover{transform:translateY(-3px);background:#cf6300}
-.i-btn.ln{background:rgba(9,22,48,.62);color:#fff;box-shadow:inset 0 0 0 2px rgba(255,255,255,.75)}
-.i-btn.ln:hover{background:rgba(255,255,255,.12)}
-.i-stats{display:grid;grid-template-columns:repeat(2,minmax(0,220px));gap:20px 34px;margin-top:32px}
-.i-stats div{border-left:3px solid #ffb730;padding-left:16px}
-.i-stats strong{display:block;font:700 30px/1.1 var(--head);color:#fff}
-.i-stats span{font:600 11.5px/1.3 var(--body);color:rgba(255,255,255,.75);text-transform:uppercase;letter-spacing:.14em}
-.polas{position:absolute;inset:2% 6% 22%;cursor:pointer}
-.pola{position:absolute;inset:0 0 auto;background:#fbf8f1;padding:3% 3% 0;border-radius:3px;box-shadow:0 30px 60px -20px rgba(0,0,0,.75);transition:transform .9s var(--ease),opacity .6s}
-.pola .ph{overflow:hidden;background:#ccc}
-.pola img{width:100%;aspect-ratio:4/3;object-fit:cover}
-.pola p{font:600 clamp(22px,2.3vw,30px)/1 var(--hand);color:#2b2b2b;text-align:center;padding:14px 0 18px}
-.pola[data-pos="0"]{transform:rotate(-1.5deg);z-index:3}
-.pola[data-pos="1"]{transform:rotate(4deg) translate(4%,-3%);z-index:2}
-.pola[data-pos="2"]{transform:rotate(-6deg) translate(-5%,-1%);z-index:1}
-.pola.toss{transform:rotate(16deg) translate(80%,-14%)!important;opacity:0;z-index:4!important;transition:transform .45s var(--ease),opacity .45s}
-.thumbs{position:absolute;left:4%;right:4%;bottom:9%;display:flex;align-items:center;gap:8px;justify-content:center}
-.thumbs .arr{flex:none;width:42px;height:42px;border-radius:50%;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.5);display:grid;place-items:center;color:#fff;transition:background .2s}
-.thumbs .arr:hover{background:rgba(255,255,255,.14)}
-.thumbs .arr svg{width:16px;height:16px}
-.thumbs .t{width:52px;height:38px;border-radius:6px;overflow:hidden;opacity:.6;transition:opacity .2s,box-shadow .2s,transform .2s}
-.thumbs .t img{width:100%;height:100%!important;object-fit:cover}
-.thumbs .t.on{opacity:1;box-shadow:0 0 0 2px #ffb730;transform:translateY(-3px)}
-.i-bottom{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:clamp(36px,4vw,56px)}
-.i-pause{width:46px;height:46px;border-radius:50%;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.5);display:grid;place-items:center;color:#fff}
-.i-pause svg{width:14px;height:14px}
-.i-pin{display:inline-flex;align-items:center;gap:8px;font:600 16px/1 var(--head);color:#fff;min-width:200px}
-.i-pin svg{width:18px;height:18px;stroke:#ffb730;fill:none;stroke-width:2}
-.dests{display:flex;gap:8px;flex-wrap:wrap}
-.dests button{font:700 14px/1 var(--body);color:#fff;padding:11px 16px;border-radius:999px;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.35);transition:.25s}
-.dests button:hover{box-shadow:inset 0 0 0 1.5px #fff}
-.dests button[aria-pressed="true"]{background:#fff;color:#091630}
 
 /* =========================================================
    SERVICES (TechNext) — pick what you need
@@ -407,70 +443,27 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
 footer a{text-decoration:none;color:var(--ink)}
 
 /* =========================================================
-   Dialogs: Preview + Branding kit
-   ========================================================= */
-dialog{border:0;padding:0;background:transparent;max-width:min(1100px,100% - 24px);width:100%;margin:auto;color:var(--text)}
-dialog::backdrop{background:rgba(12,14,30,.6);backdrop-filter:blur(6px)}
-dialog[open]{animation:pop .45s var(--spring)}
-@keyframes pop{from{opacity:0;transform:translateY(20px) scale(.96)}}
-.dlg{position:relative;background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 40px 80px -30px rgba(0,0,0,.6);max-height:calc(100dvh - 32px);overflow-y:auto}
-.x{position:absolute;top:14px;right:14px;z-index:2;width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.92);display:grid;place-items:center;box-shadow:0 6px 16px -6px rgba(0,0,0,.4)}
-.x svg{width:18px;height:18px}
-.pv-bar{display:flex;align-items:center;gap:8px;padding:14px 64px 14px 18px;background:#f1f2f7;font:600 13px/1 var(--head);color:#6b7090}
-.pv-bar i{width:11px;height:11px;border-radius:50%;background:#d6d8e3}
-.pv-bar i:nth-child(1){background:#ff6b5f}.pv-bar i:nth-child(2){background:#ffc23d}.pv-bar i:nth-child(3){background:#2fcf63}
-.pv-bar span{margin-left:10px;background:#fff;border-radius:8px;padding:7px 12px;flex:1;max-width:420px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-#pv-img{width:100%}
-.pv-foot{display:flex;justify-content:flex-end;padding:14px 18px;background:#fafbff}
-.bk-head{position:relative;padding:36px 30px 28px;background:var(--b-bg);color:var(--b-fg);overflow:hidden}
-.bk-head .hand{font-size:24px;color:var(--b-acc)}
-.bk-head h3{font:800 clamp(28px,4vw,40px)/1.05 var(--head);letter-spacing:-.03em;margin-top:4px}
-.bk-logo{display:inline-flex;align-items:center;gap:12px;margin-top:22px;background:#fff;border-radius:16px;padding:14px 18px;box-shadow:0 14px 30px -18px rgba(0,0,0,.6);color:#1f1f1f}
-.bk-body{display:grid;gap:26px;padding:28px 30px 30px}
-@media (min-width:820px){.bk-body{grid-template-columns:1.2fr 1fr}}
-.bk-body h4{font:700 12px/1 var(--head);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
-.sw-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:10px}
-.sw{text-align:left;border-radius:14px;overflow:hidden;box-shadow:0 0 0 1px #eceef5;transition:transform .25s var(--spring)}
-.sw:hover{transform:translateY(-3px)}
-.sw i{display:block;height:64px;background:var(--c)}
-.sw b{display:block;font:700 13px/1.2 var(--head);color:var(--ink);padding:9px 10px 0}
-.sw small{display:block;font:500 12px/1.2 var(--body);color:var(--muted);padding:3px 10px 10px}
-.sw.copied small{color:#2f9a5a}
-.ty{border-radius:14px;box-shadow:0 0 0 1px #eceef5;padding:14px 16px}
-.ty+.ty{margin-top:10px}
-.ty .s{font-size:30px;line-height:1.1;color:var(--ink)}
-.ty small{display:block;font:500 12px/1.3 var(--body);color:var(--muted);margin-top:6px}
-.voice{display:flex;flex-wrap:wrap;gap:8px}
-.voice span{font:600 13px/1 var(--head);padding:9px 14px;border-radius:999px;background:#f3f4fa;color:var(--ink)}
-.bk-line{margin-top:18px;padding:16px;border-radius:14px;background:#f8f9fd;font:italic 500 17px/1.4 var(--head);color:var(--ink)}
-.bk-foot{display:flex;gap:10px;flex-wrap:wrap;padding:0 30px 30px}
-
-/* =========================================================
    Responsive + motion preferences
    ========================================================= */
 @media (max-width:999px){
   .proj{min-height:0}
-  .proj .stage{height:clamp(360px,90vw,520px)}
   .deck-wrap{height:clamp(260px,70vw,420px)}
-  .expo .stage{height:clamp(500px,140vw,640px)}
-  .lanyard{top:0}
 }
 @media (max-width:560px){
   .hero h1{font-size:clamp(34px,10.5vw,44px)}
-  .f3,.f4,.c3,.g-note,.b-hint,.pr-sauce{display:none}
-  .g-call{transform:scale(.88)}
-  .g-label{font-size:13px}
-  .g-picker button{width:38px;height:38px}
-  .i-stats{grid-template-columns:1fr 1fr;gap:16px}
-  .i-stats strong{font-size:24px}
-  .thumbs .t{display:none}.thumbs .t.on{display:block}
-  .board{left:0;justify-content:flex-start}
+  .f3,.f4{display:none}
+  .hc:not(.hc--m){display:none}
+  .hc{width:calc(var(--s) * .58)}
+  .orbit--out{width:120%}
+  .orbit--in .oi{--os:17%}.orbit--out .oi{--os:13%}
+  .mhint{font-size:19px;left:0;top:-4%}
+  .fotw{gap:10px;padding-left:14px}.fotw b{font-size:15px}.fotw button{padding:0 14px;font-size:14px}
+  .mcat{min-height:44px;font-size:14px}
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
   .rv{opacity:1;transform:none}
   .hero h1 .line>span,.proj h2 .w>span{transform:none}
-  .imc h2 .u::after{transform:scaleX(1)}
   html{scroll-behavior:auto}
 }
 </style>
@@ -485,7 +478,6 @@ dialog[open]{animation:pop .45s var(--spring)}
       <a class="lk" href="#glaze" data-sec="glaze">Glaze Bomb</a>
       <a class="lk" href="#pizza" data-sec="pizza">Pizza Max</a>
       <a class="lk" href="#expo" data-sec="expo">ExpoBusiness</a>
-      <a class="lk" href="#imc" data-sec="imc">Immaculate</a>
       <a class="lk" href="#services" data-sec="services">Services</a>
       <a class="go" href="#contact">Start a project</a>
       <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
@@ -511,10 +503,9 @@ dialog[open]{animation:pop .45s var(--spring)}
           <b class="on" style="color:#e85706">crave.</b>
           <b style="color:#c62f26">order from.</b>
           <b style="color:#c9460b">fly with.</b>
-          <b style="color:#bc5700">travel with.</b>
         </span><span class="sr">remember.</span></span></span>
       </h1>
-      <p class="lede">Four brands, four very different websites. Each one has its own look, its own voice and one moment people remember: a donut you can spin, a pizza you can turn, a badge you can flip.</p>
+      <p class="lede">Three brands, three very different websites. Each one has its own look, its own voice and one moment people remember: a donut you can spin, a pizza you can turn, a badge you can flip.</p>
       <div class="cta-row">
         <a class="btn btn-main" href="#glaze">See the work <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         <a class="btn btn-ghost" href="#services">What we do</a>
@@ -523,12 +514,11 @@ dialog[open]{animation:pop .45s var(--spring)}
         <button class="chip on" type="button" aria-pressed="true" style="--c:#ff6a13"><i></i>Glaze Bomb</button>
         <button class="chip" type="button" aria-pressed="false" style="--c:#c62f26"><i></i>Pizza Max</button>
         <button class="chip" type="button" aria-pressed="false" style="--c:#f26a1b"><i></i>ExpoBusiness</button>
-        <button class="chip" type="button" aria-pressed="false" style="--c:#bc5700"><i></i>Immaculate</button>
       </div>
       <div class="stats">
-        <div><strong data-count="4">4</strong><span>Brands</span></div>
-        <div><strong data-count="38" data-suffix="+">38+</strong><span>Pages</span></div>
-        <div><strong data-count="3">3</strong><span>Countries</span></div>
+        <div><strong data-count="3">3</strong><span>Brands</span></div>
+        <div><strong data-count="27">27</strong><span>Pages</span></div>
+        <div><strong data-count="3">3</strong><span>Brand kits</span></div>
       </div>
     </div>
     <div class="deck-wrap" aria-hidden="true">
@@ -540,7 +530,6 @@ dialog[open]{animation:pop .45s var(--spring)}
         <div class="card3d" data-pos="0" data-target="#glaze"><div class="bar"><i></i><i></i><i></i><span>glaze-bomb-donuts</span></div><img src="portfolio-shots/glaze.webp" alt="" width="2000" height="1096"></div>
         <div class="card3d" data-pos="1" data-target="#pizza"><div class="bar"><i></i><i></i><i></i><span>pizza-max</span></div><img src="portfolio-shots/pizza.webp" alt="" width="2000" height="1099"></div>
         <div class="card3d" data-pos="2" data-target="#expo"><div class="bar"><i></i><i></i><i></i><span>expobusiness-travel</span></div><img src="portfolio-shots/travel.webp" alt="" width="2000" height="1096"></div>
-        <div class="card3d" data-pos="3" data-target="#imc"><div class="bar"><i></i><i></i><i></i><span>immaculateconnectionsph.com</span></div><img src="portfolio-shots/immaculate.webp" alt="" width="2000" height="1097"></div>
       </div>
       <div class="tag-note"><b>tap a card!</b><span id="deck-name">Glaze Bomb · donut shop</span></div>
     </div>
@@ -554,94 +543,94 @@ dialog[open]{animation:pop .45s var(--spring)}
 
 <!-- ================= 01 GLAZE BOMB ================= -->
 <section class="proj glaze" id="glaze" aria-labelledby="glaze-title">
-  <span class="num-tag" aria-hidden="true" style="color:#d64f00">01</span>
+  <div class="g-bg" aria-hidden="true"><div class="g-beams"></div><div class="g-orb"></div><div class="floor"><div class="floor__grid"></div></div><div class="g-horizon"></div></div>
+  <div class="g-cloud" id="gCloud" aria-hidden="true"></div>
   <div class="wrap proj-grid">
     <div class="rv">
-      <span class="g-open">Project 01 · Filled donut shop</span>
-      <h2 id="glaze-title"><span class="w"><span>Glaze Bomb,</span></span> <br><span class="w"><span class="o">glazed by hand.</span></span></h2>
-      <p class="lede">A product-led site you can play with: spin a live 3D donut, build your own, watch six donuts drop into a box, and ask “Glazy” the chat helper to add to your order.</p>
+      <span class="kicker">Project 01 · Glaze Bomb</span>
+      <h2 id="glaze-title"><span class="w"><span>Every donut,</span></span> <br><span class="w"><span class="accent">every drink.</span></span></h2>
+      <p class="lede">A filled-donut shop you can play with: a live 3D donut on the counter, a build-your-own donut, six donuts that drop into a box, and “Glazy”, a chat helper that can add to your order.</p>
+      <div class="mcats">
+        <span class="mcat"><span><img src="portfolio-shots/decor/glaze/strawberry-sprinkle-top-sm.webp" alt="" width="160" height="160"></span>Pages <small>4</small></span>
+        <span class="mcat"><span><img src="portfolio-shots/decor/glaze/hazelnut-velvet-top-sm.webp" alt="" width="160" height="160"></span>3D renders <small>84</small></span>
+        <span class="mcat"><span><img src="portfolio-shots/decor/glaze/iced-matcha-latte-sm.webp" alt="" width="160" height="160"></span>Drinks <small>12</small></span>
+        <a class="mcat" href="https://hellogiovanni07-commits.github.io/glaze-bomb-donuts/menu.html" target="_blank" rel="noopener"><span><img src="portfolio-shots/decor/glaze/caramel-biscuit-crunch-top-sm.webp" alt="" width="160" height="160"></span>Menu <small>32 donuts</small></a>
+      </div>
       <div class="g-acts">
         <a class="g-btn fill" href="https://hellogiovanni07-commits.github.io/glaze-bomb-donuts/" target="_blank" rel="noopener">Visit the site <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         <a class="g-btn line" href="https://hellogiovanni07-commits.github.io/glaze-bomb-donuts/brand/" target="_blank" rel="noopener">Branding</a>
-        <button class="g-btn line" type="button" data-preview="glaze">Preview</button>
-      </div>
-      <div class="g-stats">
-        <div><strong>4</strong><span>pages</span></div>
-        <div><strong>84</strong><span>3D renders</span></div>
-        <div><strong>44</strong><span>menu items</span></div>
-      </div>
-      <div class="g-follow"><span class="hand">Peek inside</span>
-        <a href="https://hellogiovanni07-commits.github.io/glaze-bomb-donuts/menu.html" target="_blank" rel="noopener">Menu</a>
-        <a href="https://hellogiovanni07-commits.github.io/glaze-bomb-donuts/gallery.html" target="_blank" rel="noopener">Gallery</a>
-        <a href="https://hellogiovanni07-commits.github.io/glaze-bomb-donuts/location.html" target="_blank" rel="noopener">Location</a>
       </div>
     </div>
 
-    <div class="stage rv d1">
-      <div class="g-ring" aria-hidden="true"><div class="g-ticks"></div></div>
-      <div class="g-donut" role="slider" tabindex="0" aria-label="Spin the donut with the arrow keys" aria-valuemin="0" aria-valuemax="360" aria-valuenow="0"><img id="g-img" src="portfolio-shots/decor/caramel-biscuit-crunch.webp" alt="" width="480" height="480" draggable="false"></div>
-      <div class="g-call c1" aria-hidden="true"><i>✦</i><div><strong>Hand-dipped</strong><span>thick glossy glaze</span></div></div>
-      <div class="g-call c2" aria-hidden="true"><i>◉</i><div><strong>Live 3D donut</strong><span>spin it, build it</span></div></div>
-      <div class="g-call c3" aria-hidden="true"><i>☀</i><div><strong>Baked at 6 AM</strong><span>every single day</span></div></div>
-      <span class="g-note hand" aria-hidden="true">drag to spin!</span>
-      <div class="g-ped" aria-hidden="true"></div>
-      <div class="g-label" aria-live="polite"><span id="g-name">Caramel Biscuit Crunch</span><b id="g-price">$3.80</b></div>
-      <div class="g-picker" role="group" aria-label="Pick a flavour">
-        <button type="button" aria-pressed="true" data-src="caramel-biscuit-crunch" data-name="Caramel Biscuit Crunch" data-price="$3.80"><img src="portfolio-shots/decor/caramel-biscuit-crunch-sm.webp" alt="Caramel Biscuit Crunch" width="160" height="160"></button>
-        <button type="button" aria-pressed="false" data-src="cookie-speckle" data-name="Cookie Speckle" data-price="$3.40"><img src="portfolio-shots/decor/cookie-speckle-sm.webp" alt="Cookie Speckle" width="160" height="160" loading="lazy"></button>
-        <button type="button" aria-pressed="false" data-src="midnight-marble" data-name="Midnight Marble" data-price="$3.60"><img src="portfolio-shots/decor/midnight-marble-sm.webp" alt="Midnight Marble" width="160" height="160" loading="lazy"></button>
-        <button type="button" aria-pressed="false" data-src="choco-sprinkle" data-name="Choco Sprinkle" data-price="$3.20"><img src="portfolio-shots/decor/choco-sprinkle-sm.webp" alt="Choco Sprinkle" width="160" height="160" loading="lazy"></button>
-        <button type="button" aria-pressed="false" data-src="ube-halaya" data-name="Ube Halaya" data-price="$3.60"><img src="portfolio-shots/decor/ube-halaya-sm.webp" alt="Ube Halaya" width="160" height="160" loading="lazy"></button>
-        <button type="button" aria-pressed="false" data-src="matcha-drizzle" data-name="Matcha Drizzle" data-price="$3.60"><img src="portfolio-shots/decor/matcha-drizzle-sm.webp" alt="Matcha Drizzle" width="160" height="160" loading="lazy"></button>
+    <div class="mstage rv d1">
+      <div class="display" aria-hidden="true">
+        <div class="display__glow"></div>
+        <div class="display__ring"><i class="display__sweep"></i></div>
+        <div class="display__ticks"></div>
+        <div class="pedestal"><i class="pedestal__side"></i><i class="pedestal__top"></i><i class="pedestal__rim"></i></div>
       </div>
+      <div class="orbit orbit--out" id="orbitOut" role="group" aria-label="Drinks"></div>
+      <div class="orbit orbit--in" id="orbitIn" role="group" aria-label="Donuts"></div>
+      <div class="g-main" role="slider" tabindex="0" aria-label="Spin the donut with the arrow keys" aria-valuemin="0" aria-valuemax="360" aria-valuenow="0"><img id="gImg" src="portfolio-shots/decor/glaze/midnight-marble.webp" alt="" width="480" height="480" draggable="false"></div>
+      <p class="mhint" aria-hidden="true">tap a donut to spin it up!</p>
+      <div class="fotw"><p><small id="fotwLabel">Flavor of the week</small><b id="fotwName">Midnight Marble</b></p><button type="button" id="fotwAdd">Add · <span id="fotwPrice">$3.60</span></button></div>
     </div>
   </div>
+  <div class="band" aria-hidden="true"><div>
+    <span>20 premium donuts</span><i></i><span>12 classics</span><i></i><span>12 hot &amp; iced drinks</span><i></i><span>Free drink with every box</span><i></i><span>Boxes of 12 &amp; 24: order a day ahead</span><i></i>
+    <span>20 premium donuts</span><i></i><span>12 classics</span><i></i><span>12 hot &amp; iced drinks</span><i></i><span>Free drink with every box</span><i></i><span>Boxes of 12 &amp; 24: order a day ahead</span><i></i>
+  </div></div>
 </section>
 
 <!-- ================= 02 PIZZA MAX ================= -->
 <section class="proj pizza" id="pizza" aria-labelledby="pizza-title">
   <div class="p-bar"><div class="wrap">
-    <span class="hide-sm" style="margin-left:clamp(130px,14vw,170px)">Berlin-Pankow</span>
+    <span class="hide-sm" style="margin-left:170px">Wollankstr., Berlin-Pankow</span>
     <span class="live">Project 02 · Restaurant</span>
     <a class="ct" href="https://hellogiovanni07-commits.github.io/pizza-max/brand/" target="_blank" rel="noopener">BRANDING</a>
   </div></div>
-  <div class="p-nav" aria-hidden="true"><div class="wrap"><span>DEALS</span><span>PIZZA</span><span>BURGERS</span><span>PASTA</span><span>SALADS</span><span>DESSERTS</span><span>DRINKS</span></div></div>
+  <div class="p-nav" aria-hidden="true"><div class="wrap"><span>DEALS</span><span>MENU</span><span>DELIVERY AREA</span><span>CONTACT</span></div></div>
   <div class="p-logo" aria-hidden="true"><div class="pz">Pizza</div><div class="mx">MAX</div><div class="sw"></div><div class="tb">...tasty in the box!</div></div>
-  <img class="prop pr-basil" data-depth="-30" src="portfolio-shots/decor/basil.webp" alt="" width="254" height="420">
-  <span class="num-tag" aria-hidden="true" style="color:#c62f26;top:auto;bottom:40px">02</span>
-  <div class="wrap proj-grid">
-    <div class="rv">
-      <h2 id="pizza-title"><span class="w"><span>Hot from the</span></span> <br><span class="w"><span class="r">stone oven.</span></span></h2>
-      <p class="lede">Pizza Max, Berlin. Visitors lift the lid of a pizza box to get in. Inside: a stone-oven menu in three sizes, deals, Blender-made ingredients, pickup and delivery.</p>
-      <div class="g-acts">
+  <div class="wrap p-stage">
+    <div class="p-title rv">
+      <span class="kick">Project 02 · Pizza Max</span>
+      <h2 id="pizza-title"><span class="w"><span>Stone-oven pizza</span></span> <br><span class="w"><span>for <em>Pankow.</em></span></span></h2>
+    </div>
+    <div class="p-copy rv d1">
+      <p class="lede">Dough rested for 24 hours, tomato sauce from their own pot, baked on the stone. The site opens on a pizza box, shows a real 3D pizza you can spin, and takes the order.</p>
+      <div class="g-acts" style="margin-top:0">
         <a class="p-btn red" href="https://hellogiovanni07-commits.github.io/pizza-max/" target="_blank" rel="noopener">Visit the site</a>
-        <button class="p-btn white" type="button" data-preview="pizza">Preview</button>
         <a class="p-btn white" href="https://hellogiovanni07-commits.github.io/pizza-max/brand/" target="_blank" rel="noopener">Branding</a>
       </div>
-      <ul class="p-feats">
-        <li><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 9h8M8 13h8M8 17h5"/></svg>3 pages, incl. legal</li>
-        <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Box-lid intro animation</li>
-        <li><svg viewBox="0 0 24 24"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>Pickup &amp; delivery</li>
-        <li><svg viewBox="0 0 24 24"><path d="M12 3l9 16H3z"/></svg>3 sizes: 26 · 32 · 38 cm</li>
+      <ul class="p-feats"><li>3D pizza</li><li>Order &amp; basket</li><li>Delivery check</li><li>Brand kit</li></ul>
+    </div>
+    <div class="p-visual rv">
+      <button class="hand-note" id="pullSlice" type="button">pull a slice!<svg viewBox="0 0 80 40" aria-hidden="true"><path d="M4 6 Q40 4 66 30 M66 30 l-12 -2 M66 30 l-2 -12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></button>
+      <div class="p-pizza" id="pPizza" role="slider" tabindex="0" aria-label="Pizza on a wooden board. Drag or use the arrow keys to spin it." aria-valuemin="0" aria-valuemax="360" aria-valuenow="0">
+        <div class="p-tilt"><div class="p-spin" id="pSpin">
+          <div class="p-board"></div>
+          <img class="p-pie" id="pPie" src="portfolio-shots/decor/pizza/garden-top.webp" alt="" width="760" height="760" draggable="false">
+          <img class="p-slice" id="pSlice" src="portfolio-shots/decor/pizza/garden-top.webp" alt="" width="760" height="760" draggable="false">
+        </div></div>
+      </div>
+      <p class="hero-pick">That's our <button type="button" class="pname" id="pName" aria-label="Show the next pizza">Veggie Garden</button> <button type="button" class="mini-btn" id="pAdd">Add a Maxi, 32 cm · <span id="pPrice">€13.20</span></button></p>
+    </div>
+    <section class="today rv d1" aria-labelledby="today-title">
+      <h3 class="today-head" id="today-title"><span>Today's oven</span> <span id="todayDate"></span></h3>
+      <p class="today-open" id="todayOpen"><i aria-hidden="true"></i><span>Opening hours</span></p>
+      <ul class="today-rows">
+        <li><span>Pickup</span><span class="lead" aria-hidden="true"></span><b>ready in about 20 min</b></li>
+        <li><span>Delivery</span><span class="lead" aria-hidden="true"></span><b>in about 30 min</b></li>
+        <li><span>Minimum order</span><span class="lead" aria-hidden="true"></span><b>€15, no delivery fee</b></li>
+        <li><span>Pizza</span><span class="lead" aria-hidden="true"></span><b>from €8.50</b></li>
       </ul>
-    </div>
-
-    <div class="stage rv d1">
-      <img class="prop pr-tomato" data-depth="40" src="portfolio-shots/decor/tomato.webp" alt="" width="420" height="415">
-      <img class="prop pr-sauce" data-depth="-45" src="portfolio-shots/decor/sauce.webp" alt="">
-      <span class="pull hand" aria-hidden="true">drag to spin!<svg viewBox="0 0 50 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 8c14-6 30-6 44 4M40 6l6 6-8 2"/></svg></span>
-      <div class="pie" role="slider" tabindex="0" aria-label="Spin the pizza with the arrow keys" aria-valuemin="0" aria-valuemax="360" aria-valuenow="0">
-        <div class="pie-board"></div>
-        <div class="steam" aria-hidden="true"><i></i><i></i><i></i></div>
-        <img src="portfolio-shots/decor/pizza.webp" alt="" width="480" height="480" draggable="false">
-      </div>
-      <img class="prop pr-chili" data-depth="25" src="portfolio-shots/decor/chili.webp" alt="" width="420" height="130">
-      <img class="prop pr-olives" data-depth="-35" src="portfolio-shots/decor/olives.webp" alt="" width="420" height="312">
-      <div class="board">On the board: <b>Salami</b>
-        <label class="sr" for="size">Pizza size</label>
-        <select id="size"><option value=".82">Standard 26 cm</option><option value=".92">Maxi 32 cm</option><option value="1" selected>Wumbo 38 cm</option></select>
-      </div>
-    </div>
+      <form class="today-zip" id="zipForm" novalidate>
+        <label for="zip">Deliver to</label>
+        <input id="zip" inputmode="numeric" autocomplete="off" maxlength="5" placeholder="postcode" aria-describedby="zipMsg">
+        <button type="submit">Check</button>
+      </form>
+      <p class="today-msg" id="zipMsg" aria-live="polite">Try 13187 (Pankow) or 10115.</p>
+    </section>
   </div>
 </section>
 
@@ -658,80 +647,44 @@ dialog[open]{animation:pop .45s var(--spring)}
         <div class="g-acts">
           <a class="x-btn o" href="https://hellogiovanni07-commits.github.io/expobusiness-travel/" target="_blank" rel="noopener">Visit the site <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           <a class="x-btn ln" href="https://hellogiovanni07-commits.github.io/expobusiness-travel/brand-kit/" target="_blank" rel="noopener">Branding</a>
-          <button class="x-btn ln" type="button" data-preview="expo">Preview</button>
         </div>
         <ul class="x-trust"><li>14 pages</li><li>8 industry guides</li><li>China visa guide</li></ul>
       </div>
-      <div class="stage rv d1">
-        <span class="b-hint">Drag to swing, tap to flip</span>
-        <div class="lanyard idle">
-          <div class="strap"></div><div class="clip"></div>
-          <button class="badge" type="button" aria-label="Flip the buyer badge">
-            <span class="badge-in" style="display:block">
-              <span class="face" style="display:block">
-                <span class="b-top" style="display:block"><small>中国进出口商品交易会</small><strong>Canton Fair</strong><small>Next session · Spring 2027</small></span>
-                <span class="b-role" style="display:block">BUYER</span>
-                <span class="b-body" style="display:block">
-                  <span class="b-co"><i></i>Your Company Inc.</span>
-                  <span class="b-grid"><span>Phase<b>1·2·3</b></span><span>Venue<b>Pazhou</b></span><span>From<b>Manila</b></span></span>
-                  <span class="b-foot"><span>Badge no.<b>EB-141-0418</b>Valid<b>All phases</b></span><span class="qr"></span></span>
+      <div class="x-stage rv d1">
+        <div class="lanyard" id="lanyard">
+          <div class="pend" id="pend">
+            <svg class="strap" viewBox="0 0 120 300" preserveAspectRatio="none" aria-hidden="true">
+              <path d="M38 0 L56 292" stroke="#c9460b" stroke-width="13"/><path d="M82 0 L64 292" stroke="#e8590c" stroke-width="13"/>
+              <path d="M38 0 L56 292 M82 0 L64 292" stroke="rgba(255,255,255,.35)" stroke-width="1.5" stroke-dasharray="6 7"/>
+            </svg>
+            <div class="clip" aria-hidden="true"><i></i></div>
+            <button class="badge3d" id="badge" type="button" aria-label="Sample Canton Fair buyer badge. Drag to swing, click to flip.">
+              <span class="bf front">
+                <span class="bf-hole" aria-hidden="true"></span>
+                <span class="bf-top"><small lang="zh" id="bfZh">中国进出口商品交易会</small><b id="bfName">Canton Fair</b><em id="bfSession">Next session · Spring 2027</em></span>
+                <span class="bf-role">Buyer</span>
+                <span class="bf-id">
+                  <span class="bf-avatar" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/></svg></span>
+                  <span class="bf-who"><b>Your Company Inc.</b><small id="bfInd">Electronics buyer</small></span>
                 </span>
+                <span class="bf-meta"><span><small id="bfL1">Phase</small><b id="bfPhase">1 · 2 · 3</b></span><span><small>Venue</small><b id="bfVenue">Pazhou</b></span><span><small>From</small><b>Manila</b></span></span>
+                <span class="bf-foot"><span class="bf-idno"><small>Badge no.</small><b id="bfNo">EB-141-0418</b><small>Valid</small><b>All phases</b></span><span class="bf-qr" id="bfQr" aria-hidden="true"></span></span>
               </span>
-              <span class="face back"><img src="portfolio-shots/travel.webp" alt="" width="2000" height="1096" loading="lazy"><strong>ExpoBusiness Travel Services</strong><span>One coordinator. One itemised quotation. Invoiced to your company.</span></span>
-            </span>
-          </button>
+              <span class="bf back">
+                <span class="bf-hole" aria-hidden="true"></span>
+                <span class="bb-title">Arranged by ExpoBusiness</span>
+                <span class="bb-list"><span>Buyer badge registration</span><span>China business visa</span><span>Flights MNL → CAN</span><span>Hotel near the venue</span><span>Interpreter &amp; transfers</span><span>24/7 coordinator</span></span>
+                <span class="bb-foot">Sample badge for illustration</span>
+              </span>
+            </button>
+          </div>
+          <p class="lanyard-hint" aria-hidden="true">Drag to swing, tap to flip</p>
+          <div class="badge-dots" role="group" aria-label="Show a badge for another expo"></div>
         </div>
       </div>
     </div>
     <div class="sourcing rv" role="group" aria-label="Industries"><span>Sourcing for</span>
       <button type="button" aria-pressed="false">Electronics</button><button type="button" aria-pressed="false">Machinery</button><button type="button" aria-pressed="false">Lighting</button><button type="button" aria-pressed="false">Construction</button><button type="button" aria-pressed="false">Furniture</button><button type="button" aria-pressed="false">Hotel &amp; restaurant</button><button type="button" aria-pressed="false">Fashion</button><button type="button" aria-pressed="false">Retail &amp; gifts</button>
-    </div>
-  </div>
-</section>
-
-<!-- ================= 04 IMMACULATE CONNECTIONS ================= -->
-<section class="proj imc" id="imc" aria-labelledby="imc-title">
-  <div class="bg" aria-hidden="true"></div>
-  <span class="num-tag" aria-hidden="true" style="color:#ffb730">04</span>
-  <div class="wrap">
-    <div class="proj-grid">
-      <div class="rv">
-        <span class="kick hand">Project 04 · Immaculate Connections · live site</span>
-        <h2 id="imc-title"><span class="w"><span>Cebu travel agency,</span></span> <span class="w"><span>planned to the</span></span> <span class="w"><span class="u">last detail</span></span></h2>
-        <p class="lede">From Da Nang and Hanoi to Shanghai, Beijing, Tokyo and Osaka: a Cebu tour agency's site with tour packages, real trip photos, tickets, hotels, transport and a free quotation.</p>
-        <div class="g-acts">
-          <a class="i-btn o" href="https://www.immaculateconnectionsph.com/" target="_blank" rel="noopener">Visit the live site <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-          <button class="i-btn ln" type="button" data-brand="imc">Branding</button>
-          <button class="i-btn ln" type="button" data-preview="imc">Preview</button>
-        </div>
-        <div class="i-stats">
-          <div><strong>3</strong><span>Destination countries</span></div>
-          <div><strong>17+</strong><span>Pages</span></div>
-          <div><strong>Cebu City</strong><span>Office &amp; local team</span></div>
-          <div><strong>24/7</strong><span>Traveller support</span></div>
-        </div>
-      </div>
-      <div class="stage rv d1">
-        <div class="polas" role="button" tabindex="0" aria-label="Show the next photo">
-          <div class="pola" data-pos="2"><div class="ph"><img src="portfolio-shots/immaculate.webp" alt="" style="transform:scale(1.7);transform-origin:18% 40%" width="2000" height="1097" loading="lazy"></div><p>Planned to the last detail</p></div>
-          <div class="pola" data-pos="1"><div class="ph"><img src="portfolio-shots/immaculate.webp" alt="" width="2000" height="1097" loading="lazy"></div><p>The home page</p></div>
-          <div class="pola" data-pos="0"><div class="ph"><img src="portfolio-shots/immaculate.webp" alt="Immaculate Connections home page with a polaroid of a tour group" style="transform:scale(2.15);transform-origin:68% 47%" width="2000" height="1097" loading="lazy"></div><p>Hotel check-in</p></div>
-        </div>
-        <div class="thumbs">
-          <button class="arr" type="button" data-step="-1" aria-label="Previous photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M15 6l-6 6 6 6"/></svg></button>
-          <span class="t on"><img src="portfolio-shots/immaculate.webp" alt="" style="object-position:70% 50%" width="2000" height="1097" loading="lazy"></span>
-          <span class="t"><img src="portfolio-shots/immaculate.webp" alt="" width="2000" height="1097" loading="lazy"></span>
-          <span class="t"><img src="portfolio-shots/immaculate.webp" alt="" style="object-position:15% 40%" width="2000" height="1097" loading="lazy"></span>
-          <button class="arr" type="button" data-step="1" aria-label="Next photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></button>
-        </div>
-      </div>
-    </div>
-    <div class="i-bottom rv">
-      <button class="i-pause" type="button" aria-label="Pause the tour" aria-pressed="false"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 4h4v16H6zM14 4h4v16h-4z"/></svg></button>
-      <span class="i-pin"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span id="pin-text" aria-live="polite">Moalboal, Cebu</span></span>
-      <div class="dests" role="group" aria-label="Featured destinations">
-        <button type="button" aria-pressed="false">Bohol</button><button type="button" aria-pressed="false">Da Nang</button><button type="button" aria-pressed="false">Palawan</button><button type="button" aria-pressed="false">Japan</button><button type="button" aria-pressed="false">Boracay</button><button type="button" aria-pressed="false">Ha Long Bay</button><button type="button" aria-pressed="false">Coron</button><button type="button" aria-pressed="true">Moalboal</button>
-      </div>
     </div>
   </div>
 </section>
@@ -798,29 +751,6 @@ dialog[open]{animation:pop .45s var(--spring)}
 
 <footer><div class="wrap"><span>HelloGiovanni07 · Selected work 2026</span><a href="#top">Back to top ↑</a></div></footer>
 
-<!-- Preview dialog -->
-<dialog id="preview" aria-labelledby="pv-title">
-  <div class="dlg">
-    <button class="x" type="button" data-close aria-label="Close preview"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
-    <div class="pv-bar"><i></i><i></i><i></i><span id="pv-title">site</span></div>
-    <img id="pv-img" src="portfolio-shots/glaze.webp" alt="" width="2000" height="1096">
-    <div class="pv-foot"><a class="btn btn-main" id="pv-go" href="#" target="_blank" rel="noopener" style="--accent:#4361ee">Open the live site</a></div>
-  </div>
-</dialog>
-
-<!-- Branding dialog -->
-<dialog id="brand" aria-labelledby="bk-title">
-  <div class="dlg">
-    <button class="x" type="button" data-close aria-label="Close brand kit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
-    <div class="bk-head"><span class="hand">brand kit</span><h3 id="bk-title">Brand</h3><div class="bk-logo" id="bk-logo"></div></div>
-    <div class="bk-body">
-      <div><h4>Colours · tap to copy</h4><div class="sw-grid" id="bk-sw"></div><h4 style="margin-top:24px">Voice</h4><div class="voice" id="bk-voice"></div><p class="bk-line" id="bk-line"></p></div>
-      <div><h4>Typography</h4><div id="bk-type"></div></div>
-    </div>
-    <div class="bk-foot"><a class="btn btn-main" id="bk-go" href="#" target="_blank" rel="noopener">Visit the site</a></div>
-  </div>
-</dialog>
-
 <script>
 (() => {
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -849,8 +779,8 @@ dialog[open]{animation:pop .45s var(--spring)}
   }, 2400);
 
   const cards = $$('.card3d'), chips = $$('.chip');
-  const names = ['Glaze Bomb · donut shop', 'Pizza Max · pizzeria', 'ExpoBusiness · Canton Fair travel', 'Immaculate · Cebu tours'];
-  const colors = ['#ff6a13', '#c62f26', '#f26a1b', '#bc5700'];
+  const names = ['Glaze Bomb · donut shop', 'Pizza Max · pizzeria', 'ExpoBusiness · Canton Fair travel'];
+  const colors = ['#ff6a13', '#c62f26', '#f26a1b'];
   let active = 0, paused = false;
   const setActive = i => {
     active = (i + cards.length) % cards.length;
@@ -934,11 +864,11 @@ dialog[open]{animation:pop .45s var(--spring)}
   onScroll();
 
   /* shared: drag-to-spin helper */
-  const spinner = (el, img, idle) => {
+  const spinner = (el, target, idle, onSet) => {
     let angle = 0, v = reduce ? 0 : idle, dragging = false, last = 0;
     const at = e => { const r = el.getBoundingClientRect(); return Math.atan2(e.clientY - (r.top + r.height / 2), e.clientX - (r.left + r.width / 2)) * 180 / Math.PI; };
-    const set = () => { img.style.rotate = angle + 'deg'; el.setAttribute('aria-valuenow', ((Math.round(angle) % 360) + 360) % 360); };
-    el.addEventListener('pointerdown', e => { dragging = true; last = at(e); el.setPointerCapture(e.pointerId); });
+    const set = () => { target.style.rotate = angle + 'deg'; el.setAttribute('aria-valuenow', ((Math.round(angle) % 360) + 360) % 360); };
+    el.addEventListener('pointerdown', e => { if (e.target.closest('button')) return; dragging = true; last = at(e); el.setPointerCapture(e.pointerId); });
     el.addEventListener('pointermove', e => {
       if (!dragging) return;
       let d = at(e) - last; if (d > 180) d -= 360; if (d < -180) d += 360;
@@ -947,92 +877,153 @@ dialog[open]{animation:pop .45s var(--spring)}
     const stop = () => dragging = false;
     el.addEventListener('pointerup', stop); el.addEventListener('pointercancel', stop);
     el.addEventListener('keydown', e => { if (e.key === 'ArrowRight' || e.key === 'ArrowUp') { angle += 15; set(); e.preventDefault(); } if (e.key === 'ArrowLeft' || e.key === 'ArrowDown') { angle -= 15; set(); e.preventDefault(); } });
+    const kickSpin = s => { v = s; };
     if (!reduce) (function tick() {
       if (!dragging) { v += (idle - v) * .02; angle += v; set(); }
       requestAnimationFrame(tick);
     })();
+    return { kick: kickSpin };
   };
 
-  /* ---------- 01 Glaze: spin + flavour picker ---------- */
-  const gDonut = $('.g-donut'), gImg = $('#g-img');
-  spinner(gDonut, gImg, .05);
-  $$('.g-picker button').forEach(b => b.addEventListener('click', () => {
-    $$('.g-picker button').forEach(x => x.setAttribute('aria-pressed', x === b));
-    gDonut.classList.add('swap');
+  /* ---------- 01 Glaze: the menu hero (orbits, cloud, flavour of the week) ---------- */
+  const G = 'portfolio-shots/decor/glaze/';
+  const IN = [['Strawberry Sprinkle', 'strawberry-sprinkle', 2.8], ['Hazelnut Velvet', 'hazelnut-velvet', 3.6], ['Matcha Web', 'matcha-web', 3.7], ['Caramel Biscuit Crunch', 'caramel-biscuit-crunch', 3.8], ['Ube Cheese Cloud', 'ube-cheese-cloud', 3.7], ['Choco Crumble Stripe', 'choco-crumble-stripe', 3.7], ['Snow Web', 'snow-web', 3.6], ['Mallow Party', 'mallow-party', 2.9]];
+  const OUT = [['Iced Caramel Macchiato', 'iced-caramel-macchiato', 3.9], ['Hot Chocolate', 'hot-chocolate', 3.2], ['Iced Matcha Latte', 'iced-matcha-latte', 3.9], ['Mocha Frappe', 'mocha-frappe', 4.2], ['Cafe Latte', 'cafe-latte', 3.4], ['Iced Spanish Latte', 'iced-spanish-latte', 3.9], ['Caramel Macchiato', 'caramel-macchiato', 3.8], ['Iced Americano', 'iced-americano', 3.0]];
+  const money = n => '$' + n.toFixed(2);
+  const orbitHTML = (list, isDrink) => list.map(([n, s, p], i) => `<button class="oi" type="button" style="--a:${(360 / list.length * i).toFixed(1)}deg" data-n="${n}" data-s="${s}" data-p="${p}" data-d="${isDrink ? 1 : ''}" aria-label="${isDrink ? n : 'Show ' + n}"><span class="oi__in"><span class="oi__pop"><img src="${G}${s}${isDrink ? '' : '-top'}-sm.webp" alt="" width="160" height="160" loading="lazy"></span><span class="oi__tag">${n}<b>${money(p)}</b></span></span></button>`).join('');
+  $('#orbitIn').innerHTML = orbitHTML(IN, false);
+  $('#orbitOut').innerHTML = orbitHTML(OUT, true);
+  const CLOUD = [['choco-sprinkle', 3, 12, 92, .6, 0, -14, 1], ['iced-spanish-latte', 17, 7, 64, .3, 2, 14, 0], ['almond-snowcap', 33, 5, 78, .5, 0, -6, 0], ['berry-coconut-snow', 0, 47, 112, .9, 0, 12, 1], ['iced-americano', 4, 84, 84, .7, 0, -10, 1], ['cappuccino-swirl', 20, 93, 100, .8, 0, 8, 0], ['cookie-speckle', 55, 25, 54, .25, 3, -8, 0], ['caramel-macchiato', 96, 9, 78, .6, 0, 16, 1], ['tiramisu-dust', 91, 92, 72, .4, 2, 10, 1], ['original-glaze', 64, 5, 60, .3, 2, -20, 0], ['hazelnut-crunch', 50, 96, 120, 1.2, 1.5, -18, 0]];
+  const HSPR = ['#ff6a13', '#ffd23f', '#3ec6ff', '#7cf29c', '#a974ff', '#ff8fb4', '#3a1e10'];
+  const spr = Array.from({ length: 26 }, (_, k) => `<i class="spr" style="--x:${(k * 37 + 11) % 100}%;--y:${(k * 53 + 7) % 100}%;--c:${HSPR[k % HSPR.length]};--r:${(k * 47) % 180}deg;--t:${(3 + (k % 5) * .7).toFixed(1)}s"></i>`).join('');
+  $('#gCloud').innerHTML = spr + CLOUD.map(([s, x, y, sz, dp, bl, r, m]) => `<span class="hc${m ? ' hc--m' : ''}" data-depth="${dp * 40}" style="--x:${x}%;--y:${y}%;--s:${sz}px;--r:${r}deg;--b:${bl}px;--t:${(3.6 + (sz % 7) * .55).toFixed(2)}s"><img src="${G}${s}-sm.webp" alt="" width="160" height="160" loading="lazy"></span>`).join('');
+  const gMain = $('.g-main'), gImg = $('#gImg');
+  const gSpin = spinner(gMain, gImg, .06);
+  const boop = () => { gMain.classList.remove('boop'); void gMain.offsetWidth; gMain.classList.add('boop'); gSpin.kick(14); };
+  let fotw = true;
+  $$('.oi').forEach(b => b.addEventListener('click', () => {
+    if (b.dataset.d) { $('#fotwLabel').textContent = 'At the drinks counter'; $('#fotwName').textContent = b.dataset.n; $('#fotwPrice').textContent = money(+b.dataset.p); return; }
+    fotw = false;
+    gMain.classList.add('swap');
     setTimeout(() => {
-      gImg.src = `portfolio-shots/decor/${b.dataset.src}.webp`;
-      $('#g-name').textContent = b.dataset.name; $('#g-price').textContent = b.dataset.price;
-      gDonut.classList.remove('swap');
+      gImg.src = `${G}${b.dataset.s}.webp`;
+      $('#fotwLabel').textContent = 'Now showing'; $('#fotwName').textContent = b.dataset.n; $('#fotwPrice').textContent = money(+b.dataset.p);
+      gMain.classList.remove('swap'); boop();
     }, reduce ? 0 : 220);
   }));
-
-  /* ---------- 02 Pizza: spin + size ---------- */
-  const pie = $('.pie');
-  spinner(pie, $('.pie img'), .12);
-  $('#size').addEventListener('change', e => pie.style.scale = e.target.value);
-
-  /* ---------- 03 Expo: swing + flip badge + industries ---------- */
-  const lan = $('.lanyard'), badge = $('.badge');
-  let sx = null, moved = false;
-  lan.addEventListener('pointerdown', e => { sx = e.clientX; moved = false; lan.classList.remove('idle'); lan.style.transition = 'none'; });
-  addEventListener('pointermove', e => {
-    if (sx === null) return;
-    const d = e.clientX - sx; if (Math.abs(d) > 5) moved = true;
-    if (moved) lan.style.transform = `rotate(${Math.max(-30, Math.min(30, -d / 4))}deg)`;
+  gMain.addEventListener('click', boop);
+  $('#fotwAdd').addEventListener('click', e => {
+    const btn = e.currentTarget, html = btn.innerHTML;
+    btn.textContent = 'Added ✓'; boop();
+    setTimeout(() => btn.innerHTML = html, 1300);
   });
-  addEventListener('pointerup', () => {
-    if (sx === null) return; sx = null;
-    if (!moved) { if (!reduce) lan.classList.add('idle'); return; }
-    lan.style.transition = reduce ? 'none' : 'transform 1.4s cubic-bezier(.34,1.9,.64,1)'; lan.style.transform = 'rotate(0deg)';
-    setTimeout(() => { lan.style.transition = ''; lan.style.transform = ''; if (!reduce) lan.classList.add('idle'); }, 1400);
-  });
-  badge.addEventListener('click', e => { if (moved) { moved = false; e.preventDefault(); return; } badge.classList.toggle('flip'); });
-  $$('.sourcing button').forEach(b => b.addEventListener('click', () => {
-    const on = b.getAttribute('aria-pressed') !== 'true';
-    $$('.sourcing button').forEach(x => x.setAttribute('aria-pressed', 'false'));
-    b.setAttribute('aria-pressed', on);
-    $('.b-co').lastChild.textContent = on ? `${b.textContent} buyer` : 'Your Company Inc.';
-    badge.classList.remove('flip');
-    if (on && !reduce) { lan.classList.remove('idle'); lan.animate([{ transform: 'rotate(-14deg)' }, { transform: 'rotate(10deg)' }, { transform: 'rotate(-5deg)' }, { transform: 'rotate(0)' }], { duration: 1100, easing: 'ease-out' }).onfinish = () => lan.classList.add('idle'); }
-  }));
 
-  /* ---------- 04 Immaculate: polaroids, thumbs, auto-play, destinations ---------- */
-  const polas = $('.polas'), thumbs = $$('.thumbs .t'), pin = $('#pin-text');
-  let slide = 0, playing = !reduce, busy = false;
-  const go = step => {
-    if (busy) return; busy = true;
-    const ps = $$('.pola', polas), topP = ps.find(p => p.dataset.pos === '0');
-    if (!reduce) topP.classList.add('toss');
-    setTimeout(() => {
-      topP.classList.remove('toss');
-      ps.forEach(p => p.dataset.pos = (+p.dataset.pos + (step > 0 ? 2 : 1)) % 3);
-      slide = (slide + (step > 0 ? 1 : 2)) % 3;
-      thumbs.forEach((t, k) => t.classList.toggle('on', k === slide));
-      busy = false;
-    }, reduce ? 0 : 400);
-  };
-  polas.addEventListener('click', () => go(1));
-  polas.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(1); } });
-  $$('.thumbs .arr').forEach(b => b.addEventListener('click', () => go(+b.dataset.step)));
-  const pauseBtn = $('.i-pause');
-  const setPlay = p => {
-    playing = p; pauseBtn.setAttribute('aria-pressed', !p);
-    pauseBtn.setAttribute('aria-label', p ? 'Pause the tour' : 'Play the tour');
-    pauseBtn.innerHTML = p ? '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 4h4v16H6zM14 4h4v16h-4z"/></svg>' : '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4l13 8-13 8z"/></svg>';
-  };
-  setPlay(playing);
-  pauseBtn.addEventListener('click', () => setPlay(!playing));
-  const places = { 'Bohol': 'Chocolate Hills, Bohol', 'Da Nang': 'Ba Na Hills, Da Nang', 'Palawan': 'El Nido, Palawan', 'Japan': 'Mt. Fuji, Japan', 'Boracay': 'White Beach, Boracay', 'Ha Long Bay': 'Ha Long Bay, Vietnam', 'Coron': 'Coron, Palawan', 'Moalboal': 'Moalboal, Cebu' };
-  const dests = $$('.dests button');
-  let dIdx = dests.length - 1;
-  const setDest = k => {
-    dIdx = k; dests.forEach((x, j) => x.setAttribute('aria-pressed', j === k));
-    pin.textContent = places[dests[k].textContent];
-  };
-  dests.forEach((b, k) => b.addEventListener('click', () => { setDest(k); go(1); }));
-  let imcVisible = false;
-  new IntersectionObserver(([e]) => imcVisible = e.isIntersecting).observe($('#imc'));
-  setInterval(() => { if (playing && imcVisible && !document.hidden) { setDest((dIdx + 1) % dests.length); go(1); } }, 4200);
+  /* ---------- 02 Pizza: board, pull a slice, pizzas, today's oven ---------- */
+  const PIZZAS = [['garden', 'Veggie Garden', 13.2], ['salami', 'Salami Max', 13.0], ['marg', 'Margherita Deluxe', 12.5], ['funghi', 'Funghi Fresco', 12.9], ['diavolo', 'Diavolo', 13.5]];
+  const pPizza = $('#pPizza'), pSpin = $('#pSpin');
+  spinner(pPizza, pSpin, .1);
+  $('#pullSlice').addEventListener('click', () => pPizza.classList.toggle('pulled'));
+  let pz = 0;
+  $('#pName').addEventListener('click', () => {
+    pz = (pz + 1) % PIZZAS.length;
+    const [id, name, price] = PIZZAS[pz];
+    const src = id === 'garden' ? 'portfolio-shots/decor/pizza/garden-top.webp' : `portfolio-shots/decor/pizza/${id}-top-480.webp`;
+    pPizza.classList.remove('pulled');
+    $('#pPie').src = src; $('#pSlice').src = src;
+    $('#pName').textContent = name; $('#pPrice').textContent = '€' + price.toFixed(2).replace('.', ',').replace(',', '.');
+  });
+  $('#pAdd').addEventListener('click', e => { const b = e.currentTarget, h = b.innerHTML; b.textContent = 'Added ✓'; setTimeout(() => b.innerHTML = h, 1300); });
+  (() => {
+    const now = new Date(), d = now.getDay(), h = now.getHours() + now.getMinutes() / 60;
+    $('#todayDate').textContent = now.toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short' }).toUpperCase();
+    const hours = d === 0 ? [12, 23] : (d === 5 || d === 6) ? [11, 25] : [11, 23];
+    const open = (h >= hours[0] && h < hours[1]) || (hours[1] > 24 && h < hours[1] - 24);
+    const close = hours[1] > 24 ? '01:00' : hours[1] + ':00';
+    const el = $('#todayOpen'); el.classList.toggle('is-closed', !open);
+    el.lastElementChild.textContent = open ? `Open now · until ${close}` : `Closed now · opens at ${hours[0]}:00`;
+  })();
+  const AREAS = [['Pankow', ['13187', '13189']], ['Niederschönhausen', ['13156']], ['Rosenthal, Wilhelmsruh', ['13158']], ['Prenzlauer Berg', ['10437', '10439', '10409']], ['Weißensee', ['13086', '13088']]];
+  $('#zipForm').addEventListener('submit', e => {
+    e.preventDefault();
+    const v = $('#zip').value.trim(), msg = $('#zipMsg');
+    msg.className = 'today-msg';
+    if (!/^\d{5}$/.test(v)) { msg.textContent = 'Please enter a five-digit postcode, e.g. 13187.'; msg.classList.add('no'); return; }
+    const hit = AREAS.find(([, z]) => z.includes(v));
+    msg.textContent = hit ? `Yes, we deliver to ${hit[0]} in about 30 min.` : 'Sorry, that is outside the delivery area. Pickup is always possible.';
+    msg.classList.add(hit ? 'ok' : 'no');
+  });
+
+  /* ---------- 03 Expo: the lanyard (pendulum, flip, expos, industries) ---------- */
+  (() => {
+    const pend = $('#pend'), badge = $('#badge'), stage = $('#lanyard');
+    const q = $('#bfQr'); q.innerHTML = Array.from({ length: 81 }, (_, i) => `<i class="${(i * 7 + (i >> 3) * 3) % 5 < 2 ? 'o' : ''}"></i>`).join('');
+    let th = .12, w = 0, card = 0, cardW = 0, dragging = false, moved = 0, lastAng = 0, raf = 0, last = 0, visible = true;
+    const apply = () => { pend.style.transform = `rotate(${th}rad)`; badge.style.setProperty('--sway', `${card}rad`); };
+    const step = t => {
+      const dt = Math.min(.033, last ? (t - last) / 1000 : .016); last = t;
+      if (!dragging) { w += (-9 * th - 1.1 * w) * dt; th += w * dt; }
+      cardW += (-(card - (-th * .6)) * 24 - cardW * 3.2) * dt; card += cardW * dt;
+      apply();
+      const still = Math.abs(w) < .0008 && Math.abs(th) < .0008 && Math.abs(card) < .0008 && Math.abs(cardW) < .001;
+      if (visible && (!still || dragging)) raf = requestAnimationFrame(step); else { raf = 0; last = 0; }
+    };
+    const kick = () => { if (!raf && !reduce) raf = requestAnimationFrame(step); };
+    const anchor = () => { const r = pend.getBoundingClientRect(); return { x: r.left, y: r.top }; };
+    const angTo = e => { const a = anchor(); return Math.max(-.32, Math.min(.32, Math.atan2(-(e.clientX - a.x), e.clientY - a.y))); };
+    if (!reduce) {
+      badge.addEventListener('pointerdown', e => { dragging = true; moved = 0; badge.setPointerCapture(e.pointerId); lastAng = angTo(e); kick(); });
+      badge.addEventListener('pointermove', e => { if (!dragging) return; const a = angTo(e); moved += Math.abs(a - lastAng); w = (a - lastAng) * 60; th = a; lastAng = a; });
+      const end = () => { if (!dragging) return; dragging = false; kick(); };
+      badge.addEventListener('pointerup', end); badge.addEventListener('pointercancel', end);
+      if (fine) stage.addEventListener('pointermove', e => { if (dragging) return; const r = badge.getBoundingClientRect(); if (e.clientY > r.top - 40 && e.clientY < r.bottom + 40 && Math.abs(e.clientX - (r.left + r.width / 2)) < r.width) { w += (e.movementX || 0) * .0012; kick(); } });
+      new IntersectionObserver(([en]) => { visible = en.isIntersecting; if (visible) kick(); }).observe(stage);
+      setTimeout(kick, 600);
+    }
+    badge.addEventListener('click', () => { if (moved > .06) { moved = 0; return; } badge.classList.toggle('flipped'); w += .2; kick(); });
+    badge.addEventListener('keydown', e => { if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') { e.preventDefault(); w += e.key === 'ArrowLeft' ? -1.2 : 1.2; kick(); } });
+    const EVENTS = [
+      { zh: '中国进出口商品交易会', name: 'Canton Fair', sess: 'Next session · Spring 2027', l1: 'Phase', v1: '1 · 2 · 3', venue: 'Pazhou', no: 'EB-141-0418', c: ['#16163a', '#c9460b', '#d7261e'] },
+      { zh: '中国（广州）国际家具博览会', name: 'CIFF Guangzhou', sess: 'Guangzhou · March 2027', l1: 'When', v1: 'Mar 2027', venue: 'Pazhou', no: 'EB-CF27-0311', c: ['#3a1a0a', '#c9460b', '#e0790b'] },
+      { zh: '香港电子产品展', name: 'HK Electronics Fair', sess: 'Hong Kong · Spring 2027', l1: 'When', v1: 'Apr 2027', venue: 'HKCEC', no: 'EB-HK27-0412', c: ['#2a0a18', '#7a1030', '#d7261e'] },
+      { zh: '中国—东盟博览会', name: 'China-ASEAN Expo', sess: 'Nanning · September 2027', l1: 'When', v1: 'Sep 2027', venue: 'Nanning', no: 'EB-CA27-0916', c: ['#0e2a24', '#16463a', '#2f7f5f'] },
+      { zh: '中国国际进口博览会', name: 'CIIE', sess: 'Shanghai · November 2027', l1: 'When', v1: 'Nov 2027', venue: 'NECC', no: 'EB-II27-1105', c: ['#0e1440', '#1f2a6b', '#3b4cc0'] }
+    ];
+    const dots = $('.badge-dots'), front = badge.querySelector('.front');
+    let ev = 0, cycleT = 0;
+    dots.innerHTML = EVENTS.map((e, i) => `<button type="button" aria-label="${e.name}" aria-pressed="${i === 0}"><span>${e.name}</span></button>`).join('');
+    const showEvent = i => {
+      ev = (i + EVENTS.length) % EVENTS.length; const e = EVENTS[ev];
+      badge.classList.add('swap');
+      setTimeout(() => {
+        $('#bfZh').textContent = e.zh; $('#bfName').textContent = e.name; $('#bfSession').textContent = e.sess;
+        $('#bfL1').textContent = e.l1; $('#bfPhase').textContent = e.v1; $('#bfVenue').textContent = e.venue; $('#bfNo').textContent = e.no;
+        front.style.setProperty('--b0', e.c[0]); front.style.setProperty('--b1', e.c[1]); front.style.setProperty('--b2', e.c[2]);
+        badge.classList.remove('swap');
+      }, reduce ? 0 : 260);
+      [...dots.children].forEach((d, j) => d.setAttribute('aria-pressed', String(j === ev)));
+      w += reduce ? 0 : .18; kick();
+    };
+    const autoCycle = () => { clearTimeout(cycleT); if (!reduce) cycleT = setTimeout(() => { if (!dragging && !badge.classList.contains('flipped') && visible) showEvent(ev + 1); autoCycle(); }, 6500); };
+    [...dots.children].forEach((d, j) => d.addEventListener('click', () => { showEvent(j); autoCycle(); }));
+    autoCycle();
+    // industries type into the badge
+    const ind = $('#bfInd');
+    let typing = 0;
+    const typeTo = text => {
+      clearInterval(typing); let k = 0; ind.textContent = '';
+      if (reduce) { ind.textContent = text; return; }
+      typing = setInterval(() => { ind.textContent = text.slice(0, ++k); if (k >= text.length) clearInterval(typing); }, 40);
+    };
+    $$('.sourcing button').forEach(b => b.addEventListener('click', () => {
+      const on = b.getAttribute('aria-pressed') !== 'true';
+      $$('.sourcing button').forEach(x => x.setAttribute('aria-pressed', 'false'));
+      b.setAttribute('aria-pressed', on);
+      badge.classList.remove('flipped');
+      typeTo(on ? `${b.textContent} buyer` : 'Electronics buyer');
+      w += reduce ? 0 : .35; kick();
+    }));
+    apply();
+  })();
 
   /* ---------- Services picker ---------- */
   const picks = $$('.pick'), tray = $('.tray');
@@ -1053,61 +1044,6 @@ dialog[open]{animation:pop .45s var(--spring)}
     c.addEventListener('pointerleave', () => c.style.transform = '');
   });
 
-  /* ---------- Dialogs ---------- */
-  const SITES = {
-    glaze: { name: 'Glaze Bomb', url: 'https://hellogiovanni07-commits.github.io/glaze-bomb-donuts/', shot: 'glaze', addr: 'hellogiovanni07-commits.github.io/glaze-bomb-donuts',
-      bg: 'radial-gradient(120% 80% at 70% 30%,#fff4ea,#fdeee0)', fg: '#3a1e10', acc: '#d64f00', btn: '#d64f00',
-      logo: '<img src="portfolio-shots/decor/caramel-biscuit-crunch.webp" alt="" width="44" height="44"><b style="font:800 24px/1 var(--head);color:#3a1e10;letter-spacing:-.02em">Glaze <span style="color:#ff6a13">Bomb</span></b>',
-      colors: [['Glaze orange', '#FF6A13'], ['Deep orange', '#D64F00'], ['Brioche brown', '#3A1E10'], ['Caramel', '#6E4630'], ['Peach', '#FFE6D2'], ['Cream', '#FFF8F1']],
-      type: [['Plus Jakarta Sans', 800, 'Filled donuts, glazed by hand.', 'Headings · 800'], ['Inter', 400, 'Soft brioche filled with custard.', 'Body text · 400'], ['Caveat', 700, 'tap a donut to spin it up!', 'Handwritten notes · 700']],
-      voice: ['Warm', 'Playful', 'Fresh every morning', 'Short sentences'], line: '“Baked fresh every morning, gone by the afternoon.”' },
-    pizza: { name: 'Pizza Max', url: 'https://hellogiovanni07-commits.github.io/pizza-max/', shot: 'pizza', addr: 'hellogiovanni07-commits.github.io/pizza-max',
-      bg: '#f7f6f3', fg: '#1f1f1f', acc: '#c62f26', btn: '#c62f26',
-      logo: '<span style="text-align:left"><b style="display:block;font:800 italic 15px/1 var(--head);color:#43a047">Pizza</b><b style="display:block;font:800 italic 38px/.95 var(--head);color:#c62f26;letter-spacing:-.04em">MAX</b><i style="display:block;height:4px;border-radius:50%;background:#43a047;margin:3px 0"></i><span style="font:700 15px/1 var(--hand);color:#c62f26">...tasty in the box!</span></span>',
-      colors: [['Tomato red', '#C62F26'], ['Basil green', '#43A047'], ['Deep green', '#2E7D32'], ['Charcoal', '#1F1F1F'], ['Flour white', '#F7F6F3'], ['Crust', '#D9A868']],
-      type: [['Plus Jakarta Sans', 800, 'Hot from the stone oven.', 'Headings · 800'], ['Inter', 400, 'Dough rested for 24 hours.', 'Body text · 400'], ['Caveat', 700, 'pull a slice!', 'Handwritten notes · 700']],
-      voice: ['Hot', 'Honest', 'Neighbourhood', 'Straight to your door'], line: '“90 seconds at 400 °C. From Pankow, straight to your door.”' },
-    expo: { name: 'ExpoBusiness Travel Services', url: 'https://hellogiovanni07-commits.github.io/expobusiness-travel/', shot: 'travel', addr: 'hellogiovanni07-commits.github.io/expobusiness-travel',
-      bg: 'linear-gradient(135deg,#16163a,#2b2b5a)', fg: '#ffffff', acc: '#ff8a3d', btn: '#c9460b',
-      logo: '<svg width="40" height="34" viewBox="0 0 40 34" aria-hidden="true"><rect x="2" y="18" width="7" height="14" rx="2" fill="#f26a1b"/><rect x="13" y="11" width="7" height="21" rx="2" fill="#f26a1b"/><rect x="24" y="5" width="7" height="27" rx="2" fill="#f26a1b"/><path d="M2 14C10 4 24 2 36 4" stroke="#d7261e" stroke-width="3" fill="none" stroke-linecap="round"/><circle cx="37" cy="4" r="3" fill="#d7261e"/></svg><span style="text-align:left"><b style="display:block;font:800 20px/1 var(--head);color:#16163a">ExpoBusiness</b><span style="font:600 11px/1 var(--head);letter-spacing:.2em;color:#5a5a72">TRAVEL SERVICES</span></span>',
-      colors: [['Midnight navy', '#16163A'], ['Canton orange', '#F26A1B'], ['Hot orange', '#FF8A3D'], ['Signal red', '#D7261E'], ['Ink', '#1F1F3D'], ['Tint', '#FFF7F1']],
-      type: [['Plus Jakarta Sans', 800, 'The Canton Fair, fully managed.', 'Headings · 800'], ['Inter', 400, 'One coordinator, one itemised quotation.', 'Body text · 400']],
-      voice: ['Corporate', 'Calm', 'Fully managed', 'Invoiced to your company'], line: '“Your team simply shows up and sources.”' },
-    imc: { name: 'Immaculate Connections', url: 'https://www.immaculateconnectionsph.com/', shot: 'immaculate', addr: 'immaculateconnectionsph.com',
-      bg: 'linear-gradient(135deg,#091630,#103054)', fg: '#ffffff', acc: '#ffb730', btn: '#bc5700',
-      logo: '<svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="#091630"/><path d="M8 24c6-10 18-14 26-8-8-2-14 2-18 10z" fill="#3b82f6"/><path d="M12 14c4-4 10-5 15-2" stroke="#ffb730" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg><span style="text-align:left"><b style="display:block;font:700 19px/1.1 var(--head);color:#091630">Immaculate Connections</b><span style="font:700 11px/1 var(--head);letter-spacing:.2em;color:#bc5700">TOUR SERVICES</span></span>',
-      colors: [['Night navy', '#091630'], ['Tour orange', '#BC5700'], ['Sunset gold', '#FFB730'], ['White', '#FFFFFF'], ['Ocean blue', '#3B82F6']],
-      type: [['Plus Jakarta Sans', 700, 'Planned to the last detail.', 'Headings · 700'], ['Inter', 700, 'View tour packages', 'Buttons & body · 400–700'], ['Caveat', 600, 'Ba Na Hills, Da Nang', 'Photo captions · 600']],
-      voice: ['Friendly', 'Local', 'Reassuring', 'Planned to the last detail'], line: '“Your group simply shows up and enjoys the trip.”' }
-  };
-  let opener = null;
-  const open = d => { opener = document.activeElement; d.showModal(); };
-  $$('dialog').forEach(d => {
-    d.addEventListener('click', e => { if (e.target === d || e.target.closest('[data-close]')) d.close(); });
-    d.addEventListener('close', () => opener && opener.focus());
-  });
-  $$('[data-preview]').forEach(b => b.addEventListener('click', () => {
-    const s = SITES[b.dataset.preview];
-    $('#pv-img').src = `portfolio-shots/${s.shot}.webp`; $('#pv-img').alt = `${s.name} home page`;
-    $('#pv-title').textContent = s.addr; $('#pv-go').href = s.url;
-    open($('#preview'));
-  }));
-  $('#bk-sw').addEventListener('click', async e => {
-    const sw = e.target.closest('.sw'); if (!sw) return;
-    try { await navigator.clipboard.writeText(sw.dataset.hex); sw.querySelector('small').textContent = 'Copied!'; sw.classList.add('copied'); } catch {}
-    setTimeout(() => { sw.querySelector('small').textContent = sw.dataset.hex; sw.classList.remove('copied'); }, 1300);
-  });
-  $$('[data-brand]').forEach(b => b.addEventListener('click', () => {
-    const s = SITES[b.dataset.brand], d = $('#brand');
-    d.style.setProperty('--b-bg', s.bg); d.style.setProperty('--b-fg', s.fg); d.style.setProperty('--b-acc', s.acc);
-    $('#bk-title').textContent = s.name; $('#bk-logo').innerHTML = s.logo;
-    $('#bk-sw').innerHTML = s.colors.map(([n, h]) => `<button class="sw" type="button" data-hex="${h}" style="--c:${h}" aria-label="Copy ${n} ${h}"><i></i><b>${n}</b><small>${h}</small></button>`).join('');
-    $('#bk-type').innerHTML = s.type.map(([f, wt, sample, use]) => `<div class="ty"><div class="s" style="font-family:'${f}',${f === 'Caveat' ? 'cursive' : 'sans-serif'};font-weight:${wt}">${sample}</div><small><b>${f}</b> · ${use}</small></div>`).join('');
-    $('#bk-voice').innerHTML = s.voice.map(v => `<span>${v}</span>`).join('');
-    $('#bk-line').textContent = s.line;
-    const go = $('#bk-go'); go.href = s.url; go.style.setProperty('--accent', s.btn);
-    open(d);
-  }));
 })();
 </script>
 </body>
